@@ -1,0 +1,71 @@
+---
+import Mark from "./Mark.astro";
+import { ui, type Lang } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const year = new Date().getFullYear();
+const imprintHref = lang === "de" ? "/impressum" : "/en/imprint";
+const privacyHref = lang === "de" ? "/datenschutz" : "/en/privacy";
+const cityName = lang === "de" ? "München" : "Munich";
+---
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-col">
+      <div class="footer-brand"><Mark /> Bumble Academy</div>
+      <p class="footer-about">{t.footerAbout}</p>
+    </div>
+    <div class="footer-col">
+      <h3>{t.footerCoursesTitle}</h3>
+      <ul>
+        <li><a href="#courses">{t.navCourses}</a></li>
+        <li><a href="#how">{t.navHow}</a></li>
+        <li><a href="#reviews">{t.navReviews}</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>{t.footerContactTitle}</h3>
+      <ul>
+        <li><a href="mailto:info@bumbleflies.de">info@bumbleflies.de</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-meta">
+    <span>© bumbleflies UG · {cityName} · {year}</span>
+    <div class="footer-legal">
+      <a href={imprintHref}>{t.footerLegalImprint}</a>
+      <span>·</span>
+      <a href={privacyHref}>{t.footerLegalPrivacy}</a>
+    </div>
+  </div>
+</footer>
+<style>
+  .site-footer { padding: 56px 0 28px; border-top: 1px solid var(--rule); }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
+  .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-family: "Instrument Serif", Georgia, serif; font-size: 1.1rem; margin-bottom: 10px; }
+  .footer-about { color: var(--ink-soft); font-size: 0.9rem; max-width: 32rem; }
+  .footer-col h3 {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--ink-soft); font-weight: 600; margin: 0 0 10px;
+  }
+  .footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .footer-col a { color: var(--ink); text-decoration: none; }
+  .footer-col a:hover { color: var(--accent-deep); }
+  .footer-meta {
+    margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--rule);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    font-size: 0.8rem; color: var(--ink-soft);
+  }
+  .footer-legal { display: flex; gap: 8px; align-items: center; }
+  .footer-legal a { color: var(--ink-soft); text-decoration: none; }
+  .footer-legal a:hover { color: var(--accent-deep); }
+
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+</style>
