@@ -1,14 +1,14 @@
 ---
-import Layout from "../components/Layout.astro";
-import { content } from "../lib/content";
-import { ui } from "../lib/i18n";
-import "../styles/home.css";
+import Layout from "../../components/Layout.astro";
+import { content } from "../../lib/content";
+import { ui } from "../../lib/i18n";
+import "../../styles/home.css";
 
-const lang = "de" as const;
-const c = content.de;
-const t = ui.de;
+const lang = "en" as const;
+const c = content.en;
+const t = ui.en;
 ---
-<Layout lang={lang} altHref="/en/" title={c.title} description={c.description}>
+<Layout lang={lang} altHref="/" title={c.title} description={c.description}>
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
@@ -22,7 +22,7 @@ const t = ui.de;
       </div>
       <div class="hero-art">
         <span class="badge">mbot</span>
-        <svg viewBox="0 0 280 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration eines freundlichen Roboters auf Rädern">
+        <svg viewBox="0 0 280 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a friendly robot on wheels">
           <ellipse cx="140" cy="240" rx="90" ry="10" fill="var(--ink)" opacity="0.08" />
           <rect x="60" y="70" width="160" height="120" rx="26" fill="var(--paper)" stroke="var(--ink)" stroke-width="4" />
           <rect x="82" y="94" width="46" height="34" rx="10" fill="var(--signal)" />
@@ -45,8 +45,8 @@ const t = ui.de;
 
   <section class="age-strip" id="ages">
     <div class="wrap">
-      <span class="eyebrow">Altersgruppen</span>
-      <h2>Wir holen Kinder da ab, wo sie stehen</h2>
+      <span class="eyebrow">Age groups</span>
+      <h2>We meet kids where they are</h2>
       <div class="age-cards">
         {c.ageCards.map((a) => (
           <div class="age-card">
@@ -60,8 +60,8 @@ const t = ui.de;
 
   <section id="courses">
     <div class="wrap">
-      <span class="eyebrow">Unsere Kurse</span>
-      <h2>Zwei Wege, ein großartiger Roboter</h2>
+      <span class="eyebrow">Our courses</span>
+      <h2>Two paths, one great robot</h2>
       <div class="course-grid">
         {c.courses.map((course) => (
           <article class="course-card">
@@ -96,7 +96,7 @@ const t = ui.de;
   <section id="how" class="why">
     <div class="wrap">
       <span class="eyebrow">{t.navHow}</span>
-      <h2>Von der Idee zum rollenden Roboter in drei Schritten</h2>
+      <h2>From idea to rolling robot in three steps</h2>
       <div class="steps-grid">
         {c.steps.map((step, i) => (
           <div class="step">
@@ -134,7 +134,7 @@ const t = ui.de;
   <section id="reviews" class="testimonials">
     <div class="wrap">
       <span class="eyebrow">{t.navReviews}</span>
-      <h2>Was Familien sagen</h2>
+      <h2>What families say</h2>
       <p class="disclaimer">{c.testimonialsDisclaimer}</p>
       <div class="quote-grid">
         {c.testimonials.map((testimonial) => (
