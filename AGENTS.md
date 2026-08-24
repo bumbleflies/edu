@@ -19,9 +19,9 @@ lint/formatter configured — don't invent or require one.
 
 ## Gotchas
 
-- The only test (`src/index.test.ts`) asserts the raw source of
-  `src/pages/index.astro` contains the string `edu.bumbleflies.de`. Changing or
-  removing the title fails CI; update the test alongside it.
+- `src/lib/content.test.ts` asserts `content.de.title` and `content.en.title`
+  both contain `edu.bumbleflies.de`. Changing or removing either title fails
+  CI; update the test alongside it.
 - `/health` is served by `nginx.conf`, not Astro. The Docker HEALTHCHECK polls
   it; keep that route working when touching serving config.
 - Pushing to `master` auto-builds and publishes `bumblecode/edu` to Docker Hub
