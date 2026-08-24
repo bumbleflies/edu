@@ -1,0 +1,47 @@
+---
+import type { Lang } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+  altHref: string;
+}
+
+const { lang, altHref } = Astro.props;
+const selfHref = Astro.url.pathname;
+---
+<div class="bf-lang">
+  <a
+    href={lang === "de" ? selfHref : altHref}
+    class={`bf-lang__item ${lang === "de" ? "is-active" : ""}`}
+    aria-current={lang === "de" ? "page" : undefined}
+  >DE</a>
+  <a
+    href={lang === "en" ? selfHref : altHref}
+    class={`bf-lang__item ${lang === "en" ? "is-active" : ""}`}
+    aria-current={lang === "en" ? "page" : undefined}
+  >EN</a>
+</div>
+<style>
+  .bf-lang {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 3px;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .bf-lang__item {
+    color: var(--ink-soft);
+    padding: 5px 10px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+  }
+  .bf-lang__item.is-active {
+    background: var(--ink);
+    color: var(--bg);
+  }
+</style>
