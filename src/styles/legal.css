@@ -1,0 +1,9 @@
+/* src/styles/legal.css */
+.legal { max-width: 760px; margin: 0 auto; padding: 56px 24px; line-height: 1.7; }
+.legal h1 { font-size: 2rem; margin-bottom: 1.5rem; }
+.legal h2, .legal h3 { font-size: 1.1rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+.legal p { margin-bottom: 1rem; }
+.legal ul { margin: 0 0 1rem 1.5rem; }
+.legal a { color: var(--accent-deep); }
+.legal hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+.legal .stand { font-size: 0.85rem; color: var(--ink-soft); }
