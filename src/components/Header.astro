@@ -1,0 +1,38 @@
+---
+import Mark from "./Mark.astro";
+import LangToggle from "./LangToggle.astro";
+import { ui, type Lang } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+  altHref: string;
+}
+
+const { lang, altHref } = Astro.props;
+const t = ui[lang];
+---
+<header class="site wrap nav">
+  <div class="logo"><Mark /> Bumble Academy</div>
+  <nav class="nav-links">
+    <a href="#courses">{t.navCourses}</a>
+    <a href="#how">{t.navHow}</a>
+    <a href="#reviews">{t.navReviews}</a>
+  </nav>
+  <div class="header-actions">
+    <LangToggle lang={lang} altHref={altHref} />
+    <a class="btn btn-honey" href="#courses">{t.bookCourse}</a>
+  </div>
+</header>
+<style>
+  header.site { padding: 18px 0; }
+  .nav { display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-weight: 700; font-size: 1.2rem; display: flex; align-items: center; gap: 12px; font-family: "Instrument Serif", Georgia, serif; }
+  .nav-links { display: flex; gap: 22px; }
+  .nav-links a { color: var(--ink); text-decoration: none; font-weight: 600; }
+  .nav-links a:hover { color: var(--accent-deep); }
+  .header-actions { display: flex; align-items: center; gap: 16px; }
+
+  @media (max-width: 760px) {
+    .nav-links { display: none; }
+  }
+</style>
