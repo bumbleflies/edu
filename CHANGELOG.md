@@ -1,0 +1,33 @@
+# Changelog
+
+## [0.2.0](https://github.com/bumbleflies/edu/compare/edu-v0.1.0...edu-v0.2.0) (2026-08-25)
+
+
+### Features
+
+* add Bumble Academy landing page design and courses ([f576df8](https://github.com/bumbleflies/edu/commit/f576df8a359f846689836f7acb01993a38cb4023))
+* add DE and EN print flyer pages ([ff86f1d](https://github.com/bumbleflies/edu/commit/ff86f1dfc8d5162a8377febe5a41fae36bba3140))
+* add DE Datenschutz and EN Privacy pages ([635a4fa](https://github.com/bumbleflies/edu/commit/635a4fa9ebe974eabbdcb26fc80aa06ad5dc6c60))
+* add DE Impressum and EN Imprint pages ([4aa410d](https://github.com/bumbleflies/edu/commit/4aa410de8ad49aa374f8975ce0cef905bcdc6534))
+* add DE/EN chrome string dictionary ([5708d7a](https://github.com/bumbleflies/edu/commit/5708d7afb7add9cf6b4e9dbf2d01f4f3d39a9e93))
+* add DE/EN homepage content, retire old title-string test ([48bb719](https://github.com/bumbleflies/edu/commit/48bb719c2b1dd8f2c66f4af44f328ded82edf3af))
+* add Docker/nginx deployment and project docs ([fafe250](https://github.com/bumbleflies/edu/commit/fafe2503ed9fa87d988cd6926f03453e23c1d7cb))
+* add Footer component with legal links and contact ([05070c7](https://github.com/bumbleflies/edu/commit/05070c72f01baa87ceea53a120b3332b3d02cf83))
+* add Header component ([bc88f7b](https://github.com/bumbleflies/edu/commit/bc88f7b37e3933d2da8d376e5cb1544bcedd2ee8))
+* add Mark and LangToggle components ([ccfc827](https://github.com/bumbleflies/edu/commit/ccfc827f714c1402832e5f4238fe632b88b3780b))
+* add pretix attendee questions, branding, and privacy disclosure ([f299fbb](https://github.com/bumbleflies/edu/commit/f299fbbb9197e177971a4952ba3b2b702e1af213))
+* add shared Layout with global design tokens ([e270d0b](https://github.com/bumbleflies/edu/commit/e270d0b4d321ac5a89066a444e172f3658ccb093))
+* connect pretix ticketing for courses ([1dcbcd6](https://github.com/bumbleflies/edu/commit/1dcbcd672f9e3608cfb5c1e3a1940368b4c3dc1b))
+* connect pretix ticketing for courses ([9ddc227](https://github.com/bumbleflies/edu/commit/9ddc227c68ca3b49c3f91dbf57fd9f15f64a1913))
+* cut Docker releases through release-please instead of every master push ([c84f77c](https://github.com/bumbleflies/edu/commit/c84f77c8677cb534c92aafd1ee87567ad285c8a2))
+* scaffold Astro minimal site ([55d4e31](https://github.com/bumbleflies/edu/commit/55d4e3170bb1082132155d839fb7f9451efa9a55))
+* split homepage into DE (default) and EN (/en/) pages ([be8ba63](https://github.com/bumbleflies/edu/commit/be8ba63941765028b5486a51987417e1330bd6d9))
+
+
+### Bug Fixes
+
+* address final review findings (font self-hosting, dead anchors, flyer padding, flyer link, quote glyphs, CSS cascade) ([7318bc9](https://github.com/bumbleflies/edu/commit/7318bc953176832b1b9b0d8707770208be2cbdf6))
+* **deps:** update dependency astro to v7 ([41e0dbe](https://github.com/bumbleflies/edu/commit/41e0dbed47a656f7460df2c9b098ca9d296d160b))
+* **deps:** update dependency astro to v7 ([f5a66eb](https://github.com/bumbleflies/edu/commit/f5a66eb406b067fa5ae904807c6c8f0663f05705))
+* **deps:** update googleapis/release-please-action action to v5 ([#10](https://github.com/bumbleflies/edu/issues/10)) ([7ac23f8](https://github.com/bumbleflies/edu/commit/7ac23f8dd1ccc0c0baf79ba02c5d9afb7dd485b2))
+* exclude page-level test files from Astro's router via underscore prefix ([01e138f](https://github.com/bumbleflies/edu/commit/01e138ff4aa7fb687396cb7585dab9a2592b7512))
