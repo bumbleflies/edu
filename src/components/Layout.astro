@@ -8,9 +8,16 @@ interface Props {
   altHref: string;
   title: string;
   description: string;
+  ogImage?: string;
 }
 
-const { lang, altHref, title, description } = Astro.props;
+const { lang, altHref, title, description, ogImage = "/images/og.webp" } = Astro.props;
+
+const site = Astro.site ?? new URL("https://edu.bumbleflies.de");
+const url = new URL(Astro.url.pathname, site);
+const image = new URL(ogImage, site);
+const locale = lang === "de" ? "de_DE" : "en_US";
+const localeAlternate = lang === "de" ? "en_US" : "de_DE";
 ---
 <!doctype html>
 <html lang={lang}>
@@ -19,6 +26,21 @@ const { lang, altHref, title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={url} />
+    <meta property="og:site_name" content="bumble:education" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={locale} />
+    <meta property="og:locale:alternate" content={localeAlternate} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <style is:global>
       @font-face {
