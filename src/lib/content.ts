@@ -125,7 +125,7 @@ export const content: Record<Lang, PageContent> = {
     ],
     courses: [
       {
-        name: "Robot Explorer",
+        name: "Roboter-Entdecker",
         tag: "Einsteiger · Block-Programmierung",
         age: "8–10 Jahre",
         duration: "8 Wochen · 1×/Woche · 60–75 Min",
@@ -133,12 +133,12 @@ export const content: Record<Lang, PageContent> = {
           "Keine Angst vor dem leeren Blatt – ein freundlicher erster Roboter, große bunte Blöcke, und der Moment, in dem er sich bewegt, weil sie ihn gebaut haben.",
         outcomes: ["Logik & Abläufe", "Schleifen & Bedingungen", "Linienfolge-Roboter"],
         cta: "Jetzt entdecken",
-        href: eventUrlByCourseName("Robot Explorer"),
+        href: eventUrlByCourseName("Roboter-Entdecker"),
         icon: "blocks",
         image: "/images/course-blocks.webp",
       },
       {
-        name: "Code the Machine",
+        name: "Coding-Abenteurer",
         tag: "Fortgeschritten · Python",
         age: "11–14 Jahre",
         duration: "10 Wochen · 1×/Woche · 90 Min",
@@ -146,7 +146,7 @@ export const content: Record<Lang, PageContent> = {
           "Für Kids, die von Blöcken zu echtem Code wechseln wollen – und den Stolz erleben, wenn ihr eigenes Programm einen Roboter durchs Labyrinth steuert.",
         outcomes: ["Echter Python-Code", "Sensoren & IoT", "Autonomer Labyrinth-Roboter"],
         cta: "Jetzt coden",
-        href: eventUrlByCourseName("Code the Machine"),
+        href: eventUrlByCourseName("Coding-Abenteurer"),
         icon: "code",
         image: "/images/course-code.webp",
       },
