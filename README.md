@@ -2,9 +2,10 @@
 
 Education platform for kids — coding courses, starting with mBot, Minecraft later.
 
-This repository is currently infrastructure-only scaffolding (Astro static site,
-Docker/nginx, CI/CD, servyy-container deployment). No course content has been
-built yet.
+Course booking runs through pretix at https://pretix.eu/bumbleedu/. The two
+course events (Robot Explorer, Code the Machine) are created/updated from
+`src/data/courses.json` via `scripts/setup-pretix.mjs` (needs the
+`PRETIX_API_TOKEN` env var; see AGENTS.md).
 
 ## Development
 

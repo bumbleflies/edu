@@ -2,8 +2,11 @@
 
 ## Status
 
-Infrastructure-only scaffold: Astro 6 minimal static template plus deployment
-plumbing (Docker/nginx, CI/CD). No course/product content yet — future work.
+Astro static marketing site (DE at `/`, EN at `/en/`) plus deployment
+plumbing (Docker/nginx, CI/CD). Course booking is wired to pretix
+(`https://pretix.eu/bumbleedu/`) — event data lives in
+`src/data/courses.json`, the site's course CTAs link to the pretix
+event pages.
 
 ## Commands
 
@@ -13,6 +16,18 @@ npm run build      # -> dist/
 npm run test       # vitest run
 npx astro check    # type check
 ```
+
+### pretix ticketing setup
+
+```bash
+PRETIX_API_TOKEN=<token> node scripts/setup-pretix.mjs
+```
+
+Idempotent upsert: creates/updates one pretix event per course
+(slug/name/dates, locales `en`+`de`, item with price, unlimited quota)
+from `src/data/courses.json`. The token is read from the environment —
+never commit it. Events are created as drafts: going live requires
+enabling a payment provider in the pretix admin, which has no API.
 
 CI (Node 24) runs exactly `npm run test` then `npx astro check`. There is no
 lint/formatter configured — don't invent or require one.
