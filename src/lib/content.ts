@@ -124,14 +124,14 @@ export const content: Record<Lang, PageContent> = {
         role: "IT nerd · Patient explainer",
         blurb:
           "Our IT nerd with a teacher's patience: he knows every screw in the mbot and explains code until it finally clicks. When a kid says \"I built that!\", his day is made.",
-        image: "/images/trainer_chris.jpg",
+        image: "/images/trainer_chris.webp",
       },
       {
         name: "Jördis",
         role: "Social animal · Heart of the group",
         blurb:
           "Our social animal: she reads the room in seconds, knows who needs a nudge and who needs quiet, and turns a bunch of kids into a real team. Every kid leaves feeling seen.",
-        image: "/images/trainer_joerdi.jpg",
+        image: "/images/trainer_joerdi.webp",
       },
     ],
     trainersEyebrow: "The team",
@@ -203,14 +203,14 @@ export const content: Record<Lang, PageContent> = {
         role: "IT-Nerd · Geduldiger Erklärer",
         blurb:
           "Unser IT-Nerd mit Geduld in der Stimme: Er kennt jede Schraube am mbot und erklärt Code so lange, bis es klick macht. Wenn ein Kind sagt „Das hab ich gebaut!“, ist sein Tag gerettet.",
-        image: "/images/trainer_chris.jpg",
+        image: "/images/trainer_chris.webp",
       },
       {
         name: "Jördis",
         role: "Social Animal · Herz der Gruppe",
         blurb:
           "Unser Social Animal: spürt sofort, wer Mut braucht und wer Ruhe, und macht aus einer Gruppe ein echtes Team. Bei ihr fühlt sich jedes Kind gesehen und willkommen.",
-        image: "/images/trainer_joerdi.jpg",
+        image: "/images/trainer_joerdi.webp",
       },
     ],
     trainersEyebrow: "Das Team",
