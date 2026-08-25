@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/bumbleflies/edu/compare/edu-v0.7.0...edu-v0.8.0) (2026-08-25)
+
+
+### Features
+
+* make header logo link to home page ([7a56600](https://github.com/bumbleflies/edu/commit/7a566007896b9da34c0edddcdaef7cab49a296c6))
+
 ## [0.7.0](https://github.com/bumbleflies/edu/compare/edu-v0.6.1...edu-v0.7.0) (2026-08-25)
 
 
