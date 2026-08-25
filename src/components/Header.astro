@@ -13,7 +13,7 @@ const t = ui[lang];
 const home = lang === "de" ? "/" : "/en/";
 ---
 <header class="site wrap nav">
-  <div class="logo"><Mark /> Bumble Academy</div>
+  <div class="logo"><Mark /> bumble:education</div>
   <nav class="nav-links">
     <a href={`${home}#courses`}>{t.navCourses}</a>
     <a href={`${home}#how`}>{t.navHow}</a>
@@ -25,7 +25,7 @@ const home = lang === "de" ? "/" : "/en/";
   </div>
 </header>
 <style>
-  header.site { padding: 18px 0; }
+  header.site { padding: 18px 0; position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--rule); }
   .nav { display: flex; align-items: center; justify-content: space-between; }
   .logo { font-weight: 700; font-size: 1.2rem; display: flex; align-items: center; gap: 12px; font-family: "Instrument Serif", Georgia, serif; }
   .nav-links { display: flex; gap: 22px; }

@@ -51,7 +51,7 @@ export const content: Record<Lang, PageContent> = {
   en: {
     title: "edu.bumbleflies.de · Coding & robots for kids",
     description:
-      "Bumble Academy — hands-on programming and robotics courses for kids 8–14 using the mbot platform.",
+      "bumble:education — hands-on programming and robotics courses for kids 8–14 using the mbot platform.",
     heroEyebrow: "Kids 8–14 · mbot robotics",
     heroTitle: "Build. Code.",
     heroTitlePop: "Make it move.",
@@ -112,7 +112,7 @@ export const content: Record<Lang, PageContent> = {
   de: {
     title: "edu.bumbleflies.de · Programmieren & Roboter für Kinder",
     description:
-      "Bumble Academy — praxisnahe Programmier- und Robotik-Kurse für Kinder von 8–14 Jahren mit der mbot-Plattform.",
+      "bumble:education — praxisnahe Programmier- und Robotik-Kurse für Kinder von 8–14 Jahren mit der mbot-Plattform.",
     heroEyebrow: "Kinder 8–14 · mbot-Robotik",
     heroTitle: "Bauen. Coden.",
     heroTitlePop: "Und es bewegt sich.",

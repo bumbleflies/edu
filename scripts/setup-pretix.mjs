@@ -73,8 +73,8 @@ async function upsertEvent(course) {
   const dateFrom = new Date(`${course.startDate}T00:00:00Z`).toISOString();
   const dateTo = addDays(course.startDate, course.weeks * 7);
   const description = {
-    en: `Bumble Academy course: ${course.name.en}. Starts ${course.startDate}, ${course.weeks} weeks.`,
-    de: `Bumble-Academy-Kurs: ${course.name.de}. Start ${course.startDate}, ${course.weeks} Wochen.`,
+    en: `bumble:education course: ${course.name.en}. Starts ${course.startDate}, ${course.weeks} weeks.`,
+    de: `bumble:education-Kurs: ${course.name.de}. Start ${course.startDate}, ${course.weeks} Wochen.`,
   };
 
   if (existingSlugs.has(slug)) {
