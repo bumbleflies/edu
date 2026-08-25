@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.1](https://github.com/bumbleflies/edu/compare/edu-v0.4.0...edu-v0.4.1) (2026-08-25)
+
+
+### Bug Fixes
+
+* **ci:** authenticate release-please as a GitHub App ([#18](https://github.com/bumbleflies/edu/issues/18)) ([46f0bb4](https://github.com/bumbleflies/edu/commit/46f0bb45a624653c01a2332d46568a37e0518dfd))
+* **deps:** update actions/create-github-app-token action to v3 ([#20](https://github.com/bumbleflies/edu/issues/20)) ([ed9e89a](https://github.com/bumbleflies/edu/commit/ed9e89aed23443102d023c7eaf4662c6afbaf646))
+
 ## [0.4.0](https://github.com/bumbleflies/edu/compare/edu-v0.3.0...edu-v0.4.0) (2026-08-25)
 
 
