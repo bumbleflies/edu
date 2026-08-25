@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/bumbleflies/edu/compare/edu-v0.3.0...edu-v0.4.0) (2026-08-25)
+
+
+### Features
+
+* add favicon and translate German course titles ([#16](https://github.com/bumbleflies/edu/issues/16)) ([984f9f3](https://github.com/bumbleflies/edu/commit/984f9f3f98614db1e69324a66b8cf5abfbd2dca7))
+
 ## [0.3.0](https://github.com/bumbleflies/edu/compare/edu-v0.2.0...edu-v0.3.0) (2026-08-25)
 
 
