@@ -128,9 +128,9 @@ export const content: Record<Lang, PageContent> = {
       },
       {
         name: "Jördis",
-        role: "Social animal · Heart of the group",
+        role: "Team soul · Heart of the group",
         blurb:
-          "Our social animal: she reads the room in seconds, knows who needs a nudge and who needs quiet, and turns a bunch of kids into a real team. Every kid leaves feeling seen.",
+          "Our team soul: she reads the room in seconds, knows who needs a nudge and who needs quiet, and turns a bunch of kids into a real team. Every kid leaves feeling seen.",
         image: "/images/trainer_joerdi.webp",
       },
     ],
@@ -207,9 +207,9 @@ export const content: Record<Lang, PageContent> = {
       },
       {
         name: "Jördis",
-        role: "Social Animal · Herz der Gruppe",
+        role: "Team-Seele · Herz der Gruppe",
         blurb:
-          "Unser Social Animal: spürt sofort, wer Mut braucht und wer Ruhe, und macht aus einer Gruppe ein echtes Team. Bei ihr fühlt sich jedes Kind gesehen und willkommen.",
+          "Unsere Team-Seele: spürt sofort, wer Mut braucht und wer Ruhe, und macht aus einer Gruppe ein echtes Team. Bei ihr fühlt sich jedes Kind gesehen und willkommen.",
         image: "/images/trainer_joerdi.webp",
       },
     ],
