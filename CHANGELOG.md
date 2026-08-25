@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://github.com/bumbleflies/edu/compare/edu-v0.6.1...edu-v0.7.0) (2026-08-25)
+
+
+### Features
+
+* three-column footer with hero, flyer, contact ([2aeec7f](https://github.com/bumbleflies/edu/commit/2aeec7f86ed7ad493df8936865e1e58f34cd4752))
+
 ## [0.6.1](https://github.com/bumbleflies/edu/compare/edu-v0.6.0...edu-v0.6.1) (2026-08-25)
 
 
