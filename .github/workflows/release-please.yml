@@ -30,6 +30,14 @@ jobs:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
 
+      - name: Enable auto-merge for release PR
+        if: steps.release.outputs.prs_created == 'true'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          pr_number="$(jq -r .number <<< '${{ steps.release.outputs.pr }}')"
+          gh pr merge --squash --auto "$pr_number" --repo ${{ github.repository }}
+
   build-publish:
     needs: release-please
     if: needs.release-please.outputs.release_created == 'true'
