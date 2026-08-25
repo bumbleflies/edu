@@ -1,0 +1,33 @@
+/* src/styles/flyer.css */
+.flyer-actions { max-width: 210mm; margin: 24px auto 0; padding: 0 16mm; }
+.flyer-actions button {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 22px; border-radius: 999px; border: 0;
+  background: var(--ink); color: var(--accent); font-weight: 700; font-size: 0.95rem;
+  cursor: pointer;
+}
+.flyer-page {
+  max-width: 210mm;
+  margin: 24px auto 40px;
+  padding: 16mm;
+  background: var(--paper);
+  box-shadow: 0 8px 30px rgba(43, 43, 51, 0.08);
+}
+.flyer-head { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+.flyer-head h1 { font-size: 1.8rem; margin: 0; }
+.flyer-tag { color: var(--ink-soft); margin: 0; font-size: 0.9rem; }
+.flyer-lead { font-size: 1.05rem; color: var(--ink-soft); margin: 16px 0 28px; }
+.flyer-courses { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; }
+.flyer-course { border: 1px solid var(--rule); border-radius: 12px; padding: 16px; }
+.flyer-course h2 { font-size: 1.2rem; margin: 0 0 4px; }
+.flyer-meta { color: var(--ink-soft); font-size: 0.85rem; margin: 0 0 8px; }
+.flyer-course ul { margin: 8px 0 0 18px; padding: 0; font-size: 0.9rem; }
+.flyer-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+.flyer-step p { margin: 4px 0 0; font-size: 0.85rem; color: var(--ink-soft); }
+.flyer-contact { border-top: 1px solid var(--rule); padding-top: 16px; font-size: 0.9rem; color: var(--ink-soft); }
+
+@media print {
+  .no-print, header.site, footer.site-footer { display: none !important; }
+  body { background: #fff; }
+  .flyer-page { box-shadow: none; margin: 0; max-width: none; padding: 0; }
+}
