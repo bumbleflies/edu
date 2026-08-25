@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/bumbleflies/edu/compare/edu-v0.8.0...edu-v0.9.0) (2026-08-25)
+
+
+### Features
+
+* add trainers section with Chris and Jördis ([#33](https://github.com/bumbleflies/edu/issues/33)) ([08b8bfb](https://github.com/bumbleflies/edu/commit/08b8bfbc50ad044b9d5c850eedd6e9aea64e4ec7))
+
 ## [0.8.0](https://github.com/bumbleflies/edu/compare/edu-v0.7.0...edu-v0.8.0) (2026-08-25)
 
 
