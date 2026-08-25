@@ -8,7 +8,6 @@ export interface UiStrings {
   browseCourses: string;
   howItWorks: string;
   footerAbout: string;
-  footerCoursesTitle: string;
   footerContactTitle: string;
   footerLegalImprint: string;
   footerLegalPrivacy: string;
@@ -25,7 +24,6 @@ export const ui: Record<Lang, UiStrings> = {
     browseCourses: "Browse courses",
     howItWorks: "How it works",
     footerAbout: "Hands-on programming and robotics courses for kids 8–14, powered by bumbleflies.",
-    footerCoursesTitle: "Courses",
     footerContactTitle: "Contact",
     footerLegalImprint: "Imprint",
     footerLegalPrivacy: "Privacy",
@@ -40,7 +38,6 @@ export const ui: Record<Lang, UiStrings> = {
     browseCourses: "Kurse ansehen",
     howItWorks: "So läuft's ab",
     footerAbout: "Programmier- und Robotik-Kurse für Kinder von 8–14 Jahren, powered by bumbleflies.",
-    footerCoursesTitle: "Kurse",
     footerContactTitle: "Kontakt",
     footerLegalImprint: "Impressum",
     footerLegalPrivacy: "Datenschutz",
