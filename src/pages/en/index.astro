@@ -22,23 +22,7 @@ const t = ui.en;
       </div>
       <div class="hero-art">
         <span class="badge">mbot</span>
-        <svg viewBox="0 0 280 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a friendly robot on wheels">
-          <ellipse cx="140" cy="240" rx="90" ry="10" fill="var(--ink)" opacity="0.08" />
-          <rect x="60" y="70" width="160" height="120" rx="26" fill="var(--paper)" stroke="var(--ink)" stroke-width="4" />
-          <rect x="82" y="94" width="46" height="34" rx="10" fill="var(--signal)" />
-          <rect x="152" y="94" width="46" height="34" rx="10" fill="var(--signal)" />
-          <circle cx="105" cy="111" r="7" fill="var(--paper)" />
-          <circle cx="175" cy="111" r="7" fill="var(--paper)" />
-          <rect x="96" y="150" width="88" height="14" rx="7" fill="var(--accent)" />
-          <rect x="30" y="120" width="20" height="46" rx="10" fill="var(--ink)" />
-          <rect x="230" y="120" width="20" height="46" rx="10" fill="var(--ink)" />
-          <circle cx="140" cy="52" r="12" fill="var(--accent)" />
-          <rect x="136" y="60" width="8" height="14" fill="var(--ink)" />
-          <circle cx="95" cy="220" r="24" fill="var(--ink)" />
-          <circle cx="95" cy="220" r="9" fill="var(--accent)" />
-          <circle cx="185" cy="220" r="24" fill="var(--ink)" />
-          <circle cx="185" cy="220" r="9" fill="var(--accent)" />
-        </svg>
+        <img src="/images/hero.webp" width="1200" height="673" alt="Child playing with a friendly robot" />
       </div>
     </div>
   </section>
@@ -79,6 +63,7 @@ const t = ui.en;
                 <path d="M23 8 17 32" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" />
               </svg>
             )}
+            <img class="card-img" src={course.image} width="900" height="600" alt={course.name} />
             <div class="tag">{course.tag}</div>
             <h3>{course.name}</h3>
             <p>{course.blurb}</p>

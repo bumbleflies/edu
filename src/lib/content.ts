@@ -11,6 +11,7 @@ export interface Course {
   cta: string;
   href: string;
   icon: "blocks" | "code";
+  image: string;
 }
 
 export interface Step {
@@ -73,6 +74,7 @@ export const content: Record<Lang, PageContent> = {
         cta: "Start exploring",
         href: eventUrlByCourseName("Robot Explorer"),
         icon: "blocks",
+        image: "/images/course-blocks.webp",
       },
       {
         name: "Code the Machine",
@@ -85,6 +87,7 @@ export const content: Record<Lang, PageContent> = {
         cta: "Code the machine",
         href: eventUrlByCourseName("Code the Machine"),
         icon: "code",
+        image: "/images/course-code.webp",
       },
     ],
     steps: [
@@ -132,6 +135,7 @@ export const content: Record<Lang, PageContent> = {
         cta: "Jetzt entdecken",
         href: eventUrlByCourseName("Robot Explorer"),
         icon: "blocks",
+        image: "/images/course-blocks.webp",
       },
       {
         name: "Code the Machine",
@@ -144,6 +148,7 @@ export const content: Record<Lang, PageContent> = {
         cta: "Jetzt coden",
         href: eventUrlByCourseName("Code the Machine"),
         icon: "code",
+        image: "/images/course-code.webp",
       },
     ],
     steps: [
