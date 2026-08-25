@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/bumbleflies/edu/compare/edu-v0.4.1...edu-v0.5.0) (2026-08-25)
+
+
+### Features
+
+* rename Bumble Academy to bumble:education, sticky header ([#23](https://github.com/bumbleflies/edu/issues/23)) ([7c8ea88](https://github.com/bumbleflies/edu/commit/7c8ea885d730b221269e23102e3d20cdb099e4ca))
+
 ## [0.4.1](https://github.com/bumbleflies/edu/compare/edu-v0.4.0...edu-v0.4.1) (2026-08-25)
 
 
