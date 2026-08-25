@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/bumbleflies/edu/compare/edu-v0.5.0...edu-v0.5.1) (2026-08-25)
+
+
+### Bug Fixes
+
+* **ci:** resolve deprecation warning and pin Docker Hub login username ([#25](https://github.com/bumbleflies/edu/issues/25)) ([1969820](https://github.com/bumbleflies/edu/commit/1969820768802b995d729fd0b0b63d750807caf5))
+
 ## [0.5.0](https://github.com/bumbleflies/edu/compare/edu-v0.4.1...edu-v0.5.0) (2026-08-25)
 
 
