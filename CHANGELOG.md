@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.1](https://github.com/bumbleflies/edu/compare/edu-v0.10.0...edu-v0.10.1) (2026-08-25)
+
+
+### Continuous Integration
+
+* cut release 0.10.1 ([4df39ac](https://github.com/bumbleflies/edu/commit/4df39acecd14ebf92f6b6eb7d03270dafbb5a30f))
+
 ## [0.10.0](https://github.com/bumbleflies/edu/compare/edu-v0.9.0...edu-v0.10.0) (2026-08-25)
 
 
