@@ -10,4 +10,5 @@ jobs:
     uses: ./.github/workflows/pr-tests.yml
 
   docker-build-test:
+    needs: call-pr-tests
     uses: ./.github/workflows/docker-build-test.yml
