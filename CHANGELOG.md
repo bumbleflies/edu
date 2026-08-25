@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/bumbleflies/edu/compare/edu-v0.6.0...edu-v0.6.1) (2026-08-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency astro to v7.2.7 ([#29](https://github.com/bumbleflies/edu/issues/29)) ([6c59d49](https://github.com/bumbleflies/edu/commit/6c59d49b705475997f1e0c5616896c73d598249e))
+
 ## [0.6.0](https://github.com/bumbleflies/edu/compare/edu-v0.5.1...edu-v0.6.0) (2026-08-25)
 
 
