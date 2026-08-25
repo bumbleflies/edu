@@ -112,9 +112,9 @@ export const content: Record<Lang, PageContent> = {
     heroSubtitle:
       "Jedes Kind geht mit etwas nach Hause, das es mit den eigenen Händen gebaut hat – und mit dem Grinsen, das kommt, wenn es wirklich funktioniert. Nebenbei entstehen neue Freundschaften, es gibt echte Bugs zu lösen, und am Ende sind sie ein Stück selbstbewusster als vorher.",
     ageCards: [
-      { range: "8–10", text: "Der erste Moment von „Das hab ich gebaut!\" – ein Roboter, der sich bewegt, weil sie es ihm gesagt haben." },
+      { range: "8–10", text: "Der erste Moment von „Das hab ich gebaut!“ – ein Roboter, der sich bewegt, weil sie es ihm gesagt haben." },
       { range: "10–12", text: "Echte Herausforderungen, echtes Team. Hier gibt's die ersten High-Fives in der Gruppe." },
-      { range: "12–14", text: "Der Sprung von „Ich kann coden\" zu „Ich kann alles bauen.\" Unabhängigkeit zum Anfassen." },
+      { range: "12–14", text: "Der Sprung von „Ich kann coden“ zu „Ich kann alles bauen.“ Unabhängigkeit zum Anfassen." },
     ],
     courses: [
       {

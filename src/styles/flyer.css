@@ -25,6 +25,7 @@
 .flyer-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
 .flyer-step p { margin: 4px 0 0; font-size: 0.85rem; color: var(--ink-soft); }
 .flyer-contact { border-top: 1px solid var(--rule); padding-top: 16px; font-size: 0.9rem; color: var(--ink-soft); }
+.flyer-page section { padding: 0; }
 
 @media print {
   .no-print, header.site, footer.site-footer { display: none !important; }

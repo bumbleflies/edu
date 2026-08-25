@@ -10,17 +10,18 @@ interface Props {
 
 const { lang, altHref } = Astro.props;
 const t = ui[lang];
+const home = lang === "de" ? "/" : "/en/";
 ---
 <header class="site wrap nav">
   <div class="logo"><Mark /> Bumble Academy</div>
   <nav class="nav-links">
-    <a href="#courses">{t.navCourses}</a>
-    <a href="#how">{t.navHow}</a>
-    <a href="#reviews">{t.navReviews}</a>
+    <a href={`${home}#courses`}>{t.navCourses}</a>
+    <a href={`${home}#how`}>{t.navHow}</a>
+    <a href={`${home}#reviews`}>{t.navReviews}</a>
   </nav>
   <div class="header-actions">
     <LangToggle lang={lang} altHref={altHref} />
-    <a class="btn btn-honey" href="#courses">{t.bookCourse}</a>
+    <a class="btn btn-honey" href={`${home}#courses`}>{t.bookCourse}</a>
   </div>
 </header>
 <style>

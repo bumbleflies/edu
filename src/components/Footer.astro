@@ -12,6 +12,8 @@ const year = new Date().getFullYear();
 const imprintHref = lang === "de" ? "/impressum" : "/en/imprint";
 const privacyHref = lang === "de" ? "/datenschutz" : "/en/privacy";
 const cityName = lang === "de" ? "München" : "Munich";
+const home = lang === "de" ? "/" : "/en/";
+const flyerHref = lang === "de" ? "/flyer" : "/en/flyer";
 ---
 <footer class="site-footer">
   <div class="wrap footer-grid">
@@ -22,9 +24,10 @@ const cityName = lang === "de" ? "München" : "Munich";
     <div class="footer-col">
       <h3>{t.footerCoursesTitle}</h3>
       <ul>
-        <li><a href="#courses">{t.navCourses}</a></li>
-        <li><a href="#how">{t.navHow}</a></li>
-        <li><a href="#reviews">{t.navReviews}</a></li>
+        <li><a href={`${home}#courses`}>{t.navCourses}</a></li>
+        <li><a href={`${home}#how`}>{t.navHow}</a></li>
+        <li><a href={`${home}#reviews`}>{t.navReviews}</a></li>
+        <li><a href={flyerHref}>{t.flyerTitle}</a></li>
       </ul>
     </div>
     <div class="footer-col">
