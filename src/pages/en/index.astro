@@ -116,6 +116,25 @@ const t = ui.en;
     </div>
   </section>
 
+  <section id="trainers" class="trainers">
+    <div class="wrap">
+      <span class="eyebrow">{c.trainersEyebrow}</span>
+      <h2>{c.trainersTitle}</h2>
+      <div class="trainer-grid">
+        {c.trainers.map((trainer) => (
+          <article class="trainer-card">
+            <img class="avatar" src={trainer.image} width="240" height="240" alt={trainer.name} loading="lazy" />
+            <div>
+              <h3>{trainer.name}</h3>
+              <div class="trainer-role">{trainer.role}</div>
+              <p>{trainer.blurb}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <section id="reviews" class="testimonials">
     <div class="wrap">
       <span class="eyebrow">{t.navReviews}</span>
