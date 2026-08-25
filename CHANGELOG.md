@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/bumbleflies/edu/compare/edu-v0.5.1...edu-v0.6.0) (2026-08-25)
+
+
+### Features
+
+* add course images to flyer ([#27](https://github.com/bumbleflies/edu/issues/27)) ([1739635](https://github.com/bumbleflies/edu/commit/17396351f248e66543baf476d1b02a43ea53fbc7))
+
 ## [0.5.1](https://github.com/bumbleflies/edu/compare/edu-v0.5.0...edu-v0.5.1) (2026-08-25)
 
 
