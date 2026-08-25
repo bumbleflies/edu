@@ -35,7 +35,7 @@ jobs:
             type=raw,value=latest
             type=semver,pattern={{version}},value=${{ inputs.version }},enable=${{ inputs.version != '' }}
             type=semver,pattern={{major}}.{{minor}},value=${{ inputs.version }},enable=${{ inputs.version != '' }}
-            type=sha,prefix={{branch}}-,enable=${{ github.event_name != 'pull_request' }}
+            type=sha,prefix=edu-,enable=${{ github.event_name != 'pull_request' }}
 
       - name: Build Docker image to tar
         uses: docker/build-push-action@v7
