@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0](https://github.com/bumbleflies/edu/compare/edu-v0.10.1...edu-v0.11.0) (2026-08-25)
+
+
+### Features
+
+* add Open Graph metadata for social sharing ([817f9a4](https://github.com/bumbleflies/edu/commit/817f9a4e36486e826f713d1d488c752df2d9b895))
+
 ## [0.10.1](https://github.com/bumbleflies/edu/compare/edu-v0.10.0...edu-v0.10.1) (2026-08-25)
 
 
