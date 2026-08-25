@@ -10,4 +10,10 @@ describe('Datenschutz', () => {
     expect(source).toContain('info@bumbleflies.de');
     expect(source).toContain('DS-GVO');
   });
+
+  it('discloses pretix as a data processor', () => {
+    expect(source).toContain('pretix');
+    expect(source).toContain('Auftragsverarbeiter');
+    expect(source).toContain('https://pretix.eu/about/de/privacy');
+  });
 });

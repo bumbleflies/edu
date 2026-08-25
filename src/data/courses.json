@@ -1,0 +1,100 @@
+{
+  "pretix": {
+    "host": "https://pretix.eu",
+    "organizer": "bumbleedu",
+    "currency": "EUR",
+    "timezone": "Europe/Berlin",
+    "locales": ["en", "de"],
+    "branding": {
+      "primary_color": "#d99a3f",
+      "theme_color_background": "#f5f1e8",
+      "primary_font": "Open Sans",
+      "theme_round_borders": true,
+      "logo_show_title": true,
+      "mail_from_name": "Bumble Academy"
+    },
+    "legal": {
+      "imprintUrl": {
+        "de": "https://edu.bumbleflies.de/impressum",
+        "en": "https://edu.bumbleflies.de/en/imprint"
+      },
+      "privacyUrl": {
+        "de": "https://edu.bumbleflies.de/datenschutz",
+        "en": "https://edu.bumbleflies.de/en/privacy"
+      }
+    }
+  },
+  "location": "TBA",
+  "questions": [
+    {
+      "identifier": "child_first_name",
+      "en": "Child's first name",
+      "de": "Vorname des Kindes",
+      "type": "S",
+      "required": true
+    },
+    {
+      "identifier": "child_age",
+      "en": "Child's age",
+      "de": "Alter des Kindes",
+      "type": "N",
+      "required": true,
+      "valid_number_min": 8,
+      "valid_number_max": 14
+    },
+    {
+      "identifier": "parent_email",
+      "en": "Parent/guardian contact email",
+      "de": "E-Mail der Eltern / Erziehungsberechtigten",
+      "type": "S",
+      "required": true
+    },
+    {
+      "identifier": "notes",
+      "en": "Any allergies or notes",
+      "de": "Allergien oder Hinweise",
+      "type": "T",
+      "required": false
+    }
+  ],
+  "courses": [
+    {
+      "slug": "robot-explorer",
+      "name": { "en": "Robot Explorer", "de": "Roboter-Entdecker" },
+      "tag": { "en": "Beginner · Block coding", "de": "Einsteiger · Block-Programmierung" },
+      "age": { "en": "8–10 years", "de": "8–10 Jahre" },
+      "duration": { "en": "8 weeks · 1×/week · 60–75 min", "de": "8 Wochen · 1×/Woche · 60–75 Min" },
+      "blurb": {
+        "en": "Build your first mbot and make it come alive with colorful drag-and-drop blocks. No experience needed.",
+        "de": "Baue deinen ersten mbot und erwecke ihn mit bunten Drag-and-Drop-Blöcken zum Leben. Keine Vorkenntnisse nötig."
+      },
+      "outcomes": {
+        "en": ["Logic & sequencing", "Loops & conditionals", "Line-following robot"],
+        "de": ["Logik & Reihenfolgen", "Schleifen & Bedingungen", "Linienfolger-Roboter"]
+      },
+      "cta": { "en": "Start exploring", "de": "Jetzt entdecken" },
+      "price": 25,
+      "startDate": "2026-10-01",
+      "weeks": 8
+    },
+    {
+      "slug": "code-the-machine",
+      "name": { "en": "Code the Machine", "de": "Code die Maschine" },
+      "tag": { "en": "Intermediate · Python", "de": "Fortgeschritten · Python" },
+      "age": { "en": "11–14 years", "de": "11–14 Jahre" },
+      "duration": { "en": "10 weeks · 1×/week · 90 min", "de": "10 Wochen · 1×/Woche · 90 Min" },
+      "blurb": {
+        "en": "Level up from blocks to real Python and command your robot through sensors, lights and sound.",
+        "de": "Steig von Blöcken auf echtes Python um und steuere deinen Roboter mit Sensoren, Lichtern und Sound."
+      },
+      "outcomes": {
+        "en": ["Real Python code", "Sensors & IoT", "Autonomous maze robot"],
+        "de": ["Echtes Python", "Sensoren & IoT", "Autonomer Labyrinth-Roboter"]
+      },
+      "cta": { "en": "Code the machine", "de": "Maschine coden" },
+      "price": 40,
+      "startDate": "2026-10-01",
+      "weeks": 10
+    }
+  ]
+}

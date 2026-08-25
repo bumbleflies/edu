@@ -1,4 +1,5 @@
 import type { Lang } from "./i18n";
+import { eventUrlByCourseName } from "./pretix";
 
 export interface Course {
   name: string;
@@ -8,6 +9,7 @@ export interface Course {
   blurb: string;
   outcomes: string[];
   cta: string;
+  href: string;
   icon: "blocks" | "code";
 }
 
@@ -69,6 +71,7 @@ export const content: Record<Lang, PageContent> = {
           "No blank-page fear here — a friendly first robot, big colorful blocks, and the moment it finally moves because of something they built.",
         outcomes: ["Logic & sequencing", "Loops & conditionals", "Line-following robot"],
         cta: "Start exploring",
+        href: eventUrlByCourseName("Robot Explorer"),
         icon: "blocks",
       },
       {
@@ -80,6 +83,7 @@ export const content: Record<Lang, PageContent> = {
           "For kids ready to trade blocks for real code — and the pride of watching a program they wrote actually drive a robot through a maze.",
         outcomes: ["Real Python code", "Sensors & IoT", "Autonomous maze robot"],
         cta: "Code the machine",
+        href: eventUrlByCourseName("Code the Machine"),
         icon: "code",
       },
     ],
@@ -126,6 +130,7 @@ export const content: Record<Lang, PageContent> = {
           "Keine Angst vor dem leeren Blatt – ein freundlicher erster Roboter, große bunte Blöcke, und der Moment, in dem er sich bewegt, weil sie ihn gebaut haben.",
         outcomes: ["Logik & Abläufe", "Schleifen & Bedingungen", "Linienfolge-Roboter"],
         cta: "Jetzt entdecken",
+        href: eventUrlByCourseName("Robot Explorer"),
         icon: "blocks",
       },
       {
@@ -137,6 +142,7 @@ export const content: Record<Lang, PageContent> = {
           "Für Kids, die von Blöcken zu echtem Code wechseln wollen – und den Stolz erleben, wenn ihr eigenes Programm einen Roboter durchs Labyrinth steuert.",
         outcomes: ["Echter Python-Code", "Sensoren & IoT", "Autonomer Labyrinth-Roboter"],
         cta: "Jetzt coden",
+        href: eventUrlByCourseName("Code the Machine"),
         icon: "code",
       },
     ],

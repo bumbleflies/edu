@@ -10,4 +10,10 @@ describe('Privacy', () => {
     expect(source).toContain('info@bumbleflies.de');
     expect(source).toContain('GDPR');
   });
+
+  it('discloses pretix as a data processor', () => {
+    expect(source).toContain('pretix');
+    expect(source).toContain('data processor');
+    expect(source).toContain('https://pretix.eu/about/en/privacy');
+  });
 });
