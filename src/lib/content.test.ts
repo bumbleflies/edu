@@ -7,11 +7,13 @@ describe('homepage content', () => {
     expect(content.de.title).toContain('edu.bumbleflies.de');
   });
 
-  it('has 2 courses and 3 steps in both languages', () => {
+  it('has 2 courses, 3 steps and 2 trainers in both languages', () => {
     expect(content.en.courses).toHaveLength(2);
     expect(content.de.courses).toHaveLength(2);
     expect(content.en.steps).toHaveLength(3);
     expect(content.de.steps).toHaveLength(3);
+    expect(content.en.trainers).toHaveLength(2);
+    expect(content.de.trainers).toHaveLength(2);
   });
 
   it('has matching top-level keys for de and en', () => {
