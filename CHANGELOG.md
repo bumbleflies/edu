@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.0](https://github.com/bumbleflies/edu/compare/edu-v0.9.0...edu-v0.10.0) (2026-08-25)
+
+
+### Features
+
+* rename Jördis trainer title to Team-Seele ([01a6031](https://github.com/bumbleflies/edu/commit/01a6031e765f40cb7eabc888acb053297e8ec1e3))
+* rename Jördis trainer title to Team-Seele ([#37](https://github.com/bumbleflies/edu/issues/37)) ([8a2fdaf](https://github.com/bumbleflies/edu/commit/8a2fdaf92e2431fe0d89938dfdf475227fa60e41))
+
 ## [0.9.0](https://github.com/bumbleflies/edu/compare/edu-v0.8.0...edu-v0.9.0) (2026-08-25)
 
 
