@@ -1,6 +1,6 @@
 # edu.bumbleflies.de
 
-**Bumble Academy** — hands-on programming and robotics courses for kids 8–14
+**bumble:education** — hands-on programming and robotics courses for kids 8–14
 using the mbot platform. Astro static marketing site, served in DE at `/` and
 EN at `/en/`.
 
