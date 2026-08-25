@@ -19,3 +19,6 @@ on:
 jobs:
   pr-tests:
     uses: ./.github/workflows/pr-tests.yml
+
+  docker-build-test:
+    uses: ./.github/workflows/docker-build-test.yml
