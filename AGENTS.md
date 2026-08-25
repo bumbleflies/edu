@@ -40,10 +40,11 @@ lint/formatter configured — don't invent or require one.
   CI; update the test alongside it.
 - `/health` is served by `nginx.conf`, not Astro. The Docker HEALTHCHECK polls
   it; keep that route working when touching serving config.
-- Publishing `bumblecode/edu` to Docker Hub only happens when release-please
-  cuts a release from a `master` push (`build-publish.yml`: build + container
-  healthcheck gate, then push). Path-filtered `master` pushes and PRs run
-  tests + a Docker build/healthcheck but never publish.
+- Publishing `bumblecode/edu` to Docker Hub only happens on `edu-v*` tag
+  pushes (`release.yml`: tests, then `build-publish.yml`'s build + container
+  healthcheck gate + push). release-please creates those tags on master but no
+  longer publishes itself. Path-filtered `master` pushes and PRs run tests +
+  a Docker build/healthcheck but never publish.
 - `master.yml` has path filters (`src/**`, `public/**`, package/config files,
   `Dockerfile`, `nginx.conf`). Edits outside them won't trigger a deploy.
 - Production routing (`edu.bumbleflies.de`) lives in the separate
