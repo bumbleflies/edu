@@ -6,7 +6,7 @@
 .hero p { font-size: 1.15rem; color: var(--ink-soft); max-width: 30rem; }
 .hero-cta { margin-top: 24px; display: flex; gap: 14px; flex-wrap: wrap; }
 .hero-art { position: relative; }
-.hero-art svg { width: 100%; height: auto; display: block; }
+.hero-art img { width: 100%; height: auto; display: block; border-radius: var(--radius); }
 .badge {
   position: absolute; top: 6px; right: 6px;
   background: var(--signal); color: #fff;
@@ -32,6 +32,7 @@
 }
 .course-card:nth-child(2) { border-top-color: var(--signal); }
 .course-card .icon { width: 40px; height: 40px; margin-bottom: 6px; }
+.course-card .card-img { width: 100%; height: auto; display: block; border-radius: calc(var(--radius) - 8px); margin-bottom: 10px; aspect-ratio: 3 / 2; object-fit: cover; }
 .course-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 32px; }
 .tag { font-weight: 700; color: var(--accent-deep); font-size: 0.85rem; letter-spacing: 0.04em; }
 .meta { color: var(--ink-soft); font-size: 0.95rem; }
