@@ -24,6 +24,7 @@ const t = ui.de;
     <section class="flyer-courses">
       {c.courses.map((course) => (
         <div class="flyer-course">
+          <img class="flyer-course-img" src={course.image} width="900" height="600" alt={course.name} />
           <h2>{course.name}</h2>
           <p class="flyer-meta">{course.tag} · {course.age} · {course.duration}</p>
           <p>{course.blurb}</p>
