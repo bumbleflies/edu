@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/bumbleflies/edu/compare/edu-v0.2.0...edu-v0.3.0) (2026-08-25)
+
+
+### Features
+
+* add WebP images to hero and course cards ([#11](https://github.com/bumbleflies/edu/issues/11)) ([b9e186d](https://github.com/bumbleflies/edu/commit/b9e186d6ca36abda876e5a8fde26f190bd11038c))
+
 ## [0.2.0](https://github.com/bumbleflies/edu/compare/edu-v0.1.0...edu-v0.2.0) (2026-08-25)
 
 
