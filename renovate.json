@@ -5,18 +5,22 @@
   ],
   "packageRules": [
     {
-      "description": "Auto-merge all dev dependencies",
-      "matchDepTypes": ["devDependencies"],
+      "description": "Automerge non-major updates",
+      "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
-      "automergeType": "pr",
-      "automergeStrategy": "squash"
+      "semanticCommitType": "fix"
     },
     {
-      "description": "Auto-merge all patch updates",
-      "matchUpdateTypes": ["patch"],
+      "description": "Automerge dev dependencies",
+      "matchDepTypes": ["devDependencies"],
       "automerge": true,
-      "automergeType": "pr",
-      "automergeStrategy": "squash"
+      "semanticCommitType": "fix"
+    },
+    {
+      "description": "Automerge GitHub Actions",
+      "matchManagers": ["github-actions"],
+      "automerge": true,
+      "semanticCommitType": "fix"
     }
   ]
 }

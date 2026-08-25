@@ -19,8 +19,3 @@ on:
 jobs:
   pr-tests:
     uses: ./.github/workflows/pr-tests.yml
-
-  build-publish:
-    needs: pr-tests
-    uses: ./.github/workflows/build-publish.yml
-    secrets: inherit
