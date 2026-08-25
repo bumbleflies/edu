@@ -79,7 +79,7 @@
     },
     {
       "slug": "code-the-machine",
-      "name": { "en": "Code the Machine", "de": "Code die Maschine" },
+      "name": { "en": "Code the Machine", "de": "Coding-Abenteurer" },
       "tag": { "en": "Intermediate · Python", "de": "Fortgeschritten · Python" },
       "age": { "en": "11–14 years", "de": "11–14 Jahre" },
       "duration": { "en": "10 weeks · 1×/week · 90 min", "de": "10 Wochen · 1×/Woche · 90 Min" },
