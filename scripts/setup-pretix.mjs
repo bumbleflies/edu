@@ -39,6 +39,35 @@ function nameEquals(name, expected) {
   return name === expected || (name && name.en === expected);
 }
 
+async function upsertQuestions(slug, itemId) {
+  const existing = await request(`/events/${slug}/questions/`);
+  for (const q of coursesJson.questions) {
+    let question = existing.results.find((e) => e.identifier === q.identifier);
+    const body = {
+      identifier: q.identifier,
+      question: { en: q.en, de: q.de },
+      type: q.type,
+      required: q.required,
+      items: [itemId],
+      valid_number_min: q.valid_number_min,
+      valid_number_max: q.valid_number_max,
+    };
+    if (question) {
+      await request(`/events/${slug}/questions/${question.id}/`, {
+        method: 'PATCH',
+        body: JSON.stringify(body),
+      });
+      console.log(`updated question: ${slug} / ${q.identifier}`);
+    } else {
+      await request(`/events/${slug}/questions/`, {
+        method: 'POST',
+        body: JSON.stringify(body),
+      });
+      console.log(`created question: ${slug} / ${q.identifier}`);
+    }
+  }
+}
+
 async function upsertEvent(course) {
   const slug = course.slug;
   const dateFrom = new Date(`${course.startDate}T00:00:00Z`).toISOString();
@@ -85,7 +114,14 @@ async function upsertEvent(course) {
 
   await request(`/events/${slug}/settings/`, {
     method: 'PATCH',
-    body: JSON.stringify({ locales, locale: 'en', event_info_text: description }),
+    body: JSON.stringify({
+      locales,
+      locale: 'en',
+      event_info_text: description,
+      ...coursesJson.pretix.branding,
+      imprint_url: coursesJson.pretix.legal.imprintUrl.en,
+      contact_mail: 'info@bumbleflies.de',
+    }),
   });
 
   const items = await request(`/events/${slug}/items/`);
@@ -118,6 +154,8 @@ async function upsertEvent(course) {
     body: JSON.stringify({ name: course.name.en, size: 0, items: [item.id] }),
   });
   console.log(`recreated quota: ${slug} / ${course.name.en}`);
+
+  await upsertQuestions(slug, item.id);
 
   return { slug, publicUrl: `${host}/${organizer}/${slug}/` };
 }

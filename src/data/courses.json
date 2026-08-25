@@ -4,9 +4,59 @@
     "organizer": "bumbleedu",
     "currency": "EUR",
     "timezone": "Europe/Berlin",
-    "locales": ["en", "de"]
+    "locales": ["en", "de"],
+    "branding": {
+      "primary_color": "#d99a3f",
+      "theme_color_background": "#f5f1e8",
+      "primary_font": "Open Sans",
+      "theme_round_borders": true,
+      "logo_show_title": true,
+      "mail_from_name": "Bumble Academy"
+    },
+    "legal": {
+      "imprintUrl": {
+        "de": "https://edu.bumbleflies.de/impressum",
+        "en": "https://edu.bumbleflies.de/en/imprint"
+      },
+      "privacyUrl": {
+        "de": "https://edu.bumbleflies.de/datenschutz",
+        "en": "https://edu.bumbleflies.de/en/privacy"
+      }
+    }
   },
   "location": "TBA",
+  "questions": [
+    {
+      "identifier": "child_first_name",
+      "en": "Child's first name",
+      "de": "Vorname des Kindes",
+      "type": "S",
+      "required": true
+    },
+    {
+      "identifier": "child_age",
+      "en": "Child's age",
+      "de": "Alter des Kindes",
+      "type": "N",
+      "required": true,
+      "valid_number_min": 8,
+      "valid_number_max": 14
+    },
+    {
+      "identifier": "parent_email",
+      "en": "Parent/guardian contact email",
+      "de": "E-Mail der Eltern / Erziehungsberechtigten",
+      "type": "S",
+      "required": true
+    },
+    {
+      "identifier": "notes",
+      "en": "Any allergies or notes",
+      "de": "Allergien oder Hinweise",
+      "type": "T",
+      "required": false
+    }
+  ],
   "courses": [
     {
       "slug": "robot-explorer",

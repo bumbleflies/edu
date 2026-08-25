@@ -24,8 +24,9 @@ PRETIX_API_TOKEN=<token> node scripts/setup-pretix.mjs
 ```
 
 Idempotent upsert: creates/updates one pretix event per course
-(slug/name/dates, locales `en`+`de`, item with price, unlimited quota)
-from `src/data/courses.json`. The token is read from the environment —
+(slug/name/dates, locales `en`+`de`, item with price, unlimited quota),
+plus attendee questions and shop branding/legal settings, from
+`src/data/courses.json`. The token is read from the environment —
 never commit it. Events are created as drafts: going live requires
 enabling a payment provider in the pretix admin, which has no API.
 
