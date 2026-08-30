@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.0](https://github.com/bumbleflies/edu/compare/edu-v0.11.2...edu-v0.12.0) (2026-08-30)
+
+
+### Features
+
+* add hero explainer video "Why mBot Is The Ultimate STEM Teaching Tool" ([#47](https://github.com/bumbleflies/edu/issues/47)) ([7d9a760](https://github.com/bumbleflies/edu/commit/7d9a760eef79f5a0a7aa65885249c17941ae8267))
+* rename product to bumble:futurespace, powered by bumble:education ([#46](https://github.com/bumbleflies/edu/issues/46)) ([1b4117c](https://github.com/bumbleflies/edu/commit/1b4117ca828b87103fa2ece5142b5a59a999cf2b))
+
 ## [0.11.2](https://github.com/bumbleflies/edu/compare/edu-v0.11.1...edu-v0.11.2) (2026-08-27)
 
 
