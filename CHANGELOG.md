@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.13.0](https://github.com/bumbleflies/edu/compare/edu-v0.12.1...edu-v0.13.0) (2026-08-30)
+
+
+### Features
+
+* **footer:** link "bumbleflies" back to the parent site ([#51](https://github.com/bumbleflies/edu/issues/51)) ([fd6a583](https://github.com/bumbleflies/edu/commit/fd6a583cfbb556550bcd44a77eb1bbdf8e73e559))
+
 ## [0.12.1](https://github.com/bumbleflies/edu/compare/edu-v0.12.0...edu-v0.12.1) (2026-08-30)
 
 
