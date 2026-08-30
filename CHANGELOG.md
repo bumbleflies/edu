@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.12.1](https://github.com/bumbleflies/edu/compare/edu-v0.12.0...edu-v0.12.1) (2026-08-30)
+
+
+### Bug Fixes
+
+* **seo:** add sitemap generation and robots.txt ([#49](https://github.com/bumbleflies/edu/issues/49)) ([773b82a](https://github.com/bumbleflies/edu/commit/773b82a67f7eed7f68526388d97a8e4eb9b0a806))
+
 ## [0.12.0](https://github.com/bumbleflies/edu/compare/edu-v0.11.2...edu-v0.12.0) (2026-08-30)
 
 
