@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://edu.bumbleflies.de/sitemap-index.xml
