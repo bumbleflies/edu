@@ -21,8 +21,20 @@ const t = ui.en;
         </div>
       </div>
       <div class="hero-art">
-        <span class="badge">mbot</span>
-        <img src="/images/hero.webp" width="1200" height="673" alt="Child playing with a friendly robot" />
+        <div class="hero-video-card">
+          <span class="badge">mbot</span>
+          <video
+            controls
+            playsinline
+            preload="metadata"
+            poster="/videos/why-mbot-stem-poster.webp"
+            width="720"
+            height="1280"
+          >
+            <source src="/videos/why-mbot-stem.mp4" type="video/mp4" />
+          </video>
+          {t.videoLanguageNote && <p class="hero-video-note">{t.videoLanguageNote}</p>}
+        </div>
       </div>
     </div>
   </section>
@@ -31,6 +43,7 @@ const t = ui.en;
     <div class="wrap">
       <span class="eyebrow">Age groups</span>
       <h2>We meet kids where they are</h2>
+      <img class="age-strip-img" src="/images/hero.webp" width="1200" height="673" alt="Child playing with a friendly robot" />
       <div class="age-cards">
         {c.ageCards.map((a) => (
           <div class="age-card">

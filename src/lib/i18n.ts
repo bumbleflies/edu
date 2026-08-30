@@ -13,6 +13,7 @@ export interface UiStrings {
   footerLegalPrivacy: string;
   flyerTitle: string;
   flyerPrintButton: string;
+  videoLanguageNote: string;
 }
 
 export const ui: Record<Lang, UiStrings> = {
@@ -29,6 +30,7 @@ export const ui: Record<Lang, UiStrings> = {
     footerLegalPrivacy: "Privacy",
     flyerTitle: "Parent flyer",
     flyerPrintButton: "Print / Save as PDF",
+    videoLanguageNote: "",
   },
   de: {
     navCourses: "Kurse",
@@ -43,5 +45,6 @@ export const ui: Record<Lang, UiStrings> = {
     footerLegalPrivacy: "Datenschutz",
     flyerTitle: "Eltern-Flyer",
     flyerPrintButton: "Drucken / Als PDF speichern",
+    videoLanguageNote: "Video auf Englisch",
   },
 };
