@@ -17,7 +17,8 @@ const flyerHref = lang === "de" ? "/flyer" : "/en/flyer";
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-col">
-      <div class="footer-brand"><Mark /> bumble:education</div>
+      <div class="footer-brand"><Mark /> bumble:futurespace</div>
+      <p class="footer-powered-by">powered by bumble:education</p>
       <p class="footer-about">{t.footerAbout}</p>
     </div>
     <div class="footer-col">
@@ -42,7 +43,8 @@ const flyerHref = lang === "de" ? "/flyer" : "/en/flyer";
 <style>
   .site-footer { padding: 56px 0 28px; border-top: 1px solid var(--rule); }
   .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
-  .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-family: "Instrument Serif", Georgia, serif; font-size: 1.1rem; margin-bottom: 10px; }
+  .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-family: "Instrument Serif", Georgia, serif; font-size: 1.1rem; margin-bottom: 4px; }
+  .footer-powered-by { color: var(--ink-soft); font-size: 0.75rem; margin: 0 0 10px; }
   .footer-about { color: var(--ink-soft); font-size: 0.9rem; max-width: 32rem; }
   .footer-col h3 {
     font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
