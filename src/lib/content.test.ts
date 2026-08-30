@@ -2,9 +2,9 @@ import { describe, it, expect } from 'vitest';
 import { content } from './content';
 
 describe('homepage content', () => {
-  it('carries the edu.bumbleflies.de identity string in both languages', () => {
-    expect(content.en.title).toContain('edu.bumbleflies.de');
-    expect(content.de.title).toContain('edu.bumbleflies.de');
+  it('carries the bumble:futurespace identity string in both languages', () => {
+    expect(content.en.title).toContain('bumble:futurespace');
+    expect(content.de.title).toContain('bumble:futurespace');
   });
 
   it('has 2 courses, 3 steps and 2 trainers in both languages', () => {

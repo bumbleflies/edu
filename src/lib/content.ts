@@ -59,9 +59,9 @@ export interface PageContent {
 
 export const content: Record<Lang, PageContent> = {
   en: {
-    title: "edu.bumbleflies.de · Coding & robots for kids",
+    title: "bumble:futurespace · Coding & robots for kids",
     description:
-      "bumble:education — hands-on programming and robotics courses for kids 8–14 using the mbot platform.",
+      "bumble:futurespace — hands-on programming and robotics courses for kids 8–14 using the mbot platform, powered by bumble:education.",
     heroEyebrow: "Kids 8–14 · mbot robotics",
     heroTitle: "Build. Code.",
     heroTitlePop: "Make it move.",
@@ -138,9 +138,9 @@ export const content: Record<Lang, PageContent> = {
     trainersTitle: "Who's with your kids along the way",
   },
   de: {
-    title: "edu.bumbleflies.de · Programmieren & Roboter für Kinder",
+    title: "bumble:futurespace · Programmieren & Roboter für Kinder",
     description:
-      "bumble:education — praxisnahe Programmier- und Robotik-Kurse für Kinder von 8–14 Jahren mit der mbot-Plattform.",
+      "bumble:futurespace — praxisnahe Programmier- und Robotik-Kurse für Kinder von 8–14 Jahren mit der mbot-Plattform, powered by bumble:education.",
     heroEyebrow: "Kinder 8–14 · mbot-Robotik",
     heroTitle: "Bauen. Coden.",
     heroTitlePop: "Und es bewegt sich.",
