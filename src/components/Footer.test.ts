@@ -19,4 +19,8 @@ describe('Footer', () => {
   it('contains the company name for the copyright line', () => {
     expect(source).toContain('bumbleflies UG');
   });
+
+  it('links "bumbleflies" back to the parent site', () => {
+    expect(source).toContain('href="https://bumbleflies.de/"');
+  });
 });
