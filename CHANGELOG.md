@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.14.0](https://github.com/bumbleflies/edu/compare/edu-v0.13.1...edu-v0.14.0) (2026-09-02)
+
+
+### Features
+
+* enable website for AI agents — accessibility, structured data, easter eggs ([#55](https://github.com/bumbleflies/edu/issues/55)) ([500c4e5](https://github.com/bumbleflies/edu/commit/500c4e52190c07d5a032112e21a2f514bff29db3))
+
 ## [0.13.1](https://github.com/bumbleflies/edu/compare/edu-v0.13.0...edu-v0.13.1) (2026-08-31)
 
 
