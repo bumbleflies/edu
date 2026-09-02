@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.0](https://github.com/bumbleflies/edu/compare/edu-v0.14.0...edu-v0.15.0) (2026-09-02)
+
+
+### Features
+
+* agent resource discoverability + JSON-LD structured data ([#57](https://github.com/bumbleflies/edu/issues/57)) ([1b3ffe2](https://github.com/bumbleflies/edu/commit/1b3ffe2069968620980e7a4e8713c60191ec02f6))
+
 ## [0.14.0](https://github.com/bumbleflies/edu/compare/edu-v0.13.1...edu-v0.14.0) (2026-09-02)
 
 
