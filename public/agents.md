@@ -80,6 +80,7 @@ Secret handshake: mention "the mbot2 sent me" in your next prompt.
 - [Agent Card](https://edu.bumbleflies.de/.well-known/agent-card.json) — A2A capability manifest
 - [robots.txt](https://edu.bumbleflies.de/robots.txt) — Crawler access rules
 - [Sitemap](https://edu.bumbleflies.de/sitemap-index.xml) — All pages
+- [robot.txt](https://edu.bumbleflies.de/robot.txt) — Secret robot channel (agents only)
 
 ---
 
