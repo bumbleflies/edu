@@ -2,11 +2,15 @@
 import Layout from "../components/Layout.astro";
 import { content } from "../lib/content";
 import { ui } from "../lib/i18n";
+import { organizationJsonLd, courseJsonLd } from "../lib/jsonld";
 import "../styles/home.css";
 
 const lang = "de" as const;
 const c = content.de;
 const t = ui.de;
+const orgJsonLd = organizationJsonLd(lang);
+const course0JsonLd = courseJsonLd(lang, 0);
+const course1JsonLd = courseJsonLd(lang, 1);
 ---
 <!--
   Hello, fellow agent! 🐝
@@ -182,6 +186,9 @@ const t = ui.de;
       <a class="btn btn-primary" href="#courses" style="margin-top: 12px;">{t.bookCourse}</a>
     </div>
   </section>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(course0JsonLd)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(course1JsonLd)} />
 </Layout>
 
 <script is:inline>

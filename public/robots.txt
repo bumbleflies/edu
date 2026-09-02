@@ -53,4 +53,9 @@ Disallow: /
 User-agent: *
 Allow: /
 
+# Agent resources (machine-readable)
+# llms.txt: https://edu.bumbleflies.de/llms.txt
+# facts.json: https://edu.bumbleflies.de/facts.json
+# agent-card: https://edu.bumbleflies.de/.well-known/agent-card.json
+
 Sitemap: https://edu.bumbleflies.de/sitemap-index.xml
