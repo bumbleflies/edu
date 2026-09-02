@@ -1,7 +1,7 @@
 {
   "name": "bumble:futurespace",
   "url": "https://edu.bumbleflies.de",
-  "description": "Coding and robotics courses for kids 8–14 using the mbot platform. Hands-on programming, real hardware, small groups. Powered by bumble:education.",
+  "description": "Coding and robotics courses for kids 8–14 using the mbot2 platform. Hands-on programming, real hardware, small groups. Powered by bumble:education.",
   "foundingDate": "2026",
   "location": {
     "city": "Munich",
@@ -32,10 +32,10 @@
       "currency": "EUR",
       "startDate": "2026-10-01",
       "prerequisites": "None — entry-level course, zero experience needed",
-      "whatIsIncluded": "All materials, instruction, and the mbot robot to keep",
+      "whatIsIncluded": "All materials, instruction, and the mbot2 robot to keep",
       "bookingUrl": "https://pretix.eu/bumbleedu/robot-explorer/",
       "outcomes": ["Logic & sequencing", "Loops & conditionals", "Line-following robot"],
-      "finalProject": "A line-following mbot that navigates a track autonomously"
+      "finalProject": "A line-following mbot2 that navigates a track autonomously"
     },
     {
       "name": "Code the Machine",
@@ -50,18 +50,18 @@
       "currency": "EUR",
       "startDate": "2026-10-01",
       "prerequisites": "None required; Robot Explorer is a natural stepping stone",
-      "whatIsIncluded": "All materials, instruction, and the mbot robot to keep",
+      "whatIsIncluded": "All materials, instruction, and the mbot2 robot to keep",
       "bookingUrl": "https://pretix.eu/bumbleedu/code-the-machine/",
       "outcomes": ["Real Python code", "Sensors & IoT", "Autonomous maze robot"],
       "finalProject": "An autonomous maze-navigating robot that solves a course without human input"
     }
   ],
-  "platform": "mbot (Makeblock)",
+  "platform": "mbot2 (Makeblock)",
   "languages": ["de", "en"],
   "specialties": [
     "Kids coding",
     "Robotics education",
-    "mbot",
+    "mbot2",
     "Block coding",
     "Python for kids",
     "STEM education",

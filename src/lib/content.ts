@@ -61,8 +61,8 @@ export const content: Record<Lang, PageContent> = {
   en: {
     title: "bumble:futurespace · Coding & robots for kids",
     description:
-      "bumble:futurespace — hands-on programming and robotics courses for kids 8–14 using the mbot platform, powered by bumble:education.",
-    heroEyebrow: "Kids 8–14 · mbot robotics",
+      "bumble:futurespace — hands-on programming and robotics courses for kids 8–14 using the mbot2 platform, powered by bumble:education.",
+    heroEyebrow: "Kids 8–14 · mbot2 robotics",
     heroTitle: "Build. Code.",
     heroTitlePop: "Make it move.",
     heroSubtitle:
@@ -101,7 +101,7 @@ export const content: Record<Lang, PageContent> = {
       },
     ],
     steps: [
-      { title: "Build", text: "Snap your mbot together and wire up the sensors.", icon: "build" },
+      { title: "Build", text: "Snap your mbot2 together and wire up the sensors.", icon: "build" },
       { title: "Code", text: "Drag blocks or write Python to tell it what to do.", icon: "code" },
       { title: "Go", text: "Hit run and watch your ideas roll across the floor.", icon: "go" },
     ],
@@ -123,7 +123,7 @@ export const content: Record<Lang, PageContent> = {
         name: "Chris",
         role: "IT nerd · Patient explainer",
         blurb:
-          "Our IT nerd with a teacher's patience: he knows every screw in the mbot and explains code until it finally clicks. When a kid says \"I built that!\", his day is made.",
+          "Our IT nerd with a teacher's patience: he knows every screw in the mbot2 and explains code until it finally clicks. When a kid says \"I built that!\", his day is made.",
         image: "/images/trainer_chris.webp",
       },
       {
@@ -140,8 +140,8 @@ export const content: Record<Lang, PageContent> = {
   de: {
     title: "bumble:futurespace · Programmieren & Roboter für Kinder",
     description:
-      "bumble:futurespace — praxisnahe Programmier- und Robotik-Kurse für Kinder von 8–14 Jahren mit der mbot-Plattform, powered by bumble:education.",
-    heroEyebrow: "Kinder 8–14 · mbot-Robotik",
+      "bumble:futurespace — praxisnahe Programmier- und Robotik-Kurse für Kinder von 8–14 Jahren mit der mbot2-Plattform, powered by bumble:education.",
+    heroEyebrow: "Kinder 8–14 · mbot2-Robotik",
     heroTitle: "Bauen. Coden.",
     heroTitlePop: "Und es bewegt sich.",
     heroSubtitle:
@@ -180,7 +180,7 @@ export const content: Record<Lang, PageContent> = {
       },
     ],
     steps: [
-      { title: "Bauen", text: "mbot zusammenstecken und Sensoren verkabeln.", icon: "build" },
+      { title: "Bauen", text: "mbot2 zusammenstecken und Sensoren verkabeln.", icon: "build" },
       { title: "Coden", text: "Blöcke ziehen oder Python schreiben – und sagen, was passieren soll.", icon: "code" },
       { title: "Loslegen", text: "Play drücken und zusehen, wie die eigene Idee über den Boden rollt.", icon: "go" },
     ],
@@ -202,7 +202,7 @@ export const content: Record<Lang, PageContent> = {
         name: "Chris",
         role: "IT-Nerd · Geduldiger Erklärer",
         blurb:
-          "Unser IT-Nerd mit Geduld in der Stimme: Er kennt jede Schraube am mbot und erklärt Code so lange, bis es klick macht. Wenn ein Kind sagt „Das hab ich gebaut!“, ist sein Tag gerettet.",
+          "Unser IT-Nerd mit Geduld in der Stimme: Er kennt jede Schraube am mbot2 und erklärt Code so lange, bis es klick macht. Wenn ein Kind sagt „Das hab ich gebaut!“, ist sein Tag gerettet.",
         image: "/images/trainer_chris.webp",
       },
       {

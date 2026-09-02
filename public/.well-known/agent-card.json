@@ -1,6 +1,6 @@
 {
   "name": "bumble:futurespace",
-  "description": "Coding and robotics courses for kids 8–14 using the mbot platform. Hands-on programming, real hardware, small groups.",
+  "description": "Coding and robotics courses for kids 8–14 using the mbot2 platform. Hands-on programming, real hardware, small groups.",
   "version": "1.0.0",
   "provider": {
     "organization": "bumble:education",
@@ -26,14 +26,14 @@
       "id": "course-info",
       "name": "Course Information",
       "description": "Provides details about bumble:futurespace coding and robotics courses for kids. Covers both beginner (Robot Explorer, ages 8–10, block coding, €25) and intermediate (Code the Machine, ages 11–14, Python, €40) tracks.",
-      "tags": ["courses", "kids", "coding", "robotics", "mbot", "munich", "education"],
+      "tags": ["courses", "kids", "coding", "robotics", "mbot2", "munich", "education"],
       "examples": [
         "What courses does bumble:futurespace offer?",
         "Tell me about the Robot Explorer course",
         "What age is the Python course for?",
         "How much do the courses cost?",
         "What does a kid learn in Robot Explorer?",
-        "What sensors does the mbot use in Code the Machine?"
+        "What sensors does the mbot2 use in Code the Machine?"
       ]
     },
     {
@@ -52,7 +52,7 @@
     {
       "id": "booking-info",
       "name": "Booking Information",
-      "description": "Helps parents book courses through pretix. Explains what's included (all materials + mbot robot to keep), how to sign up, and what to expect.",
+      "description": "Helps parents book courses through pretix. Explains what's included (all materials + mbot2 robot to keep), how to sign up, and what to expect.",
       "tags": ["booking", "pretix", "pricing", "schedule", "enrollment", "materials", "robot"],
       "examples": [
         "How do I sign my kid up?",
@@ -70,7 +70,7 @@
       "examples": [
         "What will my child learn in Robot Explorer?",
         "How does the block coding to Python transition work?",
-        "What sensors does the mbot use?",
+        "What sensors does the mbot2 use?",
         "What is the final project?",
         "What is the final project in Code the Machine?"
       ]

@@ -1,7 +1,7 @@
 # edu.bumbleflies.de
 
 **bumble:futurespace** — hands-on programming and robotics courses for kids
-8–14 using the mbot platform, powered by bumble:education. Astro static
+8–14 using the mbot2 platform, powered by bumble:education. Astro static
 marketing site, served in DE at `/` and EN at `/en/`.
 
 Includes the homepage with the two courses (Robot Explorer, Code the Machine),

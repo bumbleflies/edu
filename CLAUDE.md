@@ -5,7 +5,7 @@ Guidance for Claude Code when working in this repository.
 ## Status
 
 bumble:education — the education site for kids' coding and robotics courses
-(ages 8–14, mbot platform). Astro static marketing site with DE at `/` and
+(ages 8–14, mbot2 platform). Astro static marketing site with DE at `/` and
 EN at `/en/`, plus deployment plumbing (Docker/nginx, CI/CD).
 
 Pages: homepage with the two courses (Robot Explorer, Code the Machine),

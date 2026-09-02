@@ -1,8 +1,8 @@
 # bumble:futurespace — Full Content Summary
 
-> Coding & robotics courses for kids 8–14 using the mbot platform. Hands-on programming, real hardware, small groups. Powered by bumble:education.
+> Coding & robotics courses for kids 8–14 using the mbot2 platform. Hands-on programming, real hardware, small groups. Powered by bumble:education.
 
-We teach kids to code by building real robots. Not screen simulations — physical mbot robots they assemble, program, and watch roll across the floor. Two courses, two skill levels, one goal: the grin on a kid's face when their creation actually works.
+We teach kids to code by building real robots. Not screen simulations — physical mbot2 robots they assemble, program, and watch roll across the floor. Two courses, two skill levels, one goal: the grin on a kid's face when their creation actually works.
 
 ---
 
@@ -14,14 +14,14 @@ We teach kids to code by building real robots. Not screen simulations — physic
 
 **Prerequisites:** None. This is the entry-level course — kids need zero coding or robotics experience.
 
-**What's included:** All materials, instruction, and the mbot robot to keep.
+**What's included:** All materials, instruction, and the mbot2 robot to keep.
 
 **Booking:** https://pretix.eu/bumbleedu/robot-explorer/
 
 No blank-page fear here — a friendly first robot, big colorful blocks, and the moment it finally moves because of something they built.
 
 **What kids do:**
-- Build an mbot robot from parts (sensors, motors, controller board)
+- Build an mbot2 robot from parts (sensors, motors, controller board)
 - Learn coding through colorful drag-and-drop blocks (Scratch-like)
 - Program the robot to follow lines, avoid obstacles, and respond to sensors
 - Debug, iterate, and celebrate when their creation works
@@ -31,7 +31,7 @@ No blank-page fear here — a friendly first robot, big colorful blocks, and the
 - Loops & conditionals — making decisions in code
 - Line-following robot — a working creation they take home pride in
 
-**Final project:** A line-following mbot that navigates a track autonomously.
+**Final project:** A line-following mbot2 that navigates a track autonomously.
 
 ---
 
@@ -41,7 +41,7 @@ No blank-page fear here — a friendly first robot, big colorful blocks, and the
 
 **Prerequisites:** None required, but Robot Explorer is a natural stepping stone. Kids with some block coding experience will feel at home; complete beginners can still succeed.
 
-**What's included:** All materials, instruction, and the mbot robot to keep.
+**What's included:** All materials, instruction, and the mbot2 robot to keep.
 
 **Booking:** https://pretix.eu/bumbleedu/code-the-machine/
 
@@ -66,7 +66,7 @@ For kids ready to trade blocks for real code — and the pride of watching a pro
 
 Three steps from curious to capable:
 
-1. **Build** — Snap the mbot together and wire up the sensors. Physical hardware, real connections.
+1. **Build** — Snap the mbot2 together and wire up the sensors. Physical hardware, real connections.
 2. **Code** — Drag blocks or write Python to tell the robot what to do. From visual programming to real syntax.
 3. **Go** — Hit run and watch your ideas roll across the floor. Debug, iterate, succeed.
 
@@ -86,7 +86,7 @@ Three steps from curious to capable:
 
 ### Chris — IT Nerd · Patient Explainer
 
-Our IT nerd with a teacher's patience: he knows every screw in the mbot and explains code until it finally clicks. When a kid says "I built that!", his day is made.
+Our IT nerd with a teacher's patience: he knows every screw in the mbot2 and explains code until it finally clicks. When a kid says "I built that!", his day is made.
 
 ### Jördis — Team Soul · Heart of the Group
 
@@ -107,7 +107,7 @@ Courses are booked through pretix at https://pretix.eu/bumbleedu/. Each course r
 
 ## About
 
-bumble:futurespace is the education label of bumbleflies — a Munich-based team that believes kids learn best by building real things with real hardware. We run small-group coding and robotics courses using the mbot platform, combining hands-on building with progressive programming challenges.
+bumble:futurespace is the education label of bumbleflies — a Munich-based team that believes kids learn best by building real things with real hardware. We run small-group coding and robotics courses using the mbot2 platform, combining hands-on building with progressive programming challenges.
 
 ---
 

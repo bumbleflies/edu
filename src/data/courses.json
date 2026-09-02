@@ -65,8 +65,8 @@
       "age": { "en": "8–10 years", "de": "8–10 Jahre" },
       "duration": { "en": "8 weeks · 1×/week · 60–75 min", "de": "8 Wochen · 1×/Woche · 60–75 Min" },
       "blurb": {
-        "en": "Build your first mbot and make it come alive with colorful drag-and-drop blocks. No experience needed.",
-        "de": "Baue deinen ersten mbot und erwecke ihn mit bunten Drag-and-Drop-Blöcken zum Leben. Keine Vorkenntnisse nötig."
+        "en": "Build your first mbot2 and make it come alive with colorful drag-and-drop blocks. No experience needed.",
+        "de": "Baue deinen ersten mbot2 und erwecke ihn mit bunten Drag-and-Drop-Blöcken zum Leben. Keine Vorkenntnisse nötig."
       },
       "outcomes": {
         "en": ["Logic & sequencing", "Loops & conditionals", "Line-following robot"],
