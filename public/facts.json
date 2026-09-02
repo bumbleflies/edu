@@ -1,0 +1,71 @@
+{
+  "name": "bumble:futurespace",
+  "url": "https://edu.bumbleflies.de",
+  "description": "Coding and robotics courses for kids 8–14 using the mbot2 platform. Hands-on programming, real hardware, small groups. Powered by bumble:education.",
+  "foundingDate": "2026",
+  "location": {
+    "city": "Munich",
+    "country": "DE"
+  },
+  "contact": {
+    "email": "info@bumbleflies.de",
+    "booking": "https://pretix.eu/bumbleedu/",
+    "imprint": "https://edu.bumbleflies.de/impressum",
+    "privacy": "https://edu.bumbleflies.de/datenschutz"
+  },
+  "organization": {
+    "name": "bumble:education",
+    "parent": "bumbleflies",
+    "website": "https://bumbleflies.de"
+  },
+  "courses": [
+    {
+      "name": "Robot Explorer",
+      "slug": "robot-explorer",
+      "level": "Beginner",
+      "method": "Block coding",
+      "ageRange": "8–10",
+      "duration": "8 weeks",
+      "frequency": "1×/week",
+      "sessionLength": "60–75 min",
+      "price": 25,
+      "currency": "EUR",
+      "startDate": "2026-10-01",
+      "prerequisites": "None — entry-level course, zero experience needed",
+      "whatIsIncluded": "All materials, instruction, and the mbot2 robot to keep",
+      "bookingUrl": "https://pretix.eu/bumbleedu/robot-explorer/",
+      "outcomes": ["Logic & sequencing", "Loops & conditionals", "Line-following robot"],
+      "finalProject": "A line-following mbot2 that navigates a track autonomously"
+    },
+    {
+      "name": "Code the Machine",
+      "slug": "code-the-machine",
+      "level": "Intermediate",
+      "method": "Python",
+      "ageRange": "11–14",
+      "duration": "10 weeks",
+      "frequency": "1×/week",
+      "sessionLength": "90 min",
+      "price": 40,
+      "currency": "EUR",
+      "startDate": "2026-10-01",
+      "prerequisites": "None required; Robot Explorer is a natural stepping stone",
+      "whatIsIncluded": "All materials, instruction, and the mbot2 robot to keep",
+      "bookingUrl": "https://pretix.eu/bumbleedu/code-the-machine/",
+      "outcomes": ["Real Python code", "Sensors & IoT", "Autonomous maze robot"],
+      "finalProject": "An autonomous maze-navigating robot that solves a course without human input"
+    }
+  ],
+  "platform": "mbot2 (Makeblock)",
+  "languages": ["de", "en"],
+  "specialties": [
+    "Kids coding",
+    "Robotics education",
+    "mbot2",
+    "Block coding",
+    "Python for kids",
+    "STEM education",
+    "After-school courses",
+    "Munich"
+  ]
+}

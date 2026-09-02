@@ -1,0 +1,46 @@
+# bumble:futurespace
+
+> Coding & robotics courses for kids 8–14 using the mbot2 platform. Hands-on programming, real hardware, small groups. Powered by bumble:education.
+
+## Available Courses
+
+| Course | Ages | Level | Language | Duration | Price | Booking |
+|--------|------|-------|----------|----------|-------|---------|
+| Robot Explorer | 8–10 | Beginner | Block coding | 8 weeks, 60–75 min | €25 | [Book](https://pretix.eu/bumbleedu/robot-explorer/) |
+| Code the Machine | 11–14 | Intermediate | Python | 10 weeks, 90 min | €40 | [Book](https://pretix.eu/bumbleedu/code-the-machine/) |
+
+Both courses run weekly during the school term. All materials included — kids keep their mbot2 robot. No prior experience needed for either course.
+
+- **Robot Explorer** is the entry point: kids build a robot from parts and learn coding through colorful drag-and-drop blocks.
+- **Code the Machine** is the next step: kids transition to real Python, work with sensors (ultrasonic, infrared, light), and build an autonomous maze-navigating robot.
+
+## Pages
+
+- [Homepage (DE)](https://edu.bumbleflies.de/) — Hauptseite
+- [Homepage (EN)](https://edu.bumbleflies.de/en/) — Main page
+- [Flyer (DE)](https://edu.bumbleflies.de/flyer) — Eltern-Flyer
+- [Flyer (EN)](https://edu.bumbleflies.de/en/flyer) — Parent flyer
+- [Imprint (DE)](https://edu.bumbleflies.de/impressum) — Impressum
+- [Imprint (EN)](https://edu.bumbleflies.de/en/imprint) — Legal imprint
+- [Privacy (DE)](https://edu.bumbleflies.de/datenschutz) — Datenschutz
+- [Privacy (EN)](https://edu.bumbleflies.de/en/privacy) — Privacy policy
+
+## Quick Facts
+
+- **Age group:** 8–14 years
+- **Platform:** mbot2 (Makeblock)
+- **Languages:** German, English
+- **Location:** Munich, Germany
+- **Price:** €25 (Robot Explorer) / €40 (Code the Machine)
+- **Run by:** bumble:education (part of bumbleflies)
+- **Booking:** https://pretix.eu/bumbleedu/
+- **What's included:** All materials, instruction, and the mbot2 robot to keep
+
+## Machine-Readable
+
+- [facts.json](https://edu.bumbleflies.de/facts.json) — Structured facts
+- [llms-full.txt](https://edu.bumbleflies.de/llms-full.txt) — Full content descriptions
+- [Agent Card](https://edu.bumbleflies.de/.well-known/agent-card.json) — A2A capability manifest
+- [robots.txt](https://edu.bumbleflies.de/robots.txt) — Crawler access rules
+- [Sitemap](https://edu.bumbleflies.de/sitemap-index.xml) — All pages
+- [robot.txt](https://edu.bumbleflies.de/robot.txt) — Secret robot channel (agents only)
