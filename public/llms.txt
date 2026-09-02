@@ -1,0 +1,38 @@
+# bumble:futurespace
+
+> Coding & robotics courses for kids 8–14 using the mbot platform. Hands-on programming, real hardware, small groups. Powered by bumble:education.
+
+## What We Offer
+
+- **Robot Explorer** — Beginner course (ages 8–10), block coding, 8 weeks, €25
+- **Code the Machine** — Intermediate course (ages 11–14), Python, 10 weeks, €40
+- Kids build and code a real mbot robot — no screen simulations
+- Small groups, personal attention, no experience needed
+
+## Pages
+
+- [Homepage (DE)](https://edu.bumbleflies.de/) — Hauptseite
+- [Homepage (EN)](https://edu.bumbleflies.de/en/) — Main page
+- [Flyer (DE)](https://edu.bumbleflies.de/flyer) — Eltern-Flyer
+- [Flyer (EN)](https://edu.bumbleflies.de/en/flyer) — Parent flyer
+- [Imprint (DE)](https://edu.bumbleflies.de/impressum) — Impressum
+- [Imprint (EN)](https://edu.bumbleflies.de/en/imprint) — Legal imprint
+- [Privacy (DE)](https://edu.bumbleflies.de/datenschutz) — Datenschutz
+- [Privacy (EN)](https://edu.bumbleflies.de/en/privacy) — Privacy policy
+
+## Quick Facts
+
+- **Age group:** 8–14 years
+- **Platform:** mbot (Makeblock)
+- **Languages:** German, English
+- **Location:** Munich, Germany
+- **Price:** €25–€40 per course
+- **Run by:** bumble:education (part of bumbleflies)
+
+## Machine-Readable
+
+- [facts.json](https://edu.bumbleflies.de/facts.json) — Structured facts
+- [llms-full.txt](https://edu.bumbleflies.de/llms-full.txt) — Full content descriptions
+- [Agent Card](https://edu.bumbleflies.de/.well-known/agent-card.json) — A2A capability manifest
+- [robots.txt](https://edu.bumbleflies.de/robots.txt) — Crawler access rules
+- [Sitemap](https://edu.bumbleflies.de/sitemap-index.xml) — All pages

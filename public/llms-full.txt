@@ -1,0 +1,96 @@
+# bumble:futurespace — Full Content Summary
+
+> Coding & robotics courses for kids 8–14 using the mbot platform. Hands-on programming, real hardware, small groups. Powered by bumble:education.
+
+We teach kids to code by building real robots. Not screen simulations — physical mbot robots they assemble, program, and watch roll across the floor. Two courses, two skill levels, one goal: the grin on a kid's face when their creation actually works.
+
+---
+
+## Courses
+
+### Robot Explorer — Beginner · Block Coding
+
+**Ages:** 8–10 | **Duration:** 8 weeks, 1×/week, 60–75 min | **Price:** €25
+
+No blank-page fear here — a friendly first robot, big colorful blocks, and the moment it finally moves because of something they built.
+
+**Learning outcomes:**
+- Logic & sequencing — understanding how steps create behavior
+- Loops & conditionals — making decisions in code
+- Line-following robot — a working creation they take home pride in
+
+**What kids do:** Build an mbot from parts, drag-and-drop block coding (Scratch-like), program sensors, watch their robot follow lines and avoid obstacles.
+
+### Code the Machine — Intermediate · Python
+
+**Ages:** 11–14 | **Duration:** 10 weeks, 1×/week, 90 min | **Price:** €40
+
+For kids ready to trade blocks for real code — and the pride of watching a program they wrote actually drive a robot through a maze.
+
+**Learning outcomes:**
+- Real Python code — text-based programming they can show friends
+- Sensors & IoT — reading the physical world through code
+- Autonomous maze robot — a robot that navigates on its own
+
+**What kids do:** Transition from blocks to Python, work with sensors (ultrasonic, infrared, light), program autonomous behavior, compete in maze challenges.
+
+---
+
+## How It Works
+
+Three steps from curious to capable:
+
+1. **Build** — Snap the mbot together and wire up the sensors. Physical hardware, real connections.
+2. **Code** — Drag blocks or write Python to tell the robot what to do. From visual programming to real syntax.
+3. **Go** — Hit run and watch your ideas roll across the floor. Debug, iterate, succeed.
+
+---
+
+## Why This Works
+
+- **Small groups** — Every kid gets a robot, a coach's attention, and room to ask questions. No dumb questions here.
+- **Real hardware** — Not a screen simulation. A robot they can hold, that listens to them.
+- **No experience needed** — Everyone starts at zero and leaves further than they expected.
+- **Parents included** — You see the wins as they happen, plus a real showcase to watch them show off.
+
+---
+
+## The Team
+
+### Chris — IT Nerd · Patient Explainer
+
+Our IT nerd with a teacher's patience: he knows every screw in the mbot and explains code until it finally clicks. When a kid says "I built that!", his day is made.
+
+### Jördis — Team Soul · Heart of the Group
+
+Our team soul: she reads the room in seconds, knows who needs a nudge and who needs quiet, and turns a bunch of kids into a real team. Every kid leaves feeling seen.
+
+---
+
+## Booking
+
+Courses are booked through pretix (pretix.eu/bumbleedu/). Each course runs for a fixed term with a fixed group. Prices include all materials — kids keep their robots.
+
+- Robot Explorer: €25 for 8 weeks
+- Code the Machine: €40 for 10 weeks
+
+---
+
+## About
+
+bumble:futurespace is the education label of bumbleflies — a Munich-based team that believes kids learn best by building real things with real hardware. We run small-group coding and robotics courses using the mbot platform, combining hands-on building with progressive programming challenges.
+
+---
+
+## Contact
+
+- Website: https://edu.bumbleflies.de
+- Booking: https://pretix.eu/bumbleedu/
+- Imprint: https://edu.bumbleflies.de/impressum
+- Privacy: https://edu.bumbleflies.de/datenschutz
+
+## For Agents
+
+- Welcome page: https://edu.bumbleflies.de/agents.md
+- Facts: https://edu.bumbleflies.de/facts.json
+- Agent Card: https://edu.bumbleflies.de/.well-known/agent-card.json
