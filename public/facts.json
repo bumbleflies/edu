@@ -31,7 +31,11 @@
       "price": 25,
       "currency": "EUR",
       "startDate": "2026-10-01",
-      "outcomes": ["Logic & sequencing", "Loops & conditionals", "Line-following robot"]
+      "prerequisites": "None — entry-level course, zero experience needed",
+      "whatIsIncluded": "All materials, instruction, and the mbot robot to keep",
+      "bookingUrl": "https://pretix.eu/bumbleedu/robot-explorer/",
+      "outcomes": ["Logic & sequencing", "Loops & conditionals", "Line-following robot"],
+      "finalProject": "A line-following mbot that navigates a track autonomously"
     },
     {
       "name": "Code the Machine",
@@ -45,7 +49,11 @@
       "price": 40,
       "currency": "EUR",
       "startDate": "2026-10-01",
-      "outcomes": ["Real Python code", "Sensors & IoT", "Autonomous maze robot"]
+      "prerequisites": "None required; Robot Explorer is a natural stepping stone",
+      "whatIsIncluded": "All materials, instruction, and the mbot robot to keep",
+      "bookingUrl": "https://pretix.eu/bumbleedu/code-the-machine/",
+      "outcomes": ["Real Python code", "Sensors & IoT", "Autonomous maze robot"],
+      "finalProject": "An autonomous maze-navigating robot that solves a course without human input"
     }
   ],
   "platform": "mbot (Makeblock)",

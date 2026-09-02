@@ -6,33 +6,59 @@ We teach kids to code by building real robots. Not screen simulations — physic
 
 ---
 
-## Courses
+## Course Catalog
 
 ### Robot Explorer — Beginner · Block Coding
 
-**Ages:** 8–10 | **Duration:** 8 weeks, 1×/week, 60–75 min | **Price:** €25
+**Ages:** 8–10 | **Duration:** 8 weeks, 1×/week, 60–75 min | **Price:** €25 | **Start:** 2026-10-01
+
+**Prerequisites:** None. This is the entry-level course — kids need zero coding or robotics experience.
+
+**What's included:** All materials, instruction, and the mbot robot to keep.
+
+**Booking:** https://pretix.eu/bumbleedu/robot-explorer/
 
 No blank-page fear here — a friendly first robot, big colorful blocks, and the moment it finally moves because of something they built.
+
+**What kids do:**
+- Build an mbot robot from parts (sensors, motors, controller board)
+- Learn coding through colorful drag-and-drop blocks (Scratch-like)
+- Program the robot to follow lines, avoid obstacles, and respond to sensors
+- Debug, iterate, and celebrate when their creation works
 
 **Learning outcomes:**
 - Logic & sequencing — understanding how steps create behavior
 - Loops & conditionals — making decisions in code
 - Line-following robot — a working creation they take home pride in
 
-**What kids do:** Build an mbot from parts, drag-and-drop block coding (Scratch-like), program sensors, watch their robot follow lines and avoid obstacles.
+**Final project:** A line-following mbot that navigates a track autonomously.
+
+---
 
 ### Code the Machine — Intermediate · Python
 
-**Ages:** 11–14 | **Duration:** 10 weeks, 1×/week, 90 min | **Price:** €40
+**Ages:** 11–14 | **Duration:** 10 weeks, 1×/week, 90 min | **Price:** €40 | **Start:** 2026-10-01
+
+**Prerequisites:** None required, but Robot Explorer is a natural stepping stone. Kids with some block coding experience will feel at home; complete beginners can still succeed.
+
+**What's included:** All materials, instruction, and the mbot robot to keep.
+
+**Booking:** https://pretix.eu/bumbleedu/code-the-machine/
 
 For kids ready to trade blocks for real code — and the pride of watching a program they wrote actually drive a robot through a maze.
+
+**What kids do:**
+- Transition from visual blocks to real Python (text-based programming)
+- Work with sensors: ultrasonic (distance), infrared (line following), light (ambient detection)
+- Program autonomous behavior — decision-making in code
+- Compete in maze challenges with their robots
 
 **Learning outcomes:**
 - Real Python code — text-based programming they can show friends
 - Sensors & IoT — reading the physical world through code
 - Autonomous maze robot — a robot that navigates on its own
 
-**What kids do:** Transition from blocks to Python, work with sensors (ultrasonic, infrared, light), program autonomous behavior, compete in maze challenges.
+**Final project:** An autonomous maze-navigating robot that solves a course without human input.
 
 ---
 
@@ -52,6 +78,7 @@ Three steps from curious to capable:
 - **Real hardware** — Not a screen simulation. A robot they can hold, that listens to them.
 - **No experience needed** — Everyone starts at zero and leaves further than they expected.
 - **Parents included** — You see the wins as they happen, plus a real showcase to watch them show off.
+- **All materials included** — The course price covers everything. Kids keep their robot.
 
 ---
 
@@ -69,10 +96,12 @@ Our team soul: she reads the room in seconds, knows who needs a nudge and who ne
 
 ## Booking
 
-Courses are booked through pretix (pretix.eu/bumbleedu/). Each course runs for a fixed term with a fixed group. Prices include all materials — kids keep their robots.
+Courses are booked through pretix at https://pretix.eu/bumbleedu/. Each course runs for a fixed term with a fixed group. Prices include all materials — kids keep their robots.
 
-- Robot Explorer: €25 for 8 weeks
-- Code the Machine: €40 for 10 weeks
+| Course | Price | Duration | Booking Link |
+|--------|-------|----------|--------------|
+| Robot Explorer | €25 | 8 weeks | https://pretix.eu/bumbleedu/robot-explorer/ |
+| Code the Machine | €40 | 10 weeks | https://pretix.eu/bumbleedu/code-the-machine/ |
 
 ---
 

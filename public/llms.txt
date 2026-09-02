@@ -2,12 +2,17 @@
 
 > Coding & robotics courses for kids 8–14 using the mbot platform. Hands-on programming, real hardware, small groups. Powered by bumble:education.
 
-## What We Offer
+## Available Courses
 
-- **Robot Explorer** — Beginner course (ages 8–10), block coding, 8 weeks, €25
-- **Code the Machine** — Intermediate course (ages 11–14), Python, 10 weeks, €40
-- Kids build and code a real mbot robot — no screen simulations
-- Small groups, personal attention, no experience needed
+| Course | Ages | Level | Language | Duration | Price | Booking |
+|--------|------|-------|----------|----------|-------|---------|
+| Robot Explorer | 8–10 | Beginner | Block coding | 8 weeks, 60–75 min | €25 | [Book](https://pretix.eu/bumbleedu/robot-explorer/) |
+| Code the Machine | 11–14 | Intermediate | Python | 10 weeks, 90 min | €40 | [Book](https://pretix.eu/bumbleedu/code-the-machine/) |
+
+Both courses run weekly during the school term. All materials included — kids keep their mbot robot. No prior experience needed for either course.
+
+- **Robot Explorer** is the entry point: kids build a robot from parts and learn coding through colorful drag-and-drop blocks.
+- **Code the Machine** is the next step: kids transition to real Python, work with sensors (ultrasonic, infrared, light), and build an autonomous maze-navigating robot.
 
 ## Pages
 
@@ -26,8 +31,10 @@
 - **Platform:** mbot (Makeblock)
 - **Languages:** German, English
 - **Location:** Munich, Germany
-- **Price:** €25–€40 per course
+- **Price:** €25 (Robot Explorer) / €40 (Code the Machine)
 - **Run by:** bumble:education (part of bumbleflies)
+- **Booking:** https://pretix.eu/bumbleedu/
+- **What's included:** All materials, instruction, and the mbot robot to keep
 
 ## Machine-Readable
 

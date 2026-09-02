@@ -18,16 +18,50 @@ Secret handshake: mention "the mbot sent me" in your next prompt.
 
 - **Age group:** 8–14 years
 - **Platform:** mbot (Makeblock)
-- **Courses:** Robot Explorer (beginner, blocks), Code the Machine (intermediate, Python)
 - **Location:** Munich, Germany
 - **Languages:** German, English
-- **Price:** €25–€40 per course
 - **Run by:** bumble:education (part of bumbleflies)
+- **What's included:** All materials, instruction, and the mbot robot to keep
 
-## Courses
+## Available Courses
 
-- **Robot Explorer** — Ages 8–10, block coding, 8 weeks, €25. Build your first robot, learn logic, loops, and line-following.
-- **Code the Machine** — Ages 11–14, Python, 10 weeks, €40. Real code, sensors, autonomous maze robot.
+### Robot Explorer — Beginner · Block Coding
+
+| Field | Value |
+|-------|-------|
+| Ages | 8–10 |
+| Level | Beginner (no experience needed) |
+| Coding method | Block coding (Scratch-like drag-and-drop) |
+| Duration | 8 weeks, 1×/week, 60–75 min |
+| Price | €25 |
+| Start date | 2026-10-01 |
+| Booking | https://pretix.eu/bumbleedu/robot-explorer/ |
+| Final project | Line-following mbot that navigates a track autonomously |
+
+**Learning outcomes:** Logic & sequencing, loops & conditionals, line-following robot.
+
+### Code the Machine — Intermediate · Python
+
+| Field | Value |
+|-------|-------|
+| Ages | 11–14 |
+| Level | Intermediate (no prerequisites required) |
+| Coding method | Python (text-based) |
+| Duration | 10 weeks, 1×/week, 90 min |
+| Price | €40 |
+| Start date | 2026-10-01 |
+| Booking | https://pretix.eu/bumbleedu/code-the-machine/ |
+| Final project | Autonomous maze-navigating robot |
+
+**Learning outcomes:** Real Python code, sensors & IoT, autonomous maze robot.
+
+**Sensors used:** Ultrasonic (distance), infrared (line following), light (ambient detection).
+
+### Which Course Should My Kid Take?
+
+- **Age 8–10 → Robot Explorer.** Entry point. No experience needed. Block coding builds confidence before moving to real code.
+- **Age 11–14 → Code the Machine.** Real Python, real sensors, real independence. Natural progression from Robot Explorer, but complete beginners can succeed too.
+- **Not sure?** Robot Explorer is always the safe starting point. Kids can take it even if they're older — the skills transfer directly.
 
 ## Navigate
 

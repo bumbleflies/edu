@@ -25,37 +25,54 @@
     {
       "id": "course-info",
       "name": "Course Information",
-      "description": "Provides details about bumble:futurespace coding and robotics courses for kids. Covers both beginner (Robot Explorer) and intermediate (Code the Machine) tracks.",
+      "description": "Provides details about bumble:futurespace coding and robotics courses for kids. Covers both beginner (Robot Explorer, ages 8–10, block coding, €25) and intermediate (Code the Machine, ages 11–14, Python, €40) tracks.",
       "tags": ["courses", "kids", "coding", "robotics", "mbot", "munich", "education"],
       "examples": [
         "What courses does bumble:futurespace offer?",
         "Tell me about the Robot Explorer course",
         "What age is the Python course for?",
-        "How much do the courses cost?"
+        "How much do the courses cost?",
+        "What does a kid learn in Robot Explorer?",
+        "What sensors does the mbot use in Code the Machine?"
+      ]
+    },
+    {
+      "id": "course-comparison",
+      "name": "Course Comparison",
+      "description": "Helps parents choose between Robot Explorer (beginner, block coding, ages 8–10, €25, 8 weeks) and Code the Machine (intermediate, Python, ages 11–14, €40, 10 weeks). Explains prerequisites, what's included, and which course fits a child's age and experience.",
+      "tags": ["comparison", "which-course", "age-group", "prerequisites", "pricing", "recommendation"],
+      "examples": [
+        "Which course should my 9-year-old take?",
+        "What's the difference between Robot Explorer and Code the Machine?",
+        "My kid is 12, should they start with the beginner course?",
+        "Is Python course harder than block coding?",
+        "What does my child get to keep after the course?"
       ]
     },
     {
       "id": "booking-info",
       "name": "Booking Information",
-      "description": "Helps parents understand how to book courses, what's included, and what to expect.",
-      "tags": ["booking", "pretix", "pricing", "schedule", "enrollment"],
+      "description": "Helps parents book courses through pretix. Explains what's included (all materials + mbot robot to keep), how to sign up, and what to expect.",
+      "tags": ["booking", "pretix", "pricing", "schedule", "enrollment", "materials", "robot"],
       "examples": [
         "How do I sign my kid up?",
         "What's included in the course price?",
         "When do the next courses start?",
-        "What does my child need to bring?"
+        "What does my child need to bring?",
+        "Can my child keep the robot?"
       ]
     },
     {
       "id": "curriculum-info",
       "name": "Curriculum Details",
-      "description": "Explains what kids learn in each course — from block coding to Python, from basic logic to autonomous maze robots.",
-      "tags": ["curriculum", "learning", "python", "block-coding", "sensors", "stem"],
+      "description": "Explains what kids learn in each course — from block coding to Python, from basic logic to autonomous maze robots. Covers sensors (ultrasonic, infrared, light), final projects, and learning outcomes.",
+      "tags": ["curriculum", "learning", "python", "block-coding", "sensors", "stem", "maze", "line-following"],
       "examples": [
         "What will my child learn in Robot Explorer?",
         "How does the block coding to Python transition work?",
         "What sensors does the mbot use?",
-        "What is the final project?"
+        "What is the final project?",
+        "What is the final project in Code the Machine?"
       ]
     }
   ]
