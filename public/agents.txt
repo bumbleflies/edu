@@ -1,0 +1,26 @@
+# edu.bumbleflies.de — Agent Directory
+# Updated: 2026-09-03
+
+# Site
+Homepage: https://edu.bumbleflies.de/
+Kursübersicht: https://edu.bumbleflies.de/flyer
+
+# Legal
+Impressum: https://edu.bumbleflies.de/impressum
+Datenschutz: https://edu.bumbleflies.de/datenschutz
+
+# English
+EN Home: https://edu.bumbleflies.de/en/
+EN Course Overview: https://edu.bumbleflies.de/en/flyer
+EN Imprint: https://edu.bumbleflies.de/en/imprint
+EN Privacy: https://edu.bumbleflies.de/en/privacy
+
+# Machine-Readable Files
+llms.txt: https://edu.bumbleflies.de/llms.txt
+llms-full.txt: https://edu.bumbleflies.de/llms-full.txt
+agents.md: https://edu.bumbleflies.de/agents.md
+facts.json: https://edu.bumbleflies.de/facts.json
+Agent Card: https://edu.bumbleflies.de/.well-known/agent-card.json
+robots.txt: https://edu.bumbleflies.de/robots.txt
+Sitemap: https://edu.bumbleflies.de/sitemap-index.xml
+robot.txt: https://edu.bumbleflies.de/robot.txt
