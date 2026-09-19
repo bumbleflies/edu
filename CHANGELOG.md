@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.18.0](https://github.com/bumbleflies/edu/compare/edu-v0.17.1...edu-v0.18.0) (2026-09-19)
+
+
+### Features
+
+* add STEM/MINT statements across site, SEO, pretix and agent files ([#82](https://github.com/bumbleflies/edu/issues/82)) ([c58180f](https://github.com/bumbleflies/edu/commit/c58180fc552668239153143de4a21320e139ea24))
+
 ## [0.17.1](https://github.com/bumbleflies/edu/compare/edu-v0.17.0...edu-v0.17.1) (2026-09-19)
 
 
