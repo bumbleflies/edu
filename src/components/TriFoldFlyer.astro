@@ -1,0 +1,192 @@
+---
+/**
+ * Double-sided letter-fold (Wickelfalz) parent flyer: one A4 landscape sheet
+ * per side, three panels per sheet, six panels in total.
+ *
+ *   outside (print page 1), left to right: flap 97mm | back 100mm | cover 100mm
+ *   inside  (print page 2), left to right: left 100mm | centre 100mm | right 97mm
+ *
+ * Reading journey: closed cover, cover opened (inside-left + flap), flap
+ * opened (all three inside panels), flipped over (back).
+ * The DOM follows the physical order of each sheet.
+ */
+import Mark from "./Mark.astro";
+import { content } from "../lib/content";
+import { splitAge } from "../lib/flyer";
+import { priceByCourseName } from "../lib/pretix";
+import type { Lang } from "../lib/i18n";
+import "../styles/flyer.css";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const c = content[lang];
+const f = c.flyer;
+
+/**
+ * Each flyer's QR code points at the website in the flyer's own language.
+ * Regenerate an asset with: qrencode -t SVG --svg-path -o <src> https://<url>/
+ */
+const qr = {
+  de: { src: "/images/flyer-qr-de.svg", url: "edu.bumbleflies.de" },
+  en: { src: "/images/flyer-qr-en.svg", url: "edu.bumbleflies.de/en/" },
+}[lang];
+
+const priceLabel = (courseName: string) =>
+  f.priceTemplate.replace("{price}", String(priceByCourseName(lang, courseName)));
+---
+<article class="flyer-page">
+  <div class="flyer-sheet-label no-print">{f.outsideLabel}</div>
+  <div class="flyer-sheet flyer-sheet-outside">
+    <section class="flyer-panel flyer-flap">
+      <div class="flyer-head">
+        <span class="eyebrow">{f.parentsLabel}</span>
+        <h2>{f.parentsTitle}</h2>
+      </div>
+      <ul class="flyer-why">
+        {c.whyList.map((w) => (
+          <li>
+            <span class="flyer-marker" aria-hidden="true"></span>
+            <strong>{w.title}</strong>
+            <p>{w.text}</p>
+          </li>
+        ))}
+      </ul>
+      <p class="flyer-hint">{f.flapHint}</p>
+    </section>
+
+    <section class="flyer-panel flyer-back">
+      <div class="flyer-intro">
+        <div class="flyer-brand">
+          <Mark />
+          <div>
+            <p class="flyer-brand-name">bumble:futurespace</p>
+            <p class="flyer-powered-by">powered by bumble:education</p>
+          </div>
+        </div>
+        <div class="flyer-head">
+          <h2>{c.ctaTitle}</h2>
+        </div>
+      </div>
+      <div class="flyer-qr-card">
+        <img src={qr.src} width="136" height="136" alt={f.qrAlt} />
+        <p class="flyer-qr-caption">{f.qrCaption}</p>
+        <p class="flyer-qr-url">{qr.url}</p>
+      </div>
+      <ul class="flyer-facts">
+        <li>{f.startFact}</li>
+        <li>{f.locationFact}</li>
+      </ul>
+      <div class="flyer-footer">
+        <p class="flyer-contact">
+          <a href="mailto:info@bumbleflies.de">info@bumbleflies.de</a> · <a href="tel:+4915124154206">0151 24154206</a>
+        </p>
+        <p class="flyer-small-print">{f.smallPrint}</p>
+      </div>
+    </section>
+
+    <section class="flyer-panel flyer-cover">
+      <div class="flyer-brand">
+        <Mark />
+        <div>
+          <p class="flyer-brand-name">bumble:futurespace</p>
+          <p class="flyer-powered-by">powered by bumble:education</p>
+        </div>
+      </div>
+      <div class="flyer-headline">
+        <span class="eyebrow">{c.heroEyebrow}</span>
+        <h1>{c.heroTitle}<br /><span class="pop">{c.heroTitlePop}</span></h1>
+      </div>
+      <div class="flyer-hero">
+        <img src="/images/hero.webp" width="1200" height="673" alt={f.heroAlt} />
+        <p class="flyer-sticker">{f.sticker}</p>
+      </div>
+      <p class="flyer-parent-line">{f.parentLine}</p>
+      <p class="flyer-hint">{f.openHint}</p>
+    </section>
+  </div>
+
+  <div class="flyer-sheet-label no-print">{f.insideLabel}</div>
+  <div class="flyer-sheet flyer-sheet-inside">
+    <section class="flyer-panel flyer-inside-left">
+      <div class="flyer-head">
+        <span class="eyebrow">{f.experienceLabel}</span>
+        <h2>{f.experienceTitle}</h2>
+      </div>
+      <ol class="flyer-journey">
+        {c.steps.map((step, i) => (
+          <li>
+            <span class="flyer-step-num" aria-hidden="true">{i + 1}</span>
+            <div>
+              <strong>{step.title}</strong>
+              <p>{step.text}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+      <p class="flyer-closing">{f.experienceClosing}</p>
+    </section>
+
+    <section class="flyer-panel flyer-inside-centre">
+      <div class="flyer-head">
+        <span class="eyebrow">{f.coursesLabel}</span>
+        <h2>{f.coursesTitle}</h2>
+      </div>
+      <div class="flyer-courses">
+        {c.courses.map((course) => {
+          const age = splitAge(course.age);
+          return (
+            <article class="flyer-course">
+              <div class="flyer-course-top">
+                <p class="flyer-age">
+                  <span class="flyer-age-range">{age.range}</span>
+                  <span class="flyer-age-unit">{age.unit}</span>
+                </p>
+                <p class="flyer-price">{priceLabel(course.name)}</p>
+              </div>
+              <h3>{course.name}</h3>
+              <p class="flyer-course-tag">{course.tag}</p>
+              <p class="flyer-course-meta">{course.duration}</p>
+              <ul class="flyer-outcomes">
+                {course.outcomes.map((o) => <li>{o}</li>)}
+              </ul>
+            </article>
+          );
+        })}
+      </div>
+      <ul class="flyer-facts">
+        <li>{f.startFact}</li>
+        <li>{f.locationFact}</li>
+      </ul>
+    </section>
+
+    <section class="flyer-panel flyer-inside-right">
+      <div class="flyer-head">
+        <span class="eyebrow">{c.trainersEyebrow}</span>
+        <h2>{c.trainersTitle}</h2>
+      </div>
+      <div class="flyer-trainers">
+        {c.trainers.map((trainer) => (
+          <article class="flyer-trainer">
+            <img src={trainer.image} width="240" height="240" alt={trainer.name} />
+            <div>
+              <h3>{trainer.name}</h3>
+              <p class="flyer-trainer-role">{trainer.role}</p>
+            </div>
+            <p class="flyer-trainer-blurb">{trainer.blurb}</p>
+          </article>
+        ))}
+      </div>
+      <div class="flyer-signup-strip">
+        <img src={qr.src} width="91" height="91" alt={f.qrAlt} />
+        <div>
+          <h3>{f.signupTitle}</h3>
+          <p>{f.signupText}</p>
+          <p class="flyer-signup-phone"><a href="tel:+4915124154206">0151 24154206</a></p>
+        </div>
+      </div>
+    </section>
+  </div>
+</article>
