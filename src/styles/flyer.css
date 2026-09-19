@@ -1,246 +1,36 @@
-/* src/styles/flyer.css
- *
- * Double-sided letter-fold (Wickelfalz) parent flyer: two A4 landscape sheets
- * (297 x 210 mm), three panels each.
- *
- *   outside (print page 1): flap 97mm | back 100mm | cover 100mm
- *   inside  (print page 2): left 100mm | centre 100mm | right 97mm
- *
- *  - Below 1200px the panels stack as cards, in reading order.
- *  - From 1200px and in print the two true sheets are shown / printed.
- *  - Browser printing has no bleed, so nothing may touch a sheet edge or a
- *    fold. Every panel keeps 8 mm of padding, and tinted areas are inset
- *    cards (--bg), never edge-to-edge fills.
- *  - Print text is sized in pt: body >= 9.5pt, labels 9pt, small print >= 7.5pt.
- *  - Amber is reserved for action and emphasis: sticker, price pills, markers, rules.
- */
-
-/* ---- Screen chrome (hidden in print) ---- */
-.flyer-actions { max-width: 440px; margin: 24px auto 0; padding: 0 16px; }
+/* src/styles/flyer.css */
+.flyer-actions { max-width: 210mm; margin: 24px auto 0; padding: 0 16mm; }
 .flyer-actions button {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 12px 22px; border-radius: 999px; border: 0;
-  background: var(--ink); color: var(--accent); font-weight: 700; font-size: 15px;
+  background: var(--ink); color: var(--accent); font-weight: 700; font-size: 0.95rem;
   cursor: pointer;
 }
-.flyer-print-hint { margin: 12px 0 0; max-width: 62ch; font-size: 13px; line-height: 1.5; color: var(--ink-soft); }
-
-/* ---- Stacked layout (below 1200px): one card per panel ---- */
 .flyer-page {
-  display: flex; flex-direction: column; gap: 16px;
-  max-width: 440px; margin: 16px auto 40px; padding: 0 16px;
-  color: var(--ink); font-size: 9.5pt; line-height: 1.35;
-  overflow-wrap: break-word;
+  max-width: 210mm;
+  margin: 24px auto 40px;
+  padding: 16mm;
+  background: var(--paper);
+  box-shadow: 0 8px 30px rgba(43, 43, 51, 0.08);
 }
-/* Layout.astro sets a global `section { padding: 72px 0 }`; panels set their own padding below. */
+.flyer-head { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+.flyer-head h1 { font-size: 1.8rem; margin: 0; }
+.flyer-powered-by { color: var(--ink-soft); margin: 0; font-size: 0.7rem; }
+.flyer-tag { color: var(--ink-soft); margin: 0; font-size: 0.9rem; }
+.flyer-lead { font-size: 1.05rem; color: var(--ink-soft); margin: 16px 0 28px; }
+.flyer-courses { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; }
+.flyer-course { border: 1px solid var(--rule); border-radius: 12px; padding: 16px; }
+.flyer-course-img { width: 100%; height: auto; display: block; border-radius: 8px; margin-bottom: 10px; aspect-ratio: 3 / 2; object-fit: cover; }
+.flyer-course h2 { font-size: 1.2rem; margin: 0 0 4px; }
+.flyer-meta { color: var(--ink-soft); font-size: 0.85rem; margin: 0 0 8px; }
+.flyer-course ul { margin: 8px 0 0 18px; padding: 0; font-size: 0.9rem; }
+.flyer-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+.flyer-step p { margin: 4px 0 0; font-size: 0.85rem; color: var(--ink-soft); }
+.flyer-contact { border-top: 1px solid var(--rule); padding-top: 16px; font-size: 0.9rem; color: var(--ink-soft); }
 .flyer-page section { padding: 0; }
-.flyer-sheet { display: contents; }
-.flyer-sheet-label { display: none; }
-.flyer-page .flyer-panel {
-  display: flex; flex-direction: column; gap: 5mm; min-width: 0;
-  padding: 8mm; border-radius: 12px;
-  background: var(--paper); box-shadow: 0 8px 30px rgba(43, 43, 51, 0.08);
-}
-/* The DOM keeps each sheet's physical order; `order` deliberately re-sequences the stacked cards into the reading journey. */
-.flyer-page .flyer-cover { order: 1; }
-.flyer-page .flyer-inside-left { order: 2; }
-.flyer-page .flyer-flap { order: 3; }
-.flyer-page .flyer-inside-centre { order: 4; }
-.flyer-page .flyer-inside-right { order: 5; }
-.flyer-page .flyer-back { order: 6; }
-
-/* Resets use :where() (zero specificity) so the component classes below can override them. */
-:where(.flyer-page) :is(p, ul, ol) { margin: 0; }
-:where(.flyer-page) :is(ul, ol) { padding: 0; list-style: none; }
-:where(.flyer-page) p { text-wrap: pretty; }
-.flyer-page a { color: inherit; text-decoration: none; }
-.flyer-page img { display: block; max-width: 100%; }
-.flyer-page h1, .flyer-page h2, .flyer-page h3 { margin: 0; }
-
-/* ---- Shared panel header: mono label, serif title, amber rule ---- */
-/* The site's --accent-deep label colour fails 4.5:1 on cream, so labels are darker inside the flyer. */
-.flyer-page .eyebrow { margin-bottom: 0; font-size: 9pt; color: #7d5a2c; }
-.flyer-head .eyebrow { margin-bottom: 2.5mm; }
-.flyer-page .flyer-panel h2 { font-size: 19pt; line-height: 1.05; text-wrap: balance; }
-.flyer-page .flyer-panel h2::after {
-  content: ""; display: block; width: 12mm; height: 0.9mm; margin-top: 2.5mm;
-  border-radius: 1mm; background: var(--accent);
-}
-.flyer-hint {
-  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-  font-size: 9pt; font-weight: 600; letter-spacing: 0.04em; line-height: 1.3;
-  color: #7d5a2c; text-align: right; text-wrap: balance;
-}
-.flyer-brand { display: flex; align-items: center; gap: 3mm; }
-.flyer-brand-name { font-family: "Instrument Serif", Georgia, serif; font-size: 17pt; line-height: 1; }
-.flyer-powered-by { margin-top: 0.8mm; font-size: 8pt; color: var(--ink-soft); }
-
-/* ---- Front cover ---- */
-.flyer-headline .eyebrow { margin-bottom: 2.5mm; }
-.flyer-cover h1 { font-size: 32pt; line-height: 1.02; }
-.flyer-cover h1 .pop { display: block; color: var(--signal); font-style: italic; text-wrap: balance; }
-/* 8:5 keeps both the robot (left) and the child (right) of the 16:9 source in frame; auto margins centre it in the free space. */
-.flyer-hero { position: relative; flex: none; aspect-ratio: 8 / 5; margin-block: auto; }
-.flyer-hero img {
-  position: absolute; inset: 0; width: 100%; height: 100%; border-radius: 5mm;
-  object-fit: cover; object-position: 32% 50%;
-}
-.flyer-sticker {
-  position: absolute; left: 3mm; bottom: -3mm; max-width: 72mm;
-  padding: 2mm 4mm; border-radius: 2.5mm; transform: rotate(-3deg);
-  background: var(--accent); color: var(--ink);
-  font-family: "Instrument Serif", Georgia, serif; font-size: 16pt; line-height: 1.1;
-  box-shadow: 0.6mm 0.8mm 0 rgba(26, 23, 20, 0.25);
-}
-.flyer-parent-line {
-  padding: 4.5mm 5mm; border-radius: 4mm; background: var(--bg);
-  font-size: 11pt; line-height: 1.4;
-}
-
-/* ---- Inside left: what does my child do? ---- */
-.flyer-journey { display: grid; }
-.flyer-journey li {
-  position: relative; display: grid; grid-template-columns: 9mm 1fr; gap: 4.5mm;
-  align-items: start; padding-bottom: 15mm;
-}
-.flyer-journey li:last-child { padding-bottom: 0; }
-.flyer-journey li:not(:last-child)::before {
-  content: ""; position: absolute; left: 4.15mm; top: 10.5mm; bottom: 1.5mm;
-  border-left: 0.7mm dotted var(--accent);
-}
-.flyer-step-num {
-  display: grid; place-items: center; width: 9mm; height: 9mm; border-radius: 50%;
-  background: var(--accent); color: var(--ink); font-weight: 700; font-size: 13pt; line-height: 1;
-}
-.flyer-journey strong { display: block; font-size: 14pt; line-height: 1.2; }
-.flyer-journey p { margin-top: 1mm; font-size: 11pt; color: var(--ink-soft); }
-.flyer-closing {
-  padding: 8mm; border-radius: 4mm; background: var(--bg);
-  font-family: "Instrument Serif", Georgia, serif; font-style: italic;
-  font-size: 18pt; line-height: 1.25; text-wrap: balance;
-}
-
-/* ---- Flap: is it a safe choice? ---- */
-.flyer-why { display: grid; gap: 3mm; }
-.flyer-why li {
-  display: grid; grid-template-columns: 6mm 1fr; gap: 1.5mm 3.5mm; align-items: center;
-  padding: 4mm 4.5mm; border-radius: 4mm; background: var(--bg);
-}
-.flyer-marker { position: relative; width: 6mm; height: 6mm; border-radius: 50%; background: var(--accent); }
-.flyer-marker::after {
-  content: ""; position: absolute; left: 2.15mm; top: 1.05mm; width: 1.4mm; height: 2.8mm;
-  border: solid var(--ink); border-width: 0 0.6mm 0.6mm 0; transform: rotate(45deg);
-}
-.flyer-why strong { font-size: 11.5pt; line-height: 1.25; }
-.flyer-why p { grid-column: 1 / -1; font-size: 10.5pt; color: var(--ink-soft); }
-
-/* ---- Inside centre: which course, when, how much? ---- */
-.flyer-courses { display: grid; gap: 5mm; }
-.flyer-course { padding: 5.5mm 6mm; border-radius: 4mm; background: var(--bg); }
-.flyer-course-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 3mm; margin-bottom: 2.5mm; }
-.flyer-age { line-height: 1; }
-.flyer-age-range {
-  display: block; font-family: "Instrument Serif", Georgia, serif;
-  font-size: 30pt; line-height: 1; color: var(--signal);
-}
-.flyer-age-unit { display: block; margin-top: 0.8mm; font-size: 9.5pt; font-weight: 700; color: var(--ink-soft); }
-.flyer-price {
-  padding: 0.9mm 3mm; border-radius: 99mm; background: var(--accent);
-  font-weight: 700; font-size: 9.5pt; white-space: nowrap;
-}
-.flyer-course h3 { font-size: 15pt; line-height: 1.1; }
-.flyer-course-tag { margin-top: 1.2mm; font-size: 10pt; font-weight: 700; color: var(--signal); }
-.flyer-course-meta { font-size: 10pt; color: var(--ink-soft); }
-.flyer-outcomes { margin-top: 2.5mm; font-size: 10.5pt; }
-.flyer-outcomes li { position: relative; padding-left: 4.5mm; }
-.flyer-outcomes li::before {
-  content: ""; position: absolute; left: 0.7mm; top: 1.7mm;
-  width: 1.7mm; height: 1.7mm; border-radius: 50%; background: var(--accent);
-}
-.flyer-facts { display: flex; flex-wrap: wrap; gap: 2mm; }
-.flyer-facts li {
-  padding: 1mm 3mm; border-radius: 99mm; background: rgba(217, 154, 63, 0.22);
-  font-weight: 700; font-size: 9.5pt;
-}
-
-/* ---- Inside right: who is behind it? ---- */
-.flyer-trainers { display: grid; gap: 7mm; }
-.flyer-trainer { display: grid; grid-template-columns: 20mm 1fr; gap: 3mm 4mm; align-items: center; }
-.flyer-trainer img {
-  width: 20mm; height: 20mm; border-radius: 50%;
-  object-fit: cover; border: 0.6mm solid var(--accent);
-}
-.flyer-trainer h3 { font-size: 16pt; line-height: 1.05; }
-.flyer-trainer-role { margin-top: 1mm; font-size: 9.5pt; font-weight: 700; color: var(--signal); }
-.flyer-trainer-blurb { grid-column: 1 / -1; font-size: 11pt; color: var(--ink-soft); }
-.flyer-signup-strip {
-  display: grid; grid-template-columns: 24mm 1fr; gap: 4mm; align-items: center;
-  padding: 4mm; border-radius: 4mm; background: rgba(217, 154, 63, 0.2);
-}
-.flyer-signup-strip img { width: 24mm; height: 24mm; border-radius: 1mm; background: #fff; }
-.flyer-signup-strip h3 { font-size: 15pt; line-height: 1.05; }
-.flyer-signup-strip p { margin-top: 1mm; }
-.flyer-signup-strip .flyer-signup-phone { margin-top: 1.5mm; font-size: 13pt; font-weight: 700; white-space: nowrap; }
-
-/* ---- Back cover ---- */
-.flyer-intro { display: grid; gap: 9mm; }
-.flyer-back .flyer-head h2 { font-size: 22pt; }
-.flyer-qr-card {
-  display: grid; justify-items: center; gap: 3.5mm; padding: 8mm 6mm;
-  border-radius: 4mm; background: var(--bg); text-align: center;
-}
-.flyer-qr-card img { width: 36mm; height: 36mm; border-radius: 1.5mm; background: #fff; }
-.flyer-qr-caption { max-width: 62mm; font-size: 11pt; font-weight: 700; }
-.flyer-qr-url { font-size: 12pt; font-weight: 700; color: var(--signal); }
-.flyer-footer { display: grid; gap: 2mm; padding-top: 3mm; border-top: 0.25mm solid var(--rule); }
-.flyer-contact { font-weight: 600; }
-.flyer-contact a { white-space: nowrap; }
-.flyer-small-print { font-size: 7.5pt; line-height: 1.3; color: var(--ink-soft); }
-
-/* ---- True sheets: wide screens and print ---- */
-@media screen and (min-width: 1200px), print {
-  .flyer-actions { max-width: 297mm; padding: 0; }
-  .flyer-page { display: block; width: 297mm; max-width: none; margin: 28px auto 40px; padding: 0; }
-  .flyer-sheet {
-    display: grid; width: 297mm; height: 210mm; overflow: hidden;
-    background: var(--paper); box-shadow: 0 8px 30px rgba(43, 43, 51, 0.08);
-  }
-  .flyer-sheet-outside { grid-template-columns: 97mm 100mm 100mm; }
-  .flyer-sheet-inside { grid-template-columns: 100mm 100mm 97mm; }
-  .flyer-sheet-label {
-    display: block; margin: 28px 0 10px;
-    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-    font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--ink-soft);
-  }
-  .flyer-sheet-label:first-child { margin-top: 0; }
-  .flyer-page .flyer-panel {
-    order: 0; box-sizing: border-box; height: 210mm; padding: 8mm;
-    /* `gap` is only the minimum: space-between spreads any spare room evenly. */
-    gap: 3.5mm; justify-content: space-between; overflow: hidden; break-inside: avoid;
-    border-radius: 0; box-shadow: none;
-  }
-  /* Display-size cover headline fills the space the 8:5 hero leaves free. */
-  .flyer-cover h1 { font-size: 42pt; line-height: 1; text-wrap: balance; }
-  /* Faint fold guides on screen only (removed for print below). */
-  .flyer-page .flyer-panel + .flyer-panel { box-shadow: inset 1px 0 0 var(--rule); }
-}
-
-/* ---- Print: outside on page 1, inside on page 2 ---- */
-@page { size: A4 landscape; margin: 0; }
 
 @media print {
-  html, body {
-    margin: 0; background: #fff;
-    -webkit-print-color-adjust: exact; print-color-adjust: exact;
-  }
   .no-print, header.site, footer.site-footer { display: none !important; }
-  .flyer-page {
-    margin: 0;
-    -webkit-print-color-adjust: exact; print-color-adjust: exact;
-  }
-  .flyer-sheet { box-shadow: none; }
-  .flyer-sheet-outside { break-after: page; }
-  .flyer-sheet-inside { break-after: avoid; }
-  .flyer-page .flyer-panel + .flyer-panel { box-shadow: none; }
+  body { background: #fff; }
+  .flyer-page { box-shadow: none; margin: 0; max-width: none; padding: 0; }
 }
