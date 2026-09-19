@@ -50,6 +50,9 @@ const approvedFlyerCopy = {
     insideLabel: 'Innenseite · Druckseite 2',
     printHint:
       'Beidseitig drucken (an der kurzen Kante wenden). Falten (Wickelfalz): Innenseite nach oben, zuerst das rechte Drittel einklappen, dann das linke darüberlegen.',
+    onePageLead:
+      'Euer Kind hat sich für einen unserer Kurse interessiert – hier steht alles, was ihr wissen wollt.',
+    onePagePrintHint: 'Einseitig auf A4 drucken (Hochformat).',
   },
   en: {
     heroAlt: 'Child playing with a friendly robot',
@@ -78,6 +81,9 @@ const approvedFlyerCopy = {
     insideLabel: 'Inside · print page 2',
     printHint:
       'Print double-sided (flip on the short edge). Letter-fold: inside facing up, fold the right third in first, then the left third over it.',
+    onePageLead:
+      "Your child showed interest in one of our courses – here is everything you'd like to know.",
+    onePagePrintHint: 'Print single-sided on A4 (portrait).',
   },
 } as const;
 
@@ -126,6 +132,40 @@ describe('flyer content block', () => {
   it('explains how to print and fold in both languages', () => {
     expect(content.de.flyer.printHint).toContain('Wickelfalz');
     expect(content.en.flyer.printHint).toContain('Letter-fold');
+  });
+
+  describe('one-page flyer copy', () => {
+    it('has a lead line under the headline that addresses the parents', () => {
+      expect(content.de.flyer.onePageLead).toMatch(/^Euer Kind\b/);
+      expect(content.de.flyer.onePageLead).toMatch(/\bihr\b/);
+      expect(content.en.flyer.onePageLead).toMatch(/^Your child\b/);
+    });
+
+    it('keeps the lead free of promises: no price, date or ownership claim', () => {
+      for (const lang of ['de', 'en'] as const) {
+        expect(content[lang].flyer.onePageLead, lang).not.toMatch(/\d/);
+      }
+    });
+
+    it('tells the reader to print single-sided on A4 portrait', () => {
+      expect(content.de.flyer.onePagePrintHint).toMatch(/^Einseitig\b.*\bA4\b.*Hochformat/);
+      expect(content.en.flyer.onePagePrintHint).toMatch(/^Print single-sided\b.*\bA4\b.*portrait/);
+    });
+
+    it('is a one-liner without any folding instructions', () => {
+      for (const lang of ['de', 'en'] as const) {
+        const hint = content[lang].flyer.onePagePrintHint;
+        expect(hint, lang).not.toMatch(/falt|fold|Wickelfalz|beidseitig|double-sided/i);
+        expect(hint, lang).not.toContain('\n');
+        expect(hint.length, lang).toBeLessThan(80);
+      }
+    });
+
+    it('does not reuse the tri-fold print hint', () => {
+      for (const lang of ['de', 'en'] as const) {
+        expect(content[lang].flyer.onePagePrintHint).not.toBe(content[lang].flyer.printHint);
+      }
+    });
   });
 
   it('never claims that kids keep or take home the robot', () => {

@@ -1,6 +1,6 @@
 ---
 import Layout from "../components/Layout.astro";
-import Mark from "../components/Mark.astro";
+import ParentFlyer from "../components/ParentFlyer.astro";
 import { content } from "../lib/content";
 import { ui } from "../lib/i18n";
 import "../styles/flyer.css";
@@ -9,44 +9,11 @@ const c = content.de;
 const t = ui.de;
 ---
 <Layout lang="de" altHref="/en/flyer" title={`${t.flyerTitle} · edu.bumbleflies.de`} description={c.description}>
-  <div class="flyer-actions no-print">
+  <div class="pf-actions no-print">
     <button type="button" id="print-btn">{t.flyerPrintButton}</button>
+    <p class="pf-print-hint">{c.flyer.onePagePrintHint}</p>
   </div>
-  <article class="flyer-page">
-    <header class="flyer-head">
-      <Mark />
-      <div>
-        <h1>bumble:futurespace</h1>
-        <p class="flyer-powered-by">powered by bumble:education</p>
-        <p class="flyer-tag">{c.heroEyebrow}</p>
-      </div>
-    </header>
-    <p class="flyer-lead">{c.heroSubtitle}</p>
-    <section class="flyer-courses">
-      {c.courses.map((course) => (
-        <div class="flyer-course">
-          <img class="flyer-course-img" src={course.image} width="900" height="600" alt={course.name} />
-          <h2>{course.name}</h2>
-          <p class="flyer-meta">{course.tag} · {course.age} · {course.duration}</p>
-          <p>{course.blurb}</p>
-          <ul>
-            {course.outcomes.map((o) => <li>{o}</li>)}
-          </ul>
-        </div>
-      ))}
-    </section>
-    <section class="flyer-steps">
-      {c.steps.map((step, i) => (
-        <div class="flyer-step">
-          <strong>{i + 1}. {step.title}</strong>
-          <p>{step.text}</p>
-        </div>
-      ))}
-    </section>
-    <footer class="flyer-contact">
-      <p>info@bumbleflies.de · edu.bumbleflies.de</p>
-    </footer>
-  </article>
+  <ParentFlyer lang="de" />
   <script>
     document.getElementById("print-btn")?.addEventListener("click", () => window.print());
   </script>
