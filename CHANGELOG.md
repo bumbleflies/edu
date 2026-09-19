@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.17.0](https://github.com/bumbleflies/edu/compare/edu-v0.16.1...edu-v0.17.0) (2026-09-19)
+
+
+### Features
+
+* one-page parent flyer in the tri-fold design ([#80](https://github.com/bumbleflies/edu/issues/80)) ([3f4b0ae](https://github.com/bumbleflies/edu/commit/3f4b0aef87a06c4c42a7d56ebbb579c20a176553))
+
 ## [0.16.1](https://github.com/bumbleflies/edu/compare/edu-v0.16.0...edu-v0.16.1) (2026-09-19)
 
 
