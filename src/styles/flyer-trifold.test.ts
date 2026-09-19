@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const read = (relative: string) =>
   readFileSync(fileURLToPath(new URL(relative, import.meta.url)), 'utf-8');
 
-const css = read('./flyer.css');
+const css = read('./flyer-trifold.css');
 
 /** Returns the body of the first `@media` block whose query matches `query`. */
 function mediaBlock(query: RegExp): string {
