@@ -37,6 +37,50 @@ export interface Trainer {
   image: string;
 }
 
+/**
+ * Copy that only appears on the double-sided tri-fold parent flyer
+ * (`/flyer`, `/en/flyer`). Everything else on the flyer comes from the
+ * shared content fields, so wording stays identical to the website.
+ */
+export interface FlyerContent {
+  heroAlt: string;
+  /** Sticker on the cover, aimed at the child holding the flyer. */
+  sticker: string;
+  /** Cover line addressed to the parents. */
+  parentLine: string;
+  /** Hint at the bottom of the cover: open the flyer. */
+  openHint: string;
+  /** Inside-left panel: "what does my child do?" */
+  experienceLabel: string;
+  experienceTitle: string;
+  experienceClosing: string;
+  /** Flap panel: "is it a safe choice?" */
+  parentsLabel: string;
+  parentsTitle: string;
+  /** Hint at the bottom of the flap: keep unfolding. */
+  flapHint: string;
+  /** Inside-centre panel: "which course, when, how much?" */
+  coursesLabel: string;
+  coursesTitle: string;
+  /** Contains a `{price}` placeholder, filled from the pretix course data. */
+  priceTemplate: string;
+  /** Month only, deliberately no day. */
+  startFact: string;
+  /** Deliberately no specific venue. */
+  locationFact: string;
+  /** Sign-up strip in the inside-right panel. */
+  signupTitle: string;
+  signupText: string;
+  qrCaption: string;
+  qrAlt: string;
+  smallPrint: string;
+  /** Screen-only labels above each printed sheet. */
+  outsideLabel: string;
+  insideLabel: string;
+  /** Screen-only print and fold instructions beside the print button. */
+  printHint: string;
+}
+
 export interface PageContent {
   title: string;
   description: string;
@@ -55,6 +99,7 @@ export interface PageContent {
   trainersTitle: string;
   ctaTitle: string;
   ctaSubtitle: string;
+  flyer: FlyerContent;
 }
 
 export const content: Record<Lang, PageContent> = {
@@ -136,6 +181,34 @@ export const content: Record<Lang, PageContent> = {
     ],
     trainersEyebrow: "The team",
     trainersTitle: "Who's with your kids along the way",
+    flyer: {
+      heroAlt: "Child playing with a friendly robot",
+      sticker: "Show this to your parents!",
+      parentLine:
+        "Your child showed interest in one of our courses. Inside you'll find everything you'd like to know.",
+      openHint: "Open up →",
+      experienceLabel: "The experience",
+      experienceTitle: "What your child will experience",
+      experienceClosing:
+        "Along the way they make friends, hit real bugs, fix them, and walk away a little more confident than when they started.",
+      parentsLabel: "For parents",
+      parentsTitle: "In good hands",
+      flapHint: "Keep unfolding: courses, prices & team →",
+      coursesLabel: "The courses",
+      coursesTitle: "Which course fits?",
+      priceTemplate: "€{price} per course",
+      startFact: "Start: October 2026",
+      locationFact: "Courses near you",
+      signupTitle: "Sign up now",
+      signupText: "Scan the QR code or just call:",
+      qrCaption: "Scan the QR code for all info & sign-up",
+      qrAlt: "QR code linking to edu.bumbleflies.de/en/",
+      smallPrint: "© bumbleflies UG · Munich · Imprint & privacy: edu.bumbleflies.de/en/imprint",
+      outsideLabel: "Outside · print page 1",
+      insideLabel: "Inside · print page 2",
+      printHint:
+        "Print double-sided (flip on the short edge). Letter-fold: inside facing up, fold the right third in first, then the left third over it.",
+    },
   },
   de: {
     title: "bumble:futurespace · Programmieren & Roboter für Kinder",
@@ -215,5 +288,33 @@ export const content: Record<Lang, PageContent> = {
     ],
     trainersEyebrow: "Das Team",
     trainersTitle: "Wer eure Kinder begleitet",
+    flyer: {
+      heroAlt: "Kind spielt mit einem freundlichen Roboter",
+      sticker: "Zeig das deinen Eltern!",
+      parentLine:
+        "Euer Kind hat sich für einen unserer Kurse interessiert. Innen steht alles, was ihr wissen wollt.",
+      openHint: "Aufklappen →",
+      experienceLabel: "Das Erlebnis",
+      experienceTitle: "Das erlebt euer Kind",
+      experienceClosing:
+        "Nebenbei entstehen neue Freundschaften, es gibt echte Bugs zu lösen, und am Ende sind sie ein Stück selbstbewusster als vorher.",
+      parentsLabel: "Für Eltern",
+      parentsTitle: "Gut aufgehoben",
+      flapHint: "Weiter aufklappen: Kurse, Preise & Team →",
+      coursesLabel: "Die Kurse",
+      coursesTitle: "Welcher Kurs passt?",
+      priceTemplate: "{price} € pro Kurs",
+      startFact: "Start: Oktober 2026",
+      locationFact: "Kurse in eurer Nähe",
+      signupTitle: "Jetzt anmelden",
+      signupText: "QR-Code scannen oder einfach anrufen:",
+      qrCaption: "QR-Code scannen: alle Infos & Anmeldung",
+      qrAlt: "QR-Code zur Website edu.bumbleflies.de",
+      smallPrint: "© bumbleflies UG · München · Impressum & Datenschutz: edu.bumbleflies.de/impressum",
+      outsideLabel: "Außenseite · Druckseite 1",
+      insideLabel: "Innenseite · Druckseite 2",
+      printHint:
+        "Beidseitig drucken (an der kurzen Kante wenden). Falten (Wickelfalz): Innenseite nach oben, zuerst das rechte Drittel einklappen, dann das linke darüberlegen.",
+    },
   },
 };
