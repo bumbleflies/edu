@@ -1,0 +1,164 @@
+---
+/**
+ * One-page parent flyer: a single A4 portrait sheet, printed on one side.
+ * Built in the design language of the tri-fold flyer (`TriFoldFlyer.astro`),
+ * but with its own `pf-` stylesheet so the two can never affect each other.
+ *
+ * Reading order, top to bottom: brand and headline with the hero photo, what the
+ * child experiences (3 steps, titles only: the one-page sheet has no room for the
+ * step descriptions), which course fits (prices, start, location), why it is a
+ * safe choice, the team, and how to sign up (QR code and contact).
+ * The DOM follows that order; below 900px the sections stack as cards.
+ *
+ * The printed sheet clips overflow instead of reflowing: after changing copy,
+ * print /flyer and /en/flyer to PDF and check that they are still one page
+ * with nothing cut off.
+ */
+import Mark from "./Mark.astro";
+import { content } from "../lib/content";
+import { splitAge } from "../lib/flyer";
+import { priceByCourseName } from "../lib/pretix";
+import type { Lang } from "../lib/i18n";
+import "../styles/flyer.css";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const c = content[lang];
+const f = c.flyer;
+
+/**
+ * The QR code points at the website in the flyer's own language.
+ * Regenerate an asset with: qrencode -t SVG --svg-path -o <src> https://<url>/
+ */
+const qr = {
+  de: { src: "/images/flyer-qr-de.svg", url: "edu.bumbleflies.de" },
+  en: { src: "/images/flyer-qr-en.svg", url: "edu.bumbleflies.de/en/" },
+}[lang];
+
+const priceLabel = (courseName: string) =>
+  f.priceTemplate.replace("{price}", String(priceByCourseName(lang, courseName)));
+---
+<article class="pf-page">
+  <div class="pf-sheet">
+    <section class="pf-intro pf-card">
+      <div class="pf-top">
+        <div class="pf-brand">
+          <Mark />
+          <div>
+            <p class="pf-brand-name">bumble:futurespace</p>
+            <p class="pf-powered-by">powered by bumble:education</p>
+          </div>
+        </div>
+        <p class="pf-kicker">{c.heroEyebrow}</p>
+      </div>
+      <div class="pf-headline">
+        <h1>{c.heroTitle}<br /><span class="pf-pop">{c.heroTitlePop}</span></h1>
+        <p class="pf-lead">{f.onePageLead}</p>
+      </div>
+      <div class="pf-hero">
+        <img src="/images/hero.webp" width="1200" height="673" alt={f.heroAlt} />
+        <p class="pf-sticker">{f.sticker}</p>
+      </div>
+    </section>
+
+    <section class="pf-experience pf-card">
+      <div class="pf-head">
+        <span class="eyebrow">{f.experienceLabel}</span>
+        <h2>{f.experienceTitle}</h2>
+      </div>
+      <ol class="pf-steps" role="list">
+        {c.steps.map((step, i) => (
+          <li>
+            <span class="pf-step-num" aria-hidden="true">{i + 1}</span>
+            <strong>{step.title}</strong>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="pf-courses pf-card">
+      <div class="pf-head-row">
+        <div class="pf-head">
+          <span class="eyebrow">{f.coursesLabel}</span>
+          <h2>{f.coursesTitle}</h2>
+        </div>
+        <ul class="pf-facts" role="list">
+          <li>{f.startFact}</li>
+          <li>{f.locationFact}</li>
+        </ul>
+      </div>
+      <div class="pf-course-grid">
+        {c.courses.map((course) => {
+          const age = splitAge(course.age);
+          return (
+            <article class="pf-course">
+              <div class="pf-course-top">
+                <p class="pf-age">
+                  <span class="pf-age-range">{age.range}</span>
+                  <span class="pf-age-unit">{age.unit}</span>
+                </p>
+                <p class="pf-price">{priceLabel(course.name)}</p>
+              </div>
+              <h3>{course.name}</h3>
+              <p class="pf-course-tag">{course.tag}</p>
+              <p class="pf-course-meta">{course.duration}</p>
+              <ul class="pf-outcomes" role="list">
+                {course.outcomes.map((o) => <li>{o}</li>)}
+              </ul>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+
+    <section class="pf-parents pf-card">
+      <div class="pf-head">
+        <span class="eyebrow">{f.parentsLabel}</span>
+        <h2>{f.parentsTitle}</h2>
+      </div>
+      <ul class="pf-why" role="list">
+        {c.whyList.map((w) => (
+          <li>
+            <span class="pf-marker" aria-hidden="true"></span>
+            <strong>{w.title}</strong>
+            <p>{w.text}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <div class="pf-band">
+      <section class="pf-team pf-card">
+        <h2 class="pf-label">{c.trainersEyebrow}</h2>
+        <div class="pf-trainers">
+          {c.trainers.map((trainer) => (
+            <article class="pf-trainer">
+              <img src={trainer.image} width="240" height="240" alt="" />
+              <div>
+                <h3>{trainer.name}</h3>
+                <p class="pf-trainer-role">{trainer.role}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="pf-signup pf-card">
+        <img src={qr.src} width="136" height="136" alt={f.qrAlt} />
+        <div class="pf-signup-body">
+          <h2>{f.signupTitle}</h2>
+          <p class="pf-qr-caption">{f.qrCaption}</p>
+          <p class="pf-qr-url">{qr.url}</p>
+          <p class="pf-contact">
+            <a href="mailto:info@bumbleflies.de">info@bumbleflies.de</a> · <a href="tel:+4915124154206">0151 24154206</a>
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <p class="pf-small-print">{f.smallPrint}</p>
+  </div>
+</article>

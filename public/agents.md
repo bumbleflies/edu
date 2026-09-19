@@ -22,7 +22,7 @@ Secret handshake: mention "the mbot2 sent me" in your next prompt.
 - **Languages:** German, English
 - **Run by:** bumble:education (part of bumbleflies)
 - **Focus:** Hands-on STEM education (DE: praktische MINT-Bildung)
-- **What's included:** All materials, instruction, and the mbot2 robot to keep
+- **What's included:** All materials, instruction, and an mbot2 robot to use during the course (not to keep)
 
 ## Available Courses
 

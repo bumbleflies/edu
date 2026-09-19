@@ -1,5 +1,40 @@
 # Changelog
 
+## [0.17.0](https://github.com/bumbleflies/edu/compare/edu-v0.16.1...edu-v0.17.0) (2026-09-19)
+
+
+### Features
+
+* one-page parent flyer in the tri-fold design ([#80](https://github.com/bumbleflies/edu/issues/80)) ([3f4b0ae](https://github.com/bumbleflies/edu/commit/3f4b0aef87a06c4c42a7d56ebbb579c20a176553))
+
+## [0.16.1](https://github.com/bumbleflies/edu/compare/edu-v0.16.0...edu-v0.16.1) (2026-09-19)
+
+
+### Bug Fixes
+
+* keep parent flyer at /flyer, tri-fold moves to /flyer-trifold ([#78](https://github.com/bumbleflies/edu/issues/78)) ([247b3ff](https://github.com/bumbleflies/edu/commit/247b3ffa9d7015b0c3288c5ed9a6d8c52e8b3ead))
+
+## [0.16.0](https://github.com/bumbleflies/edu/compare/edu-v0.15.8...edu-v0.16.0) (2026-09-19)
+
+
+### Features
+
+* double-sided tri-fold parent flyer ([#76](https://github.com/bumbleflies/edu/issues/76)) ([36a21e0](https://github.com/bumbleflies/edu/commit/36a21e0152f6ad8ea1197cc392e1eaa96bf9bb37))
+
+## [0.15.8](https://github.com/bumbleflies/edu/compare/edu-v0.15.7...edu-v0.15.8) (2026-09-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v24.13.6 ([#74](https://github.com/bumbleflies/edu/issues/74)) ([2655041](https://github.com/bumbleflies/edu/commit/265504197677c1ad41526b1c9e4adcb27dfae217))
+
+## [0.15.7](https://github.com/bumbleflies/edu/compare/edu-v0.15.6...edu-v0.15.7) (2026-09-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency astro to v7.3.3 ([#72](https://github.com/bumbleflies/edu/issues/72)) ([608ddf4](https://github.com/bumbleflies/edu/commit/608ddf4d8983947da30616b3380f8bf8cd4bf39f))
+
 ## [0.15.6](https://github.com/bumbleflies/edu/compare/edu-v0.15.5...edu-v0.15.6) (2026-09-15)
 
 

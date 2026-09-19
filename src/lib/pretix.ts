@@ -35,3 +35,16 @@ export function eventUrlByCourseName(name: string): string {
   const course = pretixCourses.find((c) => c.name.en === name || c.name.de === name);
   return course ? eventUrl(course.slug) : "#";
 }
+
+/**
+ * Price of the course whose localized name is `name`, in the pretix currency.
+ *
+ * Matches by name, never by array position, so reordering either list cannot
+ * put the wrong price on a course. Throws for unknown names: printed material
+ * must never go out with a missing or wrong price.
+ */
+export function priceByCourseName(lang: Lang, name: string): number {
+  const course = pretixCourses.find((c) => c.name[lang] === name);
+  if (!course) throw new Error(`No pretix course named "${name}" (${lang})`);
+  return course.price;
+}

@@ -32,7 +32,7 @@
       "currency": "EUR",
       "startDate": "2026-10-01",
       "prerequisites": "None — entry-level course, zero experience needed",
-      "whatIsIncluded": "All materials, instruction, and the mbot2 robot to keep",
+      "whatIsIncluded": "All materials, instruction, and an mbot2 robot to use during the course (not to keep)",
       "bookingUrl": "https://pretix.eu/bumbleedu/robot-explorer/",
       "outcomes": ["Logic & sequencing", "Loops & conditionals", "Line-following robot", "Applied STEM skills"],
       "finalProject": "A line-following mbot2 that navigates a track autonomously"
@@ -50,7 +50,7 @@
       "currency": "EUR",
       "startDate": "2026-10-01",
       "prerequisites": "None required; Robot Explorer is a natural stepping stone",
-      "whatIsIncluded": "All materials, instruction, and the mbot2 robot to keep",
+      "whatIsIncluded": "All materials, instruction, and an mbot2 robot to use during the course (not to keep)",
       "bookingUrl": "https://pretix.eu/bumbleedu/code-the-machine/",
       "outcomes": ["Real Python code", "Sensors & IoT", "Autonomous maze robot", "Applied STEM skills"],
       "finalProject": "An autonomous maze-navigating robot that solves a course without human input"

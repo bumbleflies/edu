@@ -1,5 +1,11 @@
 import { describe, it, expect } from 'vitest';
-import { pretix, pretixCourses, eventUrl, eventUrlByCourseName } from './pretix';
+import {
+  pretix,
+  pretixCourses,
+  eventUrl,
+  eventUrlByCourseName,
+  priceByCourseName,
+} from './pretix';
 import { content } from './content';
 
 describe('pretix config', () => {
@@ -40,5 +46,31 @@ describe('homepage booking links', () => {
         expect(course.href).toMatch(/^https:\/\/pretix\.eu\/bumbleedu\/[a-z-]+\/$/);
       }
     }
+  });
+});
+
+describe('priceByCourseName', () => {
+  it('looks prices up by localized course name', () => {
+    expect(priceByCourseName('de', 'Roboter-Entdecker')).toBe(25);
+    expect(priceByCourseName('de', 'Coding-Abenteurer')).toBe(40);
+    expect(priceByCourseName('en', 'Robot Explorer')).toBe(25);
+    expect(priceByCourseName('en', 'Code the Machine')).toBe(40);
+  });
+
+  it('matches by name, never by array position', () => {
+    for (const lang of ['de', 'en'] as const) {
+      for (const course of content[lang].courses) {
+        const expected = pretixCourses.find((p) => p.name[lang] === course.name)?.price;
+        expect(priceByCourseName(lang, course.name)).toBe(expected);
+      }
+    }
+  });
+
+  it('does not match a name from the other language', () => {
+    expect(() => priceByCourseName('de', 'Robot Explorer')).toThrow(/Robot Explorer/);
+  });
+
+  it('fails loudly for an unknown course instead of printing a wrong price', () => {
+    expect(() => priceByCourseName('en', 'Unknown course')).toThrow(/Unknown course/);
   });
 });

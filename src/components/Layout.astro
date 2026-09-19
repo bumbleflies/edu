@@ -9,9 +9,10 @@ interface Props {
   title: string;
   description: string;
   ogImage?: string;
+  noindex?: boolean;
 }
 
-const { lang, altHref, title, description, ogImage = "/images/og.webp" } = Astro.props;
+const { lang, altHref, title, description, ogImage = "/images/og.webp", noindex = false } = Astro.props;
 
 const site = Astro.site ?? new URL("https://edu.bumbleflies.de");
 const url = new URL(Astro.url.pathname, site);
@@ -26,6 +27,7 @@ const localeAlternate = lang === "de" ? "en_US" : "de_DE";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={url} />
     <meta property="og:site_name" content="bumble:education" />
     <meta property="og:type" content="website" />

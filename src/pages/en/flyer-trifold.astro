@@ -1,19 +1,19 @@
 ---
 import Layout from "../../components/Layout.astro";
-import ParentFlyer from "../../components/ParentFlyer.astro";
+import TriFoldFlyer from "../../components/TriFoldFlyer.astro";
 import { content } from "../../lib/content";
 import { ui } from "../../lib/i18n";
-import "../../styles/flyer.css";
+import "../../styles/flyer-trifold.css";
 
 const c = content.en;
 const t = ui.en;
 ---
-<Layout lang="en" altHref="/flyer" title={`${t.flyerTitle} · edu.bumbleflies.de`} description={c.description}>
-  <div class="pf-actions no-print">
+<Layout lang="en" altHref="/flyer-trifold" noindex title={`${t.flyerTitle} (tri-fold) · edu.bumbleflies.de`} description={c.description}>
+  <div class="flyer-actions no-print">
     <button type="button" id="print-btn">{t.flyerPrintButton}</button>
-    <p class="pf-print-hint">{c.flyer.onePagePrintHint}</p>
+    <p class="flyer-print-hint">{c.flyer.printHint}</p>
   </div>
-  <ParentFlyer lang="en" />
+  <TriFoldFlyer lang="en" />
   <script>
     document.getElementById("print-btn")?.addEventListener("click", () => window.print());
   </script>
