@@ -65,12 +65,12 @@
       "age": { "en": "8–10 years", "de": "8–10 Jahre" },
       "duration": { "en": "8 weeks · 1×/week · 60–75 min", "de": "8 Wochen · 1×/Woche · 60–75 Min" },
       "blurb": {
-        "en": "Build your first mbot2 and make it come alive with colorful drag-and-drop blocks. No experience needed.",
-        "de": "Baue deinen ersten mbot2 und erwecke ihn mit bunten Drag-and-Drop-Blöcken zum Leben. Keine Vorkenntnisse nötig."
+        "en": "Hands-on STEM education: build your first mbot2 and make it come alive with colorful drag-and-drop blocks. No experience needed.",
+        "de": "Praktische MINT-Bildung: Baue deinen ersten mbot2 und erwecke ihn mit bunten Drag-and-Drop-Blöcken zum Leben. Keine Vorkenntnisse nötig."
       },
       "outcomes": {
-        "en": ["Logic & sequencing", "Loops & conditionals", "Line-following robot"],
-        "de": ["Logik & Reihenfolgen", "Schleifen & Bedingungen", "Linienfolger-Roboter"]
+        "en": ["Logic & sequencing", "Loops & conditionals", "Line-following robot", "Applied STEM skills"],
+        "de": ["Logik & Reihenfolgen", "Schleifen & Bedingungen", "Linienfolger-Roboter", "Angewandte MINT-Kompetenzen"]
       },
       "cta": { "en": "Start exploring", "de": "Jetzt entdecken" },
       "price": 25,
@@ -84,12 +84,12 @@
       "age": { "en": "11–14 years", "de": "11–14 Jahre" },
       "duration": { "en": "10 weeks · 1×/week · 90 min", "de": "10 Wochen · 1×/Woche · 90 Min" },
       "blurb": {
-        "en": "Level up from blocks to real Python and command your robot through sensors, lights and sound.",
-        "de": "Steig von Blöcken auf echtes Python um und steuere deinen Roboter mit Sensoren, Lichtern und Sound."
+        "en": "Applied STEM education: level up from blocks to real Python and command your robot through sensors, lights and sound.",
+        "de": "Angewandte MINT-Bildung: Steig von Blöcken auf echtes Python um und steuere deinen Roboter mit Sensoren, Lichtern und Sound."
       },
       "outcomes": {
-        "en": ["Real Python code", "Sensors & IoT", "Autonomous maze robot"],
-        "de": ["Echtes Python", "Sensoren & IoT", "Autonomer Labyrinth-Roboter"]
+        "en": ["Real Python code", "Sensors & IoT", "Autonomous maze robot", "Applied STEM skills"],
+        "de": ["Echtes Python", "Sensoren & IoT", "Autonomer Labyrinth-Roboter", "Angewandte MINT-Kompetenzen"]
       },
       "cta": { "en": "Code the machine", "de": "Maschine coden" },
       "price": 40,

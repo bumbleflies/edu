@@ -1,8 +1,8 @@
 # bumble:futurespace — Full Content Summary
 
-> Coding & robotics courses for kids 8–14 using the mbot2 platform. Hands-on programming, real hardware, small groups. Powered by bumble:education.
+> Hands-on STEM education (praktische MINT-Bildung): coding & robotics courses for kids 8–14 using the mbot2 platform. Real hardware, small groups. Powered by bumble:education.
 
-We teach kids to code by building real robots. Not screen simulations — physical mbot2 robots they assemble, program, and watch roll across the floor. Two courses, two skill levels, one goal: the grin on a kid's face when their creation actually works.
+We teach kids to code by building real robots — hands-on STEM education where science, technology, engineering and math come alive through hardware kids can hold. Not screen simulations — physical mbot2 robots they assemble, program, and watch roll across the floor. Two courses, two skill levels, one goal: the grin on a kid's face when their creation actually works.
 
 ---
 
@@ -30,6 +30,7 @@ No blank-page fear here — a friendly first robot, big colorful blocks, and the
 - Logic & sequencing — understanding how steps create behavior
 - Loops & conditionals — making decisions in code
 - Line-following robot — a working creation they take home pride in
+- Applied STEM skills — science, technology, engineering and math through real hardware
 
 **Final project:** A line-following mbot2 that navigates a track autonomously.
 
@@ -57,6 +58,7 @@ For kids ready to trade blocks for real code — and the pride of watching a pro
 - Real Python code — text-based programming they can show friends
 - Sensors & IoT — reading the physical world through code
 - Autonomous maze robot — a robot that navigates on its own
+- Applied STEM skills — science, technology, engineering and math through real hardware
 
 **Final project:** An autonomous maze-navigating robot that solves a course without human input.
 
@@ -78,6 +80,7 @@ Three steps from curious to capable:
 - **Real hardware** — Not a screen simulation. A robot they can hold, that listens to them.
 - **No experience needed** — Everyone starts at zero and leaves further than they expected.
 - **Parents included** — You see the wins as they happen, plus a real showcase to watch them show off.
+- **Hands-on STEM education** — Real sensors, real code, real physics: kids learn science, technology, engineering and math by making a robot actually work.
 - **All materials included** — The course price covers everything. Each kid gets an mbot2 robot to use during the course (not to keep).
 
 ---
@@ -107,7 +110,7 @@ Courses are booked through pretix at https://pretix.eu/bumbleedu/. Each course r
 
 ## About
 
-bumble:futurespace is the education label of bumbleflies — a Munich-based team that believes kids learn best by building real things with real hardware. We run small-group coding and robotics courses using the mbot2 platform, combining hands-on building with progressive programming challenges.
+bumble:futurespace is the education label of bumbleflies — a Munich-based team that believes kids learn best by building real things with real hardware. We run small-group coding and robotics courses using the mbot2 platform, combining hands-on building with progressive programming challenges. Our courses are hands-on STEM education (DE: praktische MINT-Bildung): every project teaches science, technology, engineering and math through a robot kids assemble and program themselves.
 
 ---
 

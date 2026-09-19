@@ -12,4 +12,9 @@ describe('ui strings', () => {
     expect(ui.en.footerLegalImprint).toBe('Imprint');
     expect(ui.de.footerLegalImprint).toBe('Impressum');
   });
+
+  it('carries STEM/MINT in the footer about line', () => {
+    expect(ui.en.footerAboutPrefix).toContain('STEM');
+    expect(ui.de.footerAboutPrefix).toContain('MINT');
+  });
 });

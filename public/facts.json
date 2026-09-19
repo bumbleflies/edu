@@ -1,7 +1,7 @@
 {
   "name": "bumble:futurespace",
   "url": "https://edu.bumbleflies.de",
-  "description": "Coding and robotics courses for kids 8–14 using the mbot2 platform. Hands-on programming, real hardware, small groups. Powered by bumble:education.",
+  "description": "Hands-on STEM education (praktische MINT-Bildung): coding and robotics courses for kids 8–14 using the mbot2 platform. Real hardware, small groups. Powered by bumble:education.",
   "foundingDate": "2026",
   "location": {
     "city": "Munich",
@@ -34,7 +34,7 @@
       "prerequisites": "None — entry-level course, zero experience needed",
       "whatIsIncluded": "All materials, instruction, and an mbot2 robot to use during the course (not to keep)",
       "bookingUrl": "https://pretix.eu/bumbleedu/robot-explorer/",
-      "outcomes": ["Logic & sequencing", "Loops & conditionals", "Line-following robot"],
+      "outcomes": ["Logic & sequencing", "Loops & conditionals", "Line-following robot", "Applied STEM skills"],
       "finalProject": "A line-following mbot2 that navigates a track autonomously"
     },
     {
@@ -52,7 +52,7 @@
       "prerequisites": "None required; Robot Explorer is a natural stepping stone",
       "whatIsIncluded": "All materials, instruction, and an mbot2 robot to use during the course (not to keep)",
       "bookingUrl": "https://pretix.eu/bumbleedu/code-the-machine/",
-      "outcomes": ["Real Python code", "Sensors & IoT", "Autonomous maze robot"],
+      "outcomes": ["Real Python code", "Sensors & IoT", "Autonomous maze robot", "Applied STEM skills"],
       "finalProject": "An autonomous maze-navigating robot that solves a course without human input"
     }
   ],
@@ -65,6 +65,8 @@
     "Block coding",
     "Python for kids",
     "STEM education",
+    "MINT-Bildung",
+    "MINT education",
     "After-school courses",
     "Munich"
   ]

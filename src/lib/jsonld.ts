@@ -5,23 +5,23 @@ const SITE = "https://edu.bumbleflies.de";
 
 const DESCRIPTIONS: Record<Lang, Record<number, string>> = {
   en: {
-    0: "Build your first mbot2 and make it come alive with colorful drag-and-drop blocks. No experience needed.",
-    1: "Level up from blocks to real Python and command your robot through sensors, lights and sound.",
+    0: "Build your first mbot2 and make it come alive with colorful drag-and-drop blocks. Hands-on STEM education — no experience needed.",
+    1: "Level up from blocks to real Python and command your robot through sensors, lights and sound. Applied STEM education with real hardware.",
   },
   de: {
-    0: "Baue deinen ersten mbot2 und erwecke ihn mit bunten Drag-and-Drop-Blöcken zum Leben. Keine Vorkenntnisse nötig.",
-    1: "Steig von Blöcken auf echtes Python um und steuere deinen Roboter mit Sensoren, Lichtern und Sound.",
+    0: "Baue deinen ersten mbot2 und erwecke ihn mit bunten Drag-and-Drop-Blöcken zum Leben. Praktische MINT-Bildung — keine Vorkenntnisse nötig.",
+    1: "Steig von Blöcken auf echtes Python um und steuere deinen Roboter mit Sensoren, Lichtern und Sound. Angewandte MINT-Bildung mit echter Hardware.",
   },
 };
 
 const OUTCOMES: Record<Lang, Record<number, string[]>> = {
   en: {
-    0: ["Logic & sequencing", "Loops & conditionals", "Line-following robot"],
-    1: ["Real Python code", "Sensors & IoT", "Autonomous maze robot"],
+    0: ["Logic & sequencing", "Loops & conditionals", "Line-following robot", "Applied STEM skills"],
+    1: ["Real Python code", "Sensors & IoT", "Autonomous maze robot", "Applied STEM skills"],
   },
   de: {
-    0: ["Logik & Abläufe", "Schleifen & Bedingungen", "Linienfolge-Roboter"],
-    1: ["Echter Python-Code", "Sensoren & IoT", "Autonomer Labyrinth-Roboter"],
+    0: ["Logik & Abläufe", "Schleifen & Bedingungen", "Linienfolge-Roboter", "Angewandte MINT-Kompetenzen"],
+    1: ["Echter Python-Code", "Sensoren & IoT", "Autonomer Labyrinth-Roboter", "Angewandte MINT-Kompetenzen"],
   },
 };
 
@@ -33,8 +33,8 @@ export function organizationJsonLd(lang: Lang) {
     url: SITE,
     description:
       lang === "de"
-        ? "Praxisnahe Programmier- und Robotik-Kurse für Kinder von 8–14 Jahren mit der mbot2-Plattform."
-        : "Hands-on programming and robotics courses for kids 8–14 using the mbot2 platform.",
+        ? "Praktische MINT-Bildung: Programmier- und Robotik-Kurse für Kinder von 8–14 Jahren mit der mbot2-Plattform."
+        : "Hands-on STEM education: programming and robotics courses for kids 8–14 using the mbot2 platform.",
     parentOrganization: {
       "@type": "Organization",
       name: "bumbleflies",
