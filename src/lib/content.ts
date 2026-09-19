@@ -38,9 +38,12 @@ export interface Trainer {
 }
 
 /**
- * Copy that only appears on the double-sided tri-fold parent flyer
- * (`/flyer`, `/en/flyer`). Everything else on the flyer comes from the
- * shared content fields, so wording stays identical to the website.
+ * Copy that only appears on the printable parent flyers: the one-page A4
+ * flyer (`/flyer`, `/en/flyer`) and the double-sided tri-fold
+ * (`/flyer-trifold`, `/en/flyer-trifold`). Both share this block; the fields
+ * marked "tri-fold" or "one-page" belong to one flyer only. Everything else on
+ * the flyers comes from the shared content fields, so wording stays identical
+ * to the website.
  */
 export interface FlyerContent {
   heroAlt: string;
@@ -77,8 +80,12 @@ export interface FlyerContent {
   /** Screen-only labels above each printed sheet. */
   outsideLabel: string;
   insideLabel: string;
-  /** Screen-only print and fold instructions beside the print button. */
+  /** Tri-fold only: screen-only print and fold instructions beside the print button. */
   printHint: string;
+  /** One-page only: lead line under the headline, addressed to the parents. */
+  onePageLead: string;
+  /** One-page only: screen-only one-line print hint beside the print button. */
+  onePagePrintHint: string;
 }
 
 export interface PageContent {
@@ -208,6 +215,9 @@ export const content: Record<Lang, PageContent> = {
       insideLabel: "Inside · print page 2",
       printHint:
         "Print double-sided (flip on the short edge). Letter-fold: inside facing up, fold the right third in first, then the left third over it.",
+      onePageLead:
+        "Your child showed interest in one of our courses – here is everything you'd like to know.",
+      onePagePrintHint: "Print single-sided on A4 (portrait).",
     },
   },
   de: {
@@ -315,6 +325,9 @@ export const content: Record<Lang, PageContent> = {
       insideLabel: "Innenseite · Druckseite 2",
       printHint:
         "Beidseitig drucken (an der kurzen Kante wenden). Falten (Wickelfalz): Innenseite nach oben, zuerst das rechte Drittel einklappen, dann das linke darüberlegen.",
+      onePageLead:
+        "Euer Kind hat sich für einen unserer Kurse interessiert – hier steht alles, was ihr wissen wollt.",
+      onePagePrintHint: "Einseitig auf A4 drucken (Hochformat).",
     },
   },
 };
