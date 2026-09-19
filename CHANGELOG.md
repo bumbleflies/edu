@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.16.1](https://github.com/bumbleflies/edu/compare/edu-v0.16.0...edu-v0.16.1) (2026-09-19)
+
+
+### Bug Fixes
+
+* keep parent flyer at /flyer, tri-fold moves to /flyer-trifold ([#78](https://github.com/bumbleflies/edu/issues/78)) ([247b3ff](https://github.com/bumbleflies/edu/commit/247b3ffa9d7015b0c3288c5ed9a6d8c52e8b3ead))
+
 ## [0.16.0](https://github.com/bumbleflies/edu/compare/edu-v0.15.8...edu-v0.16.0) (2026-09-19)
 
 
