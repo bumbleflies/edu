@@ -1,4 +1,5 @@
 import { describe, it, expect, beforeAll } from 'vitest';
+import { ownershipClaim } from '../test-utils/ownership-claim';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { experimental_AstroContainer as AstroContainer } from 'astro/container';
@@ -102,11 +103,15 @@ describe.each(['de', 'en'] as const)('ParentFlyer (%s)', (lang) => {
   });
 
   describe('images', () => {
-    it('has a non-empty alt text on every image and exactly four images', () => {
+    it('has exactly four images: informative alt on the hero and the QR code, empty alt on the avatars', () => {
       const images = html.match(/<img[^>]*>/g) ?? [];
       // hero, two trainer avatars, one QR code
       expect(images).toHaveLength(4);
-      for (const image of images) expect(image).toMatch(/alt="[^"]+"/);
+      const avatars = images.filter((image) => /trainer_/.test(image));
+      expect(avatars).toHaveLength(2);
+      // the trainer's name is printed right next to the avatar, so the picture itself is decorative
+      for (const avatar of avatars) expect(avatar).toMatch(/alt=""/);
+      for (const image of images.filter((image) => !/trainer_/.test(image))) expect(image).toMatch(/alt="[^"]+"/);
     });
 
     it('every image has explicit dimensions so nothing shifts while loading', () => {
@@ -237,7 +242,7 @@ describe.each(['de', 'en'] as const)('ParentFlyer (%s)', (lang) => {
       const body = section(html, 'team');
       expect(text(body)).toContain(c.trainersEyebrow);
       for (const trainer of c.trainers) {
-        expect(body).toMatch(new RegExp(`<img[^>]*src="${trainer.image}"[^>]*alt="${trainer.name}"`));
+        expect(body).toMatch(new RegExp(`<img[^>]*src="${trainer.image}"[^>]*alt=""`));
         expect(text(body)).toContain(trainer.name);
         expect(text(body)).toContain(text(trainer.role));
         expect(text(body)).not.toContain(text(trainer.blurb).slice(0, 30));
@@ -285,12 +290,16 @@ describe.each(['de', 'en'] as const)('ParentFlyer (%s)', (lang) => {
     expect(html.indexOf('class="pf-small-print"')).toBeGreaterThan(html.lastIndexOf('</section>'));
   });
 
+  it('marks every list as a list, because the CSS removes the bullets (Safari drops the semantics otherwise)', () => {
+    const lists = html.match(/<(ul|ol)\b[^>]*>/g) ?? [];
+    expect(lists.length).toBeGreaterThanOrEqual(4);
+    for (const list of lists) expect(list).toMatch(/role="list"/);
+  });
+
   it('leaves out testimonials and any claim that kids keep the robot', () => {
     const visible = text(html);
     for (const testimonial of c.testimonials) expect(visible).not.toContain(text(testimonial.quote).slice(0, 30));
     expect(visible).not.toMatch(/testimonial/i);
-    expect(visible).not.toMatch(
-      /\bkeeps? (their|the|a|an|his|her|your)\b|robot to keep|behalten|zum mitnehmen|take home|nach hause/i,
-    );
+    expect(visible).not.toMatch(ownershipClaim);
   });
 });

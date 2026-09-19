@@ -1,4 +1,5 @@
 import { describe, it, expect, beforeAll } from 'vitest';
+import { ownershipClaim } from '../test-utils/ownership-claim';
 import { experimental_AstroContainer as AstroContainer } from 'astro/container';
 import TriFoldFlyer from './TriFoldFlyer.astro';
 import { content } from '../lib/content';
@@ -178,8 +179,6 @@ describe.each(['de', 'en'] as const)('TriFoldFlyer (%s)', (lang) => {
   it('leaves out testimonials and any claim that kids keep the robot', () => {
     const visible = text(html);
     for (const testimonial of c.testimonials) expect(visible).not.toContain(text(testimonial.quote).slice(0, 30));
-    expect(visible).not.toMatch(
-      /\bkeeps? (their|the|a|an|his|her|your)\b|robot to keep|behalten|zum mitnehmen|take home|nach hause/i,
-    );
+    expect(visible).not.toMatch(ownershipClaim);
   });
 });

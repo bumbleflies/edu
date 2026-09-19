@@ -158,7 +158,7 @@ export const content: Record<Lang, PageContent> = {
       { title: "Go", text: "Hit run and watch your ideas roll across the floor.", icon: "go" },
     ],
     whyList: [
-      { title: "Small groups", text: "Every kid gets a robot, a coach's attention, and room to ask questions — there are no dumb ones." },
+      { title: "Small groups", text: "Every kid has their own robot in class, a coach's attention, and room to ask questions — there are no dumb ones." },
       { title: "Real hardware", text: "Not a screen simulation — a robot they can hold, that listens to them." },
       { title: "No experience needed", text: "Everyone starts at zero and leaves further than they expected." },
       { title: "Parents included", text: "You'll see the wins as they happen, plus a real showcase to watch them show off." },
@@ -268,7 +268,7 @@ export const content: Record<Lang, PageContent> = {
       { title: "Loslegen", text: "Play drücken und zusehen, wie die eigene Idee über den Boden rollt.", icon: "go" },
     ],
     whyList: [
-      { title: "Kleine Gruppen", text: "Jedes Kind bekommt einen eigenen Roboter, echte Betreuung – und Raum für Fragen, denn dumme Fragen gibt's hier nicht." },
+      { title: "Kleine Gruppen", text: "Jedes Kind hat im Kurs seinen eigenen Roboter, echte Betreuung – und Raum für Fragen, denn dumme Fragen gibt's hier nicht." },
       { title: "Echte Hardware", text: "Keine Bildschirm-Simulation – ein Roboter zum Anfassen, der wirklich reagiert." },
       { title: "Keine Vorkenntnisse nötig", text: "Alle starten bei null und kommen weiter, als sie erwartet hätten." },
       { title: "Eltern inklusive", text: "Ihr seht die Fortschritte live mit – plus eine echte Abschlusspräsentation zum Vorführen." },

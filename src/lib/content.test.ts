@@ -1,4 +1,5 @@
 import { describe, it, expect } from 'vitest';
+import { ownershipClaim } from '../test-utils/ownership-claim';
 import { content } from './content';
 
 describe('homepage content', () => {
@@ -144,6 +145,22 @@ describe('flyer content block', () => {
     it('keeps the lead free of promises: no price, date or ownership claim', () => {
       for (const lang of ['de', 'en'] as const) {
         expect(content[lang].flyer.onePageLead, lang).not.toMatch(/\d/);
+        expect(content[lang].flyer.onePageLead, lang).not.toMatch(ownershipClaim);
+      }
+    });
+
+    it('has no ownership claim in any copy that appears on a flyer (the robot is only used during the course)', () => {
+      for (const lang of ['de', 'en'] as const) {
+        const c = content[lang];
+        const copy = [
+          ...Object.values(c.flyer),
+          ...c.whyList.flatMap((item) => [item.title, item.text]),
+          ...c.steps.flatMap((step) => [step.title, step.text]),
+          ...c.trainers.flatMap((trainer) => [trainer.role, trainer.blurb]),
+          ...c.courses.flatMap((course) => [course.blurb, ...course.outcomes]),
+        ];
+        expect(copy.length).toBeGreaterThan(30);
+        for (const line of copy) expect(line, `${lang}: ${line}`).not.toMatch(ownershipClaim);
       }
     });
 

@@ -1,4 +1,5 @@
 import { describe, it, expect } from 'vitest';
+import { handedOver } from '../test-utils/ownership-claim';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
@@ -18,6 +19,7 @@ describe('machine-readable site data', () => {
   it.each(machineReadableFiles)('%s does not claim kids keep the mbot2 robot', (file) => {
     expect(readPublic(file)).not.toMatch(/robot to keep/i);
     expect(readPublic(file)).not.toMatch(/\bkids? keep (their|the|a|an|his|her)\b[^.\n]*robots?/i);
+    expect(readPublic(file), 'reads as if the robot is handed over').not.toMatch(handedOver);
   });
 
   it('states in facts.json that the robot is for use during the course only', () => {
