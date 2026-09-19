@@ -74,7 +74,7 @@ Three steps from curious to capable:
 
 ## Why This Works
 
-- **Small groups** — Every kid gets a robot, a coach's attention, and room to ask questions. No dumb questions here.
+- **Small groups** — Every kid has their own robot in class, a coach's attention, and room to ask questions. No dumb questions here.
 - **Real hardware** — Not a screen simulation. A robot they can hold, that listens to them.
 - **No experience needed** — Everyone starts at zero and leaves further than they expected.
 - **Parents included** — You see the wins as they happen, plus a real showcase to watch them show off.

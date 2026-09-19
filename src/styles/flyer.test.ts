@@ -43,13 +43,20 @@ describe('one-page flyer stylesheet: page and sheet', () => {
     expect(css).toMatch(/@page\s*\{[^}]*margin:\s*0/);
   });
 
-  it('shows the true 210mm x 297mm sheet only on wide screens and in print', () => {
+  it('shows the true A4 sheet (210mm wide, a hair under 297mm tall) only on wide screens and in print', () => {
     expect(css).toMatch(sheetQuery);
     const sheet = sheetMode();
     expect(sheet).toMatch(/\.pf-sheet\s*\{[^}]*width:\s*210mm/);
-    expect(sheet).toMatch(/\.pf-sheet\s*\{[^}]*height:\s*297mm/);
+    expect(sheet).toMatch(/\.pf-sheet\s*\{[^}]*height:\s*296\.5mm/);
     expect(sheet).toMatch(/\.pf-sheet\s*\{[^}]*overflow:\s*hidden/);
     expect(sheet).toMatch(/\.pf-sheet\s*\{[^}]*box-sizing:\s*border-box/);
+  });
+
+  it('is a hair shorter than the 297mm page, so a full-height sheet can never spill onto a second page', () => {
+    const rule = sheetMode().match(/\.pf-sheet\s*\{([^}]*)\}/)?.[1] ?? '';
+    const height = Number(rule.match(/(?<![-\w])height:\s*([\d.]+)mm/)?.[1]);
+    expect(height).toBeGreaterThanOrEqual(296);
+    expect(height).toBeLessThan(297);
   });
 
   it('does not fix the sheet size below 900px', () => {
@@ -157,8 +164,31 @@ describe('one-page flyer stylesheet: stacked layout below 900px', () => {
 });
 
 describe('one-page flyer stylesheet: design language', () => {
-  it('overrides the mono label colour with an accessible brown', () => {
-    expect(css).toContain('#7d5a2c');
+  it('sets every small mono label (section labels, team label, kicker) in the accessible brown', () => {
+    for (const selector of ['.pf-page .eyebrow', '.pf-page h2.pf-label', '.pf-kicker']) {
+      const rule = rules().find((candidate) => candidate.selector === selector);
+      expect(rule, selector).toBeDefined();
+      expect(rule?.body, selector).toMatch(/color:\s*#7d5a2c/i);
+    }
+  });
+
+  it('the brown label colour has at least 4.5:1 contrast on white and on the cream card colour', () => {
+    const channel = (value: number) => {
+      const s = value / 255;
+      return s <= 0.03928 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4;
+    };
+    const luminance = (hex: string) => {
+      const [r, g, b] = [1, 3, 5].map((i) => channel(parseInt(hex.slice(i, i + 2), 16)));
+      return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    };
+    const contrast = (a: string, b: string) => {
+      const [hi, lo] = [luminance(a), luminance(b)].sort((x, y) => y - x);
+      return (hi + 0.05) / (lo + 0.05);
+    };
+    const cream = read('../components/Layout.astro').match(/--bg:\s*(#[0-9a-f]{6})/i)?.[1] ?? '';
+    expect(cream).toMatch(/^#[0-9a-f]{6}$/i);
+    expect(contrast('#7d5a2c', '#ffffff')).toBeGreaterThanOrEqual(4.5);
+    expect(contrast('#7d5a2c', cream)).toBeGreaterThanOrEqual(4.5);
   });
 
   it('gives every section a 12mm x 0.9mm amber rule under its title', () => {
@@ -197,6 +227,20 @@ describe('one-page flyer stylesheet: design language', () => {
     const size = Number(sheetMode().match(/\.pf-intro h1\s*\{[^}]*font-size:\s*([\d.]+)pt/)?.[1]);
     expect(size).toBeGreaterThanOrEqual(38);
     expect(size).toBeLessThanOrEqual(42);
+  });
+});
+
+describe('one-page flyer stylesheet: nothing that matters is hidden', () => {
+  it('hides only decorations and the screen chrome in print, never flyer content', () => {
+    const hiding = rules().filter(({ body }) =>
+      /display:\s*none|visibility:\s*hidden|opacity:\s*0(?![\d.])|font-size:\s*0(?![\d.])|clip(-path)?:/.test(body),
+    );
+    expect(hiding.length).toBeGreaterThan(0);
+    for (const { selector } of hiding) {
+      for (const part of selector.split(',').map((piece) => piece.trim())) {
+        expect(part, `${selector} hides something`).toMatch(/::(after|before)$|^(\.no-print|header\.site|footer\.site-footer)$/);
+      }
+    }
   });
 });
 

@@ -42,7 +42,7 @@ describe('the parent flyer is the one-page flyer in the tri-fold design language
   it('parent stylesheet is one A4 portrait sheet', () => {
     expect(parentCss).toMatch(/size:\s*A4 portrait/);
     expect(parentCss).toContain('210mm');
-    expect(parentCss).toContain('297mm');
+    expect(parentCss).toMatch(/height:\s*296\.5mm/);
   });
 
   it('parent stylesheet has none of the tri-fold-only rules', () => {

@@ -69,7 +69,7 @@ const priceLabel = (courseName: string) =>
         <span class="eyebrow">{f.experienceLabel}</span>
         <h2>{f.experienceTitle}</h2>
       </div>
-      <ol class="pf-steps">
+      <ol class="pf-steps" role="list">
         {c.steps.map((step, i) => (
           <li>
             <span class="pf-step-num" aria-hidden="true">{i + 1}</span>
@@ -85,7 +85,7 @@ const priceLabel = (courseName: string) =>
           <span class="eyebrow">{f.coursesLabel}</span>
           <h2>{f.coursesTitle}</h2>
         </div>
-        <ul class="pf-facts">
+        <ul class="pf-facts" role="list">
           <li>{f.startFact}</li>
           <li>{f.locationFact}</li>
         </ul>
@@ -105,7 +105,7 @@ const priceLabel = (courseName: string) =>
               <h3>{course.name}</h3>
               <p class="pf-course-tag">{course.tag}</p>
               <p class="pf-course-meta">{course.duration}</p>
-              <ul class="pf-outcomes">
+              <ul class="pf-outcomes" role="list">
                 {course.outcomes.map((o) => <li>{o}</li>)}
               </ul>
             </article>
@@ -119,7 +119,7 @@ const priceLabel = (courseName: string) =>
         <span class="eyebrow">{f.parentsLabel}</span>
         <h2>{f.parentsTitle}</h2>
       </div>
-      <ul class="pf-why">
+      <ul class="pf-why" role="list">
         {c.whyList.map((w) => (
           <li>
             <span class="pf-marker" aria-hidden="true"></span>
@@ -136,7 +136,7 @@ const priceLabel = (courseName: string) =>
         <div class="pf-trainers">
           {c.trainers.map((trainer) => (
             <article class="pf-trainer">
-              <img src={trainer.image} width="240" height="240" alt={trainer.name} />
+              <img src={trainer.image} width="240" height="240" alt="" />
               <div>
                 <h3>{trainer.name}</h3>
                 <p class="pf-trainer-role">{trainer.role}</p>

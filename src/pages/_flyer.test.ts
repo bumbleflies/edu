@@ -50,7 +50,12 @@ describe('DE flyer page', () => {
   });
 
   it('ships a valid, language-specific QR asset', () => {
-    expect(qrSvg).toContain('<svg');
+    for (const svg of [qrSvg, otherQrSvg]) {
+      expect(svg).toMatch(/<svg[^>]*viewBox="0 0 \d+ \d+"/);
+      expect(svg).toMatch(/<rect[^>]*fill="#ffffff"/); // white ground, so the code scans on any background
+      expect(svg).toMatch(/translate\(4,/); // 4-module quiet zone
+      expect((svg.match(/M\d+,\d+h1/g) ?? []).length).toBeGreaterThan(100); // hundreds of modules, not a placeholder
+    }
     expect(qrSvg).not.toBe(otherQrSvg);
   });
 });
