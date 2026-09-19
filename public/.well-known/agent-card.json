@@ -52,7 +52,7 @@
     {
       "id": "booking-info",
       "name": "Booking Information",
-      "description": "Helps parents book courses through pretix. Explains what's included (all materials + mbot2 robot to keep), how to sign up, and what to expect.",
+      "description": "Helps parents book courses through pretix. Explains what's included (all materials + an mbot2 robot to use during the course), how to sign up, and what to expect.",
       "tags": ["booking", "pretix", "pricing", "schedule", "enrollment", "materials", "robot"],
       "examples": [
         "How do I sign my kid up?",

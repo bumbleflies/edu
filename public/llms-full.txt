@@ -14,7 +14,7 @@ We teach kids to code by building real robots. Not screen simulations — physic
 
 **Prerequisites:** None. This is the entry-level course — kids need zero coding or robotics experience.
 
-**What's included:** All materials, instruction, and the mbot2 robot to keep.
+**What's included:** All materials, instruction, and an mbot2 robot to use during the course (not to keep).
 
 **Booking:** https://pretix.eu/bumbleedu/robot-explorer/
 
@@ -41,7 +41,7 @@ No blank-page fear here — a friendly first robot, big colorful blocks, and the
 
 **Prerequisites:** None required, but Robot Explorer is a natural stepping stone. Kids with some block coding experience will feel at home; complete beginners can still succeed.
 
-**What's included:** All materials, instruction, and the mbot2 robot to keep.
+**What's included:** All materials, instruction, and an mbot2 robot to use during the course (not to keep).
 
 **Booking:** https://pretix.eu/bumbleedu/code-the-machine/
 
@@ -78,7 +78,7 @@ Three steps from curious to capable:
 - **Real hardware** — Not a screen simulation. A robot they can hold, that listens to them.
 - **No experience needed** — Everyone starts at zero and leaves further than they expected.
 - **Parents included** — You see the wins as they happen, plus a real showcase to watch them show off.
-- **All materials included** — The course price covers everything. Kids keep their robot.
+- **All materials included** — The course price covers everything. Each kid gets an mbot2 robot to use during the course (not to keep).
 
 ---
 
@@ -96,7 +96,7 @@ Our team soul: she reads the room in seconds, knows who needs a nudge and who ne
 
 ## Booking
 
-Courses are booked through pretix at https://pretix.eu/bumbleedu/. Each course runs for a fixed term with a fixed group. Prices include all materials — kids keep their robots.
+Courses are booked through pretix at https://pretix.eu/bumbleedu/. Each course runs for a fixed term with a fixed group. Prices include all materials and the use of an mbot2 robot during the course (robots are not kept afterwards).
 
 | Course | Price | Duration | Booking Link |
 |--------|-------|----------|--------------|
