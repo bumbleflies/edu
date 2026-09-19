@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.17.1](https://github.com/bumbleflies/edu/compare/edu-v0.17.0...edu-v0.17.1) (2026-09-19)
+
+
+### Bug Fixes
+
+* parent flyer follow-ups (robot wording, print fit, a11y, tests) ([#83](https://github.com/bumbleflies/edu/issues/83)) ([66e2719](https://github.com/bumbleflies/edu/commit/66e2719942674d96f8926977b6b2846f59c161c3))
+
 ## [0.17.0](https://github.com/bumbleflies/edu/compare/edu-v0.16.1...edu-v0.17.0) (2026-09-19)
 
 
