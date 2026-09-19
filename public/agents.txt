@@ -1,5 +1,5 @@
 # edu.bumbleflies.de — Agent Directory
-# Updated: 2026-09-03
+# Updated: 2026-09-19
 
 # Site
 Homepage: https://edu.bumbleflies.de/

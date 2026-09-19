@@ -59,14 +59,14 @@ export interface PageContent {
 
 export const content: Record<Lang, PageContent> = {
   en: {
-    title: "bumble:futurespace · Coding & robots for kids",
+    title: "bumble:futurespace · Hands-on STEM education: coding & robots for kids",
     description:
-      "bumble:futurespace — hands-on programming and robotics courses for kids 8–14 using the mbot2 platform, powered by bumble:education.",
-    heroEyebrow: "Kids 8–14 · mbot2 robotics",
+      "bumble:futurespace — hands-on STEM education: programming and robotics courses for kids 8–14 using the mbot2 platform, powered by bumble:education.",
+    heroEyebrow: "Kids 8–14 · Hands-on STEM with mbot2 robotics",
     heroTitle: "Build. Code.",
     heroTitlePop: "Make it move.",
     heroSubtitle:
-      "Every kid leaves with something they built with their own hands — and the grin that comes with watching it actually work. Along the way they make friends, hit real bugs, fix them, and walk away a little more confident than when they started.",
+      "Hands-on STEM education with real robots: every kid leaves with something they built with their own hands — and the grin that comes with watching it actually work. Along the way they make friends, hit real bugs, fix them, and walk away a little more confident than when they started.",
     ageCards: [
       { range: "8–10", text: "Their first taste of \"I made this\" — a robot that moves because they told it to." },
       { range: "10–12", text: "Real challenges, real teammates. This is where the group high-fives start." },
@@ -79,8 +79,8 @@ export const content: Record<Lang, PageContent> = {
         age: "8–10 years",
         duration: "8 weeks · 1×/week · 60–75 min",
         blurb:
-          "No blank-page fear here — a friendly first robot, big colorful blocks, and the moment it finally moves because of something they built.",
-        outcomes: ["Logic & sequencing", "Loops & conditionals", "Line-following robot"],
+          "Hands-on STEM education from the very first session — no blank-page fear here: a friendly first robot, big colorful blocks, and the moment it finally moves because of something they built.",
+        outcomes: ["Logic & sequencing", "Loops & conditionals", "Line-following robot", "Applied STEM skills"],
         cta: "Start exploring",
         href: eventUrlByCourseName("Robot Explorer"),
         icon: "blocks",
@@ -92,8 +92,8 @@ export const content: Record<Lang, PageContent> = {
         age: "11–14 years",
         duration: "10 weeks · 1×/week · 90 min",
         blurb:
-          "For kids ready to trade blocks for real code — and the pride of watching a program they wrote actually drive a robot through a maze.",
-        outcomes: ["Real Python code", "Sensors & IoT", "Autonomous maze robot"],
+          "Applied STEM education for kids ready to trade blocks for real code — and the pride of watching a program they wrote actually drive a robot through a maze.",
+        outcomes: ["Real Python code", "Sensors & IoT", "Autonomous maze robot", "Applied STEM skills"],
         cta: "Code the machine",
         href: eventUrlByCourseName("Code the Machine"),
         icon: "code",
@@ -110,6 +110,7 @@ export const content: Record<Lang, PageContent> = {
       { title: "Real hardware", text: "Not a screen simulation — a robot they can hold, that listens to them." },
       { title: "No experience needed", text: "Everyone starts at zero and leaves further than they expected." },
       { title: "Parents included", text: "You'll see the wins as they happen, plus a real showcase to watch them show off." },
+      { title: "Hands-on STEM education", text: "Real sensors, real code, real physics — kids learn science, technology, engineering and math by making a robot actually work." },
     ],
     testimonials: [
       { quote: "My daughter built her first obstacle-avoiding robot after four weeks — she couldn't stop smiling.", name: "Anna, mum of Mia (9)" },
@@ -117,7 +118,7 @@ export const content: Record<Lang, PageContent> = {
     ],
     testimonialsDisclaimer: "Illustrative example quotes — real family reviews coming soon.",
     ctaTitle: "Ready to make something move?",
-    ctaSubtitle: "Give them a term to go from curious to capable — and a robot to show for it.",
+    ctaSubtitle: "Give them a term of hands-on STEM education: from curious to capable — and a robot to show for it.",
     trainers: [
       {
         name: "Chris",
@@ -138,14 +139,14 @@ export const content: Record<Lang, PageContent> = {
     trainersTitle: "Who's with your kids along the way",
   },
   de: {
-    title: "bumble:futurespace · Programmieren & Roboter für Kinder",
+    title: "bumble:futurespace · Praktische MINT-Bildung: Programmieren & Roboter für Kinder",
     description:
-      "bumble:futurespace — praxisnahe Programmier- und Robotik-Kurse für Kinder von 8–14 Jahren mit der mbot2-Plattform, powered by bumble:education.",
-    heroEyebrow: "Kinder 8–14 · mbot2-Robotik",
+      "bumble:futurespace — praktische MINT-Bildung: Programmier- und Robotik-Kurse für Kinder von 8–14 Jahren mit der mbot2-Plattform, powered by bumble:education.",
+    heroEyebrow: "Kinder 8–14 · Praktische MINT-Bildung mit mbot2-Robotik",
     heroTitle: "Bauen. Coden.",
     heroTitlePop: "Und es bewegt sich.",
     heroSubtitle:
-      "Jedes Kind geht mit etwas nach Hause, das es mit den eigenen Händen gebaut hat – und mit dem Grinsen, das kommt, wenn es wirklich funktioniert. Nebenbei entstehen neue Freundschaften, es gibt echte Bugs zu lösen, und am Ende sind sie ein Stück selbstbewusster als vorher.",
+      "Praktische MINT-Bildung mit echten Robotern: Jedes Kind geht mit etwas nach Hause, das es mit den eigenen Händen gebaut hat – und mit dem Grinsen, das kommt, wenn es wirklich funktioniert. Nebenbei entstehen neue Freundschaften, es gibt echte Bugs zu lösen, und am Ende sind sie ein Stück selbstbewusster als vorher.",
     ageCards: [
       { range: "8–10", text: "Der erste Moment von „Das hab ich gebaut!“ – ein Roboter, der sich bewegt, weil sie es ihm gesagt haben." },
       { range: "10–12", text: "Echte Herausforderungen, echtes Team. Hier gibt's die ersten High-Fives in der Gruppe." },
@@ -158,8 +159,8 @@ export const content: Record<Lang, PageContent> = {
         age: "8–10 Jahre",
         duration: "8 Wochen · 1×/Woche · 60–75 Min",
         blurb:
-          "Keine Angst vor dem leeren Blatt – ein freundlicher erster Roboter, große bunte Blöcke, und der Moment, in dem er sich bewegt, weil sie ihn gebaut haben.",
-        outcomes: ["Logik & Abläufe", "Schleifen & Bedingungen", "Linienfolge-Roboter"],
+          "Praktische MINT-Bildung von Anfang an: Keine Angst vor dem leeren Blatt – ein freundlicher erster Roboter, große bunte Blöcke, und der Moment, in dem er sich bewegt, weil sie ihn gebaut haben.",
+        outcomes: ["Logik & Abläufe", "Schleifen & Bedingungen", "Linienfolge-Roboter", "Angewandte MINT-Kompetenzen"],
         cta: "Jetzt entdecken",
         href: eventUrlByCourseName("Roboter-Entdecker"),
         icon: "blocks",
@@ -171,8 +172,8 @@ export const content: Record<Lang, PageContent> = {
         age: "11–14 Jahre",
         duration: "10 Wochen · 1×/Woche · 90 Min",
         blurb:
-          "Für Kids, die von Blöcken zu echtem Code wechseln wollen – und den Stolz erleben, wenn ihr eigenes Programm einen Roboter durchs Labyrinth steuert.",
-        outcomes: ["Echter Python-Code", "Sensoren & IoT", "Autonomer Labyrinth-Roboter"],
+          "Angewandte MINT-Bildung für Kids, die von Blöcken zu echtem Code wechseln wollen – und den Stolz erleben, wenn ihr eigenes Programm einen Roboter durchs Labyrinth steuert.",
+        outcomes: ["Echter Python-Code", "Sensoren & IoT", "Autonomer Labyrinth-Roboter", "Angewandte MINT-Kompetenzen"],
         cta: "Jetzt coden",
         href: eventUrlByCourseName("Coding-Abenteurer"),
         icon: "code",
@@ -189,6 +190,7 @@ export const content: Record<Lang, PageContent> = {
       { title: "Echte Hardware", text: "Keine Bildschirm-Simulation – ein Roboter zum Anfassen, der wirklich reagiert." },
       { title: "Keine Vorkenntnisse nötig", text: "Alle starten bei null und kommen weiter, als sie erwartet hätten." },
       { title: "Eltern inklusive", text: "Ihr seht die Fortschritte live mit – plus eine echte Abschlusspräsentation zum Vorführen." },
+      { title: "Praktische MINT-Bildung", text: "Echte Sensoren, echter Code, echte Physik – Kinder lernen Mathematik, Informatik, Naturwissenschaft und Technik, indem sie einen Roboter zum Laufen bringen." },
     ],
     testimonials: [
       { quote: "Meine Tochter hat nach vier Wochen ihren ersten hindernis-erkennenden Roboter gebaut – sie konnte gar nicht mehr aufhören zu grinsen.", name: "Anna, Mama von Mia (9)" },
@@ -196,7 +198,7 @@ export const content: Record<Lang, PageContent> = {
     ],
     testimonialsDisclaimer: "Beispielhafte Zitate zur Veranschaulichung – echte Erfahrungsberichte folgen in Kürze.",
     ctaTitle: "Bereit, etwas zum Laufen zu bringen?",
-    ctaSubtitle: "Ein Kurs reicht, um aus Neugier echtes Können zu machen – inklusive Roboter zum Vorzeigen.",
+    ctaSubtitle: "Ein Kurs praktische MINT-Bildung reicht, um aus Neugier echtes Können zu machen – inklusive Roboter zum Vorzeigen.",
     trainers: [
       {
         name: "Chris",

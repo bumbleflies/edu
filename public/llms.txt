@@ -1,7 +1,7 @@
 # bumble:futurespace
-# Updated: 2026-09-03
+# Updated: 2026-09-19
 
-> Coding & robotics courses for kids 8–14 using the mbot2 platform. Hands-on programming, real hardware, small groups. Powered by bumble:education.
+> Hands-on STEM education (praktische MINT-Bildung): coding & robotics courses for kids 8–14 using the mbot2 platform. Real hardware, small groups. Powered by bumble:education.
 
 ## Available Courses
 
@@ -34,6 +34,7 @@ Both courses run weekly during the school term. All materials included — kids 
 - **Location:** Munich, Germany
 - **Price:** €25 (Robot Explorer) / €40 (Code the Machine)
 - **Run by:** bumble:education (part of bumbleflies)
+- **Focus:** Hands-on STEM education (DE: praktische MINT-Bildung) — science, technology, engineering and math through real robots
 - **Booking:** https://pretix.eu/bumbleedu/
 - **What's included:** All materials, instruction, and the mbot2 robot to keep
 

@@ -1,6 +1,6 @@
 {
   "name": "bumble:futurespace",
-  "description": "Coding and robotics courses for kids 8–14 using the mbot2 platform. Hands-on programming, real hardware, small groups.",
+  "description": "Hands-on STEM education (praktische MINT-Bildung): coding and robotics courses for kids 8–14 using the mbot2 platform. Real hardware, small groups.",
   "version": "1.0.0",
   "provider": {
     "organization": "bumble:education",
@@ -25,8 +25,8 @@
     {
       "id": "course-info",
       "name": "Course Information",
-      "description": "Provides details about bumble:futurespace coding and robotics courses for kids. Covers both beginner (Robot Explorer, ages 8–10, block coding, €25) and intermediate (Code the Machine, ages 11–14, Python, €40) tracks.",
-      "tags": ["courses", "kids", "coding", "robotics", "mbot2", "munich", "education"],
+      "description": "Provides details about bumble:futurespace hands-on STEM courses for kids — coding and robotics with real mbot2 hardware. Covers both beginner (Robot Explorer, ages 8–10, block coding, €25) and intermediate (Code the Machine, ages 11–14, Python, €40) tracks.",
+      "tags": ["courses", "kids", "coding", "robotics", "mbot2", "munich", "education", "stem", "mint"],
       "examples": [
         "What courses does bumble:futurespace offer?",
         "Tell me about the Robot Explorer course",
@@ -66,7 +66,7 @@
       "id": "curriculum-info",
       "name": "Curriculum Details",
       "description": "Explains what kids learn in each course — from block coding to Python, from basic logic to autonomous maze robots. Covers sensors (ultrasonic, infrared, light), final projects, and learning outcomes.",
-      "tags": ["curriculum", "learning", "python", "block-coding", "sensors", "stem", "maze", "line-following"],
+      "tags": ["curriculum", "learning", "python", "block-coding", "sensors", "stem", "mint", "maze", "line-following"],
       "examples": [
         "What will my child learn in Robot Explorer?",
         "How does the block coding to Python transition work?",

@@ -19,6 +19,11 @@ describe('organizationJsonLd', () => {
     expect(organizationJsonLd('de').description).toContain('Programmier');
     expect(organizationJsonLd('en').description).toContain('programming');
   });
+
+  it('mentions STEM/MINT in organization descriptions', () => {
+    expect(organizationJsonLd('de').description).toContain('MINT');
+    expect(organizationJsonLd('en').description).toContain('STEM');
+  });
 });
 
 describe('courseJsonLd', () => {
@@ -61,9 +66,16 @@ describe('courseJsonLd', () => {
   it('localizes teaching outcomes', () => {
     const deOutcomes = courseJsonLd('de', 0)!.teaches;
     const enOutcomes = courseJsonLd('en', 0)!.teaches;
-    expect(deOutcomes).toHaveLength(3);
-    expect(enOutcomes).toHaveLength(3);
+    expect(deOutcomes).toHaveLength(4);
+    expect(enOutcomes).toHaveLength(4);
     expect(deOutcomes).not.toEqual(enOutcomes);
+  });
+
+  it('includes STEM/MINT skills in teaching outcomes', () => {
+    for (const idx of [0, 1]) {
+      expect(courseJsonLd('en', idx)!.teaches.some((o) => o.includes('STEM'))).toBe(true);
+      expect(courseJsonLd('de', idx)!.teaches.some((o) => o.includes('MINT'))).toBe(true);
+    }
   });
 
   it('includes Munich location in course instances', () => {
