@@ -132,9 +132,11 @@ describe.each(['de', 'en'] as const)('TriFoldFlyer (%s)', (lang) => {
   describe('reading journey: the right content in the right panel', () => {
     it('cover: hook, sticker, parent line and the open hint', () => {
       const cover = text(panel(html, 'cover'));
-      for (const part of [c.heroEyebrow, c.heroTitle, c.heroTitlePop, f.sticker, f.parentLine, f.openHint]) {
+      for (const part of [f.kicker, c.heroTitle, c.heroTitlePop, f.sticker, f.parentLine, f.openHint]) {
         expect(cover).toContain(text(part));
       }
+      // the site's long hero sentence is too wordy for the cover
+      expect(cover).not.toContain(text(c.heroEyebrow));
       expect(panel(html, 'cover')).toContain('src="/images/hero.webp"');
     });
 
