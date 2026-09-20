@@ -230,7 +230,7 @@ export const content: Record<Lang, PageContent> = {
       outsideLabel: "Outside · print page 1",
       insideLabel: "Inside · print page 2",
       printHint:
-        "Print double-sided (flip on the short edge). Letter-fold: inside facing up, fold the right third in first, then the left third over it.",
+        "Print double-sided (flip on the long edge). Letter-fold: inside facing up, fold the right third in first, then the left third over it.",
       onePageLead:
         "Your child showed interest in one of our courses – here is everything you'd like to know.",
       onePagePrintHint: "Print single-sided on A4 (portrait).",
@@ -350,7 +350,7 @@ export const content: Record<Lang, PageContent> = {
       outsideLabel: "Außenseite · Druckseite 1",
       insideLabel: "Innenseite · Druckseite 2",
       printHint:
-        "Beidseitig drucken (an der kurzen Kante wenden). Falten (Wickelfalz): Innenseite nach oben, zuerst das rechte Drittel einklappen, dann das linke darüberlegen.",
+        "Beidseitig drucken (an der langen Kante wenden). Falten (Wickelfalz): Innenseite nach oben, zuerst das rechte Drittel einklappen, dann das linke darüberlegen.",
       onePageLead:
         "Euer Kind hat sich für einen unserer Kurse interessiert – hier steht alles, was ihr wissen wollt.",
       onePagePrintHint: "Einseitig auf A4 drucken (Hochformat).",

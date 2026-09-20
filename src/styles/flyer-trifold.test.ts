@@ -66,6 +66,11 @@ describe('flyer print stylesheet: printing', () => {
     expect(print).toMatch(/\.flyer-sheet-inside\s*\{[^}]*break-after:\s*avoid/);
   });
 
+  it('rotates the inside sheet 180 degrees in print for long-edge duplex', () => {
+    const print = printMode();
+    expect(print).toMatch(/\.flyer-sheet-inside\s*\{[^}]*transform:\s*rotate\(180deg\)/);
+  });
+
   it('forces exact colour printing so tinted cards and stickers survive', () => {
     expect(css).toContain('-webkit-print-color-adjust: exact');
     expect(css).toContain('print-color-adjust: exact');
