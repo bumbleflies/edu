@@ -79,6 +79,10 @@ export interface FlyerContent {
   qrCaption: string;
   qrAlt: string;
   smallPrint: string;
+  /** Tri-fold only: alt text of the mbot2 banner in the courses panel. */
+  mbotAlt: string;
+  /** Tri-fold only: credit line for the mbot2 photo (CC BY-SA 4.0 requires author, source and licence). */
+  photoCredit: string;
   /** Screen-only labels above each printed sheet. */
   outsideLabel: string;
   insideLabel: string;
@@ -187,6 +191,13 @@ export const content: Record<Lang, PageContent> = {
           "Our team soul: she reads the room in seconds, knows who needs a nudge and who needs quiet, and turns a bunch of kids into a real team. Every kid leaves feeling seen.",
         image: "/images/trainer_joerdi.webp",
       },
+      {
+        name: "Thore",
+        role: "Kids specialist · Age 8",
+        blurb:
+          "Jördis' son and our kids specialist: at 8 years old he knows best what kids enjoy.",
+        image: "/images/trainer_thore.svg",
+      },
     ],
     trainersEyebrow: "The team",
     trainersTitle: "Who's with your kids along the way",
@@ -214,6 +225,8 @@ export const content: Record<Lang, PageContent> = {
       qrCaption: "All info & sign-up",
       qrAlt: "QR code linking to edu.bumbleflies.de/en/",
       smallPrint: "© bumbleflies UG · Imprint & privacy: edu.bumbleflies.de/en/imprint",
+      mbotAlt: "The mbot2 learning robot with a blue chassis and two round ultrasonic sensors",
+      photoCredit: "mbot2 photo: Mattruffoni, Wikimedia Commons, CC BY-SA 4.0",
       outsideLabel: "Outside · print page 1",
       insideLabel: "Inside · print page 2",
       printHint:
@@ -298,6 +311,13 @@ export const content: Record<Lang, PageContent> = {
           "Unsere Team-Seele: spürt sofort, wer Mut braucht und wer Ruhe, und macht aus einer Gruppe ein echtes Team. Bei ihr fühlt sich jedes Kind gesehen und willkommen.",
         image: "/images/trainer_joerdi.webp",
       },
+      {
+        name: "Thore",
+        role: "Kinder-Experte · 8 Jahre",
+        blurb:
+          "Jördis' Sohn und unser Kinder-Experte: Mit 8 Jahren weiß er am besten, was Kindern Spaß macht.",
+        image: "/images/trainer_thore.svg",
+      },
     ],
     trainersEyebrow: "Das Team",
     trainersTitle: "Wer eure Kinder begleitet",
@@ -325,6 +345,8 @@ export const content: Record<Lang, PageContent> = {
       qrCaption: "Alle Infos & Anmeldung",
       qrAlt: "QR-Code zur Website edu.bumbleflies.de",
       smallPrint: "© bumbleflies UG · Impressum & Datenschutz: edu.bumbleflies.de/impressum",
+      mbotAlt: "Der mbot2-Lernroboter mit blauem Chassis und zwei runden Ultraschall-Sensoren",
+      photoCredit: "Foto mbot2: Mattruffoni, Wikimedia Commons, CC BY-SA 4.0",
       outsideLabel: "Außenseite · Druckseite 1",
       insideLabel: "Innenseite · Druckseite 2",
       printHint:

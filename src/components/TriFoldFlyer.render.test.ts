@@ -55,8 +55,8 @@ describe.each(['de', 'en'] as const)('TriFoldFlyer (%s)', (lang) => {
   it('has exactly one h1 and a non-empty alt text on every image', () => {
     expect((html.match(/<h1[\s>]/g) ?? []).length).toBe(1);
     const images = html.match(/<img[^>]*>/g) ?? [];
-    // hero, two trainer avatars, two QR codes
-    expect(images).toHaveLength(5);
+    // hero, mbot2 banner, three trainer avatars, two QR codes
+    expect(images).toHaveLength(7);
     for (const image of images) expect(image).toMatch(/alt="[^"]+"/);
   });
 
@@ -119,6 +119,23 @@ describe.each(['de', 'en'] as const)('TriFoldFlyer (%s)', (lang) => {
     const mails = [...html.matchAll(/<a href="(mailto:[^"]+)"[^>]*>([^<]*)<\/a>/g)].map((m) => [m[1], m[2]]);
     expect(mails).toEqual([[`mailto:${EMAIL}`, EMAIL]]);
     expect(panel(html, 'back')).toContain(`mailto:${EMAIL}`);
+  });
+
+  describe('mbot2 banner', () => {
+    it('sits in the courses panel, between the header and the first course card', () => {
+      const centre = panel(html, 'inside-centre');
+      const image = centre.indexOf('src="/images/mbot2.webp"');
+      expect(image).toBeGreaterThan(centre.indexOf('<h2>'));
+      expect(image).toBeLessThan(centre.indexOf('<article class="flyer-course">'));
+      expect(centre).toMatch(new RegExp(`<img src="/images/mbot2\\.webp" width="1600" height="640" alt="${f.mbotAlt}"`));
+    });
+
+    it('is credited on the back cover with photographer and licence', () => {
+      const back = text(panel(html, 'back'));
+      expect(back).toContain(f.photoCredit);
+      expect(back).toContain('Mattruffoni');
+      expect(back).toContain('CC BY-SA 4.0');
+    });
   });
 
   it('shows the start and location facts on the courses panel and on the back cover', () => {

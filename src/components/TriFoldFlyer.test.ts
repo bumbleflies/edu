@@ -157,3 +157,11 @@ describe('TriFoldFlyer contact and sign-up', () => {
     expect(at('f.flapHint')).toBeLessThan(panel('back'));
   });
 });
+
+describe('TriFoldFlyer mbot2 banner', () => {
+  it('uses the mbot2 image, its alt text and the photo credit from the copy block', () => {
+    expect(source).toContain('/images/mbot2.webp');
+    expect(source).toContain('f.mbotAlt');
+    expect(source).toContain('f.photoCredit');
+  });
+});

@@ -181,13 +181,13 @@
   .pf-sheet {
     box-sizing: border-box; width: 210mm; height: 296.5mm; padding: 8mm 10mm;
     /* `gap` is only the minimum: space-between spreads any spare room evenly. */
-    gap: 3mm; justify-content: space-between; overflow: hidden;
+    gap: 2.5mm; justify-content: space-between; overflow: hidden;
     background: var(--paper); box-shadow: 0 8px 30px rgba(43, 43, 51, 0.08);
   }
   .pf-page .pf-card { padding: 0; border-radius: 0; background: none; box-shadow: none; }
-  .pf-experience, .pf-courses, .pf-parents, .pf-team { gap: 3mm; }
+  .pf-experience, .pf-courses, .pf-parents, .pf-team { gap: 2.5mm; }
 
-  .pf-intro { display: grid; grid-template-columns: 1fr 66mm; column-gap: 7mm; row-gap: 3mm; align-items: center; }
+  .pf-intro { display: grid; grid-template-columns: 1fr 62mm; column-gap: 7mm; row-gap: 3mm; align-items: center; }
   .pf-top { grid-column: 1 / -1; }
   .pf-intro h1 { font-size: 40pt; line-height: 1; }
   .pf-hero { margin-bottom: 0; }
@@ -203,12 +203,16 @@
   .pf-head-row { flex-direction: row; align-items: flex-end; justify-content: space-between; }
   .pf-facts { justify-content: flex-end; }
   .pf-course-grid { grid-template-columns: 1fr 1fr; gap: 4mm; }
-  .pf-course { padding: 3.5mm 5mm; }
+  .pf-course { padding: 3mm 5mm; }
   .pf-why { grid-template-columns: 1fr 1fr; gap: 2mm; }
-  .pf-why li { padding: 2.5mm 3.5mm; }
+  .pf-why li { padding: 2mm 3.5mm; }
+  /* Three team rows fit because the avatars are a little smaller on the sheet. */
+  .pf-trainers { gap: 1mm; }
+  .pf-trainer { grid-template-columns: 9mm 1fr; gap: 2.5mm; }
+  .pf-trainer img { width: 9mm; height: 9mm; }
   .pf-band { display: grid; grid-template-columns: 5fr 7fr; gap: 4mm; }
   .pf-signup { display: grid; grid-template-columns: 30mm 1fr; }
-  .pf-page .pf-team, .pf-page .pf-signup { padding: 4.5mm 5mm; border-radius: 4mm; }
+  .pf-page .pf-team, .pf-page .pf-signup { padding: 4mm 5mm; border-radius: 4mm; }
   .pf-page .pf-team { background: var(--bg); }
   /* The .pf-card reset above has the same specificity and comes later, so the tint is restated. */
   .pf-page .pf-signup { background: var(--pf-tint); }
