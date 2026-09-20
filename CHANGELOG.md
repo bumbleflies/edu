@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.18.1](https://github.com/bumbleflies/edu/compare/edu-v0.18.0...edu-v0.18.1) (2026-09-20)
+
+
+### Bug Fixes
+
+* parent flyer fits one page again; apply print-proof feedback ([#86](https://github.com/bumbleflies/edu/issues/86)) ([7b0f957](https://github.com/bumbleflies/edu/commit/7b0f9576effa1e2191d3e0b7bb5f8e267cc2074b))
+
 ## [0.18.0](https://github.com/bumbleflies/edu/compare/edu-v0.17.1...edu-v0.18.0) (2026-09-19)
 
 
