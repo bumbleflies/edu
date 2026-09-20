@@ -6,6 +6,11 @@
  *   outside (print page 1): flap 97mm | back 100mm | cover 100mm
  *   inside  (print page 2): left 100mm | centre 100mm | right 97mm
  *
+ *  The inside sheet is rotated 180 degrees in print so the default
+ *  "flip on the long edge" duplex setting lines the back side up with the
+ *  front (a long-edge flip preserves x; the rotation supplies the x-mirror
+ *  a letter-fold needs). On wide screens both sheets stay upright.
+ *
  *  - Below 1200px the panels stack as cards, in reading order.
  *  - From 1200px and in print the two true sheets are shown / printed.
  *  - Browser printing has no bleed, so nothing may touch a sheet edge or a
@@ -241,7 +246,9 @@
   }
   .flyer-sheet { box-shadow: none; }
   .flyer-sheet-outside { break-after: page; }
-  .flyer-sheet-inside { break-after: avoid; }
+  /* Long-edge duplex default: the rotated inside sheet lands x-mirrored
+     after a long-edge flip, i.e. aligned with the outside sheet. */
+  .flyer-sheet-inside { break-after: avoid; transform: rotate(180deg); }
   .flyer-page .flyer-panel + .flyer-panel { box-shadow: none; }
 }
 
