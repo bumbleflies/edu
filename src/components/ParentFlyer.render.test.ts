@@ -103,12 +103,12 @@ describe.each(['de', 'en'] as const)('ParentFlyer (%s)', (lang) => {
   });
 
   describe('images', () => {
-    it('has exactly four images: informative alt on the hero and the QR code, empty alt on the avatars', () => {
+    it('has exactly five images: informative alt on the hero and the QR code, empty alt on the avatars', () => {
       const images = html.match(/<img[^>]*>/g) ?? [];
-      // hero, two trainer avatars, one QR code
-      expect(images).toHaveLength(4);
+      // hero, three trainer avatars, one QR code
+      expect(images).toHaveLength(5);
       const avatars = images.filter((image) => /trainer_/.test(image));
-      expect(avatars).toHaveLength(2);
+      expect(avatars).toHaveLength(3);
       // the trainer's name is printed right next to the avatar, so the picture itself is decorative
       for (const avatar of avatars) expect(avatar).toMatch(/alt=""/);
       for (const image of images.filter((image) => !/trainer_/.test(image))) expect(image).toMatch(/alt="[^"]+"/);
@@ -316,5 +316,6 @@ describe('one-page print budget', () => {
     const reassuranceChars = c.whyList.reduce((sum, item) => sum + item.title.length + item.text.length, 0);
     expect(reassuranceChars, 'reassurance copy length').toBeLessThanOrEqual(560);
     expect(c.steps.length).toBe(3);
+    expect(c.trainers.length).toBeLessThanOrEqual(3);
   });
 });

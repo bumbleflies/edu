@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-label="Thore">
+  <rect width="480" height="480" fill="#f5f1e8"/>
+  <circle cx="240" cy="240" r="200" fill="#d99a3f" fill-opacity="0.28"/>
+  <path fill="#4a3f8f" d="M140 130H340V194H272V350H208V194H140Z"/>
+</svg>

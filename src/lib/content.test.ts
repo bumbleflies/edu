@@ -1,4 +1,6 @@
 import { describe, it, expect } from 'vitest';
+import { readFileSync, existsSync, statSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { ownershipClaim } from '../test-utils/ownership-claim';
 import { content } from './content';
 
@@ -8,13 +10,13 @@ describe('homepage content', () => {
     expect(content.de.title).toContain('bumble:futurespace');
   });
 
-  it('has 2 courses, 3 steps and 2 trainers in both languages', () => {
+  it('has 2 courses, 3 steps and 3 trainers in both languages', () => {
     expect(content.en.courses).toHaveLength(2);
     expect(content.de.courses).toHaveLength(2);
     expect(content.en.steps).toHaveLength(3);
     expect(content.de.steps).toHaveLength(3);
-    expect(content.en.trainers).toHaveLength(2);
-    expect(content.de.trainers).toHaveLength(2);
+    expect(content.en.trainers).toHaveLength(3);
+    expect(content.de.trainers).toHaveLength(3);
   });
 
   it('has matching top-level keys for de and en', () => {
@@ -71,6 +73,8 @@ const approvedFlyerCopy = {
     signupText: 'Oder einfach anrufen:',
     qrCaption: 'Alle Infos & Anmeldung',
     qrAlt: 'QR-Code zur Website edu.bumbleflies.de',
+    mbotAlt: 'Der mbot2-Lernroboter mit blauem Chassis und zwei runden Ultraschall-Sensoren',
+    photoCredit: 'Foto mbot2: Mattruffoni, Wikimedia Commons, CC BY-SA 4.0',
     smallPrint: '© bumbleflies UG · Impressum & Datenschutz: edu.bumbleflies.de/impressum',
     outsideLabel: 'Außenseite · Druckseite 1',
     insideLabel: 'Innenseite · Druckseite 2',
@@ -103,6 +107,8 @@ const approvedFlyerCopy = {
     signupText: 'Or just call:',
     qrCaption: 'All info & sign-up',
     qrAlt: 'QR code linking to edu.bumbleflies.de/en/',
+    mbotAlt: 'The mbot2 learning robot with a blue chassis and two round ultrasonic sensors',
+    photoCredit: 'mbot2 photo: Mattruffoni, Wikimedia Commons, CC BY-SA 4.0',
     smallPrint: '© bumbleflies UG · Imprint & privacy: edu.bumbleflies.de/en/imprint',
     outsideLabel: 'Outside · print page 1',
     insideLabel: 'Inside · print page 2',
@@ -275,5 +281,79 @@ describe('reassurance cards: four, with hardware and STEM/MINT folded into one',
         : /^(Real hardware|Hands-on STEM education)$/.test(title),
     );
     expect(standalone).toEqual([]);
+  });
+});
+
+const publicFile = (path: string) => fileURLToPath(new URL(`../../public${path}`, import.meta.url));
+
+describe('team: Thore, the kids specialist (Jördis\' son, 8)', () => {
+  it.each(['de', 'en'] as const)('%s: Thore is the third team member after Chris and Jördis', (lang) => {
+    expect(content[lang].trainers.map((trainer) => trainer.name)).toEqual(['Chris', 'Jördis', 'Thore']);
+  });
+
+  it.each(['de', 'en'] as const)('%s: his role says kids specialist and his age', (lang) => {
+    const thore = content[lang].trainers[2];
+    expect(thore.role).toMatch(lang === 'de' ? /Kinder-Experte/ : /[Kk]ids specialist/);
+    expect(thore.role).toMatch(/\b8\b/);
+  });
+
+  it.each(['de', 'en'] as const)('%s: his blurb names his mother and his age and stays short', (lang) => {
+    const { blurb } = content[lang].trainers[2];
+    expect(blurb).toContain('Jördis');
+    expect(blurb).toMatch(lang === 'de' ? /Sohn/ : /\bson\b/);
+    expect(blurb).toMatch(/\b8\b/);
+    expect(blurb.length).toBeLessThan(140);
+  });
+
+  it('every trainer has all four fields and an existing avatar file', () => {
+    for (const lang of ['de', 'en'] as const) {
+      for (const trainer of content[lang].trainers) {
+        for (const value of [trainer.name, trainer.role, trainer.blurb, trainer.image]) expect(value.trim()).not.toBe('');
+        expect(existsSync(publicFile(trainer.image)), `${lang}: ${trainer.image}`).toBe(true);
+      }
+    }
+  });
+
+  it("Thore's avatar is a self-contained SVG monogram (no font or external file needed)", () => {
+    const svg = readFileSync(publicFile('/images/trainer_thore.svg'), 'utf-8');
+    expect(svg).toMatch(/<svg[^>]*viewBox="0 0 480 480"/);
+    expect(svg).toContain('<path');
+    expect(svg).not.toMatch(/<text|<image|href=/);
+  });
+
+  it('the machine-readable team list names every trainer', () => {
+    const llms = readFileSync(publicFile('/llms-full.txt'), 'utf-8');
+    for (const trainer of content.en.trainers) expect(llms, trainer.name).toMatch(new RegExp(`^### ${trainer.name}\\b`, 'm'));
+  });
+});
+
+describe('mbot2 banner image and its credit', () => {
+  it('ships a real, web-sized webp of the mbot2', () => {
+    const file = publicFile('/images/mbot2.webp');
+    expect(existsSync(file)).toBe(true);
+    const size = statSync(file).size;
+    expect(size).toBeGreaterThan(10_000);
+    expect(size).toBeLessThan(250_000);
+    const head = readFileSync(file).subarray(0, 12).toString('latin1');
+    expect(head.startsWith('RIFF')).toBe(true);
+    expect(head.endsWith('WEBP')).toBe(true);
+  });
+
+  it.each(['de', 'en'] as const)('%s: credits the photographer and the licence, as CC BY-SA 4.0 requires', (lang) => {
+    const { photoCredit, mbotAlt } = content[lang].flyer;
+    expect(photoCredit).toContain('Mattruffoni');
+    expect(photoCredit).toContain('CC BY-SA 4.0');
+    expect(photoCredit).toContain('Wikimedia Commons');
+    expect(mbotAlt).toMatch(/mbot2/);
+  });
+});
+
+describe('homepage team grid', () => {
+  it('centres an odd last trainer card in the two-column grid and un-centres it on the phone', () => {
+    const css = readFileSync(fileURLToPath(new URL('../styles/home.css', import.meta.url)), 'utf-8');
+    expect(css).toMatch(/\.trainer-card:last-child:nth-child\(odd\)\s*\{[^}]*grid-column:\s*1\s*\/\s*-1/);
+    expect(css).toMatch(/\.trainer-card:last-child:nth-child\(odd\)\s*\{[^}]*justify-self:\s*center/);
+    const phone = css.slice(css.indexOf('@media (max-width: 760px)'));
+    expect(phone).toMatch(/\.trainer-card:last-child:nth-child\(odd\)\s*\{[^}]*width:\s*auto/);
   });
 });
