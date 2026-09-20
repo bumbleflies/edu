@@ -78,7 +78,7 @@ describe('TriFoldFlyer content', () => {
   });
 
   it('builds the panels from existing site content', () => {
-    for (const field of ['c.steps', 'c.whyList', 'c.trainers', 'c.courses', 'c.ctaTitle', 'c.heroEyebrow', 'c.heroTitle', 'c.heroTitlePop']) {
+    for (const field of ['c.steps', 'c.whyList', 'c.trainers', 'c.courses', 'c.ctaTitle', 'f.kicker', 'c.heroTitle', 'c.heroTitlePop']) {
       expect(source, field).toContain(field);
     }
   });

@@ -50,6 +50,7 @@ describe('homepage content', () => {
 const approvedFlyerCopy = {
   de: {
     heroAlt: 'Kind spielt mit einem freundlichen Roboter',
+    kicker: 'Kinder 8–14 · MINT',
     sticker: 'Zeig das deinen Eltern!',
     parentLine:
       'Euer Kind hat sich für einen unserer Kurse interessiert. Innen steht alles, was ihr wissen wollt.',
@@ -57,7 +58,7 @@ const approvedFlyerCopy = {
     experienceLabel: 'Das Erlebnis',
     experienceTitle: 'Das erlebt euer Kind',
     experienceClosing:
-      'Nebenbei entstehen neue Freundschaften, es gibt echte Bugs zu lösen, und am Ende sind sie ein Stück selbstbewusster als vorher.',
+      'Nebenbei entstehen neue Freundschaften, es gibt echte Aufgaben zu lösen, und am Ende sind sie ein Stück selbstbewusster als vorher.',
     parentsLabel: 'Für Eltern',
     parentsTitle: 'Gut aufgehoben',
     flapHint: 'Weiter aufklappen: Kurse, Preise & Team →',
@@ -67,10 +68,10 @@ const approvedFlyerCopy = {
     startFact: 'Start: Oktober 2026',
     locationFact: 'Kurse in eurer Nähe',
     signupTitle: 'Jetzt anmelden',
-    signupText: 'QR-Code scannen oder einfach anrufen:',
-    qrCaption: 'QR-Code scannen: alle Infos & Anmeldung',
+    signupText: 'Oder einfach anrufen:',
+    qrCaption: 'Alle Infos & Anmeldung',
     qrAlt: 'QR-Code zur Website edu.bumbleflies.de',
-    smallPrint: '© bumbleflies UG · München · Impressum & Datenschutz: edu.bumbleflies.de/impressum',
+    smallPrint: '© bumbleflies UG · Impressum & Datenschutz: edu.bumbleflies.de/impressum',
     outsideLabel: 'Außenseite · Druckseite 1',
     insideLabel: 'Innenseite · Druckseite 2',
     printHint:
@@ -81,6 +82,7 @@ const approvedFlyerCopy = {
   },
   en: {
     heroAlt: 'Child playing with a friendly robot',
+    kicker: 'Kids 8–14 · STEM',
     sticker: 'Show this to your parents!',
     parentLine:
       "Your child showed interest in one of our courses. Inside you'll find everything you'd like to know.",
@@ -88,7 +90,7 @@ const approvedFlyerCopy = {
     experienceLabel: 'The experience',
     experienceTitle: 'What your child will experience',
     experienceClosing:
-      'Along the way they make friends, hit real bugs, fix them, and walk away a little more confident than when they started.',
+      'Along the way they make friends, take on real challenges, and walk away a little more confident than when they started.',
     parentsLabel: 'For parents',
     parentsTitle: 'In good hands',
     flapHint: 'Keep unfolding: courses, prices & team →',
@@ -98,10 +100,10 @@ const approvedFlyerCopy = {
     startFact: 'Start: October 2026',
     locationFact: 'Courses near you',
     signupTitle: 'Sign up now',
-    signupText: 'Scan the QR code or just call:',
-    qrCaption: 'Scan the QR code for all info & sign-up',
+    signupText: 'Or just call:',
+    qrCaption: 'All info & sign-up',
     qrAlt: 'QR code linking to edu.bumbleflies.de/en/',
-    smallPrint: '© bumbleflies UG · Munich · Imprint & privacy: edu.bumbleflies.de/en/imprint',
+    smallPrint: '© bumbleflies UG · Imprint & privacy: edu.bumbleflies.de/en/imprint',
     outsideLabel: 'Outside · print page 1',
     insideLabel: 'Inside · print page 2',
     printHint:
@@ -216,5 +218,62 @@ describe('flyer content block', () => {
         expect(value, `${lang}.flyer.${key}`).not.toMatch(forbidden);
       }
     }
+  });
+});
+
+describe('flyer copy after the printed-proof review', () => {
+  it.each(['de', 'en'] as const)('%s: the cover kicker is a short label, not the site hero sentence', (lang) => {
+    const { kicker } = content[lang].flyer;
+    expect(kicker.length).toBeLessThan(30);
+    expect(kicker).toMatch(/8–14/);
+    expect(kicker).toMatch(lang === 'de' ? /MINT/ : /STEM/);
+    expect(kicker).not.toMatch(/mbot2/i);
+    expect(kicker).not.toBe(content[lang].heroEyebrow);
+  });
+
+  it.each(['de', 'en'] as const)('%s: never tells people to scan, because the code is printed right there', (lang) => {
+    const f = content[lang].flyer;
+    for (const line of [f.qrCaption, f.signupText]) expect(line).not.toMatch(/scan/i);
+  });
+
+  it.each(['de', 'en'] as const)('%s: the small print names no city (courses run near the family)', (lang) => {
+    expect(content[lang].flyer.smallPrint).not.toMatch(/München|Munich/);
+    expect(content[lang].flyer.smallPrint).toContain('bumbleflies UG');
+  });
+
+  it.each(['de', 'en'] as const)('%s: the closing line uses no programmer jargon for parents', (lang) => {
+    expect(content[lang].flyer.experienceClosing).not.toMatch(/\bbugs?\b/i);
+  });
+
+  it.each(['de', 'en'] as const)('%s: the first step says "robot", not the product name', (lang) => {
+    const text = content[lang].steps[0].text;
+    expect(text).not.toMatch(/mbot2/i);
+    expect(text).toMatch(lang === 'de' ? /^Roboter zusammenstecken/ : /robot together/);
+  });
+});
+
+describe('reassurance cards: four, with hardware and STEM/MINT folded into one', () => {
+  it.each(['de', 'en'] as const)('%s: exactly four cards', (lang) => {
+    expect(content[lang].whyList).toHaveLength(4);
+  });
+
+  it.each(['de', 'en'] as const)('%s: one card covers real hardware and STEM/MINT together', (lang) => {
+    const merged = content[lang].whyList.filter((item) =>
+      lang === 'de' ? /Hardware/.test(item.title) && /MINT/.test(item.title) : /hardware/i.test(item.title) && /STEM/.test(item.title),
+    );
+    expect(merged).toHaveLength(1);
+    expect(merged[0].text).toMatch(lang === 'de' ? /Sensoren/ : /sensors/);
+    expect(merged[0].text).toMatch(lang === 'de' ? /Bildschirm-Simulation/ : /screen simulation/);
+    expect(merged[0].text).toMatch(lang === 'de' ? /Mathematik, Informatik, Naturwissenschaft und Technik/ : /science, technology, engineering and math/);
+  });
+
+  it.each(['de', 'en'] as const)('%s: no card repeats the hardware or the STEM/MINT idea on its own', (lang) => {
+    const titles = content[lang].whyList.map((item) => item.title);
+    const standalone = titles.filter((title) =>
+      lang === 'de'
+        ? /^(Echte Hardware|Praktische MINT-Bildung)$/.test(title)
+        : /^(Real hardware|Hands-on STEM education)$/.test(title),
+    );
+    expect(standalone).toEqual([]);
   });
 });

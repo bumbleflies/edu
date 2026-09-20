@@ -47,6 +47,8 @@ export interface Trainer {
  */
 export interface FlyerContent {
   heroAlt: string;
+  /** Short label above the cover headline: age range and subject. The site's long hero eyebrow is too wordy for print. */
+  kicker: string;
   /** Sticker on the cover, aimed at the child holding the flyer. */
   sticker: string;
   /** Cover line addressed to the parents. */
@@ -153,16 +155,15 @@ export const content: Record<Lang, PageContent> = {
       },
     ],
     steps: [
-      { title: "Build", text: "Snap your mbot2 together and wire up the sensors.", icon: "build" },
+      { title: "Build", text: "Snap your robot together and wire up the sensors.", icon: "build" },
       { title: "Code", text: "Drag blocks or write Python to tell it what to do.", icon: "code" },
       { title: "Go", text: "Hit run and watch your ideas roll across the floor.", icon: "go" },
     ],
     whyList: [
       { title: "Small groups", text: "Every kid has their own robot in class, a coach's attention, and room to ask questions — there are no dumb ones." },
-      { title: "Real hardware", text: "Not a screen simulation — a robot they can hold, that listens to them." },
+      { title: "Real hardware, real STEM education", text: "A robot they can hold, not a screen simulation: real sensors, real code, real physics — so kids learn science, technology, engineering and math." },
       { title: "No experience needed", text: "Everyone starts at zero and leaves further than they expected." },
       { title: "Parents included", text: "You'll see the wins as they happen, plus a real showcase to watch them show off." },
-      { title: "Hands-on STEM education", text: "Real sensors, real code, real physics — kids learn science, technology, engineering and math by making a robot actually work." },
     ],
     testimonials: [
       { quote: "My daughter built her first obstacle-avoiding robot after four weeks — she couldn't stop smiling.", name: "Anna, mum of Mia (9)" },
@@ -191,6 +192,7 @@ export const content: Record<Lang, PageContent> = {
     trainersTitle: "Who's with your kids along the way",
     flyer: {
       heroAlt: "Child playing with a friendly robot",
+      kicker: "Kids 8–14 · STEM",
       sticker: "Show this to your parents!",
       parentLine:
         "Your child showed interest in one of our courses. Inside you'll find everything you'd like to know.",
@@ -198,7 +200,7 @@ export const content: Record<Lang, PageContent> = {
       experienceLabel: "The experience",
       experienceTitle: "What your child will experience",
       experienceClosing:
-        "Along the way they make friends, hit real bugs, fix them, and walk away a little more confident than when they started.",
+        "Along the way they make friends, take on real challenges, and walk away a little more confident than when they started.",
       parentsLabel: "For parents",
       parentsTitle: "In good hands",
       flapHint: "Keep unfolding: courses, prices & team →",
@@ -208,10 +210,10 @@ export const content: Record<Lang, PageContent> = {
       startFact: "Start: October 2026",
       locationFact: "Courses near you",
       signupTitle: "Sign up now",
-      signupText: "Scan the QR code or just call:",
-      qrCaption: "Scan the QR code for all info & sign-up",
+      signupText: "Or just call:",
+      qrCaption: "All info & sign-up",
       qrAlt: "QR code linking to edu.bumbleflies.de/en/",
-      smallPrint: "© bumbleflies UG · Munich · Imprint & privacy: edu.bumbleflies.de/en/imprint",
+      smallPrint: "© bumbleflies UG · Imprint & privacy: edu.bumbleflies.de/en/imprint",
       outsideLabel: "Outside · print page 1",
       insideLabel: "Inside · print page 2",
       printHint:
@@ -264,16 +266,15 @@ export const content: Record<Lang, PageContent> = {
       },
     ],
     steps: [
-      { title: "Bauen", text: "mbot2 zusammenstecken und Sensoren verkabeln.", icon: "build" },
+      { title: "Bauen", text: "Roboter zusammenstecken und Sensoren verkabeln.", icon: "build" },
       { title: "Coden", text: "Blöcke ziehen oder Python schreiben – und sagen, was passieren soll.", icon: "code" },
       { title: "Loslegen", text: "Play drücken und zusehen, wie die eigene Idee über den Boden rollt.", icon: "go" },
     ],
     whyList: [
       { title: "Kleine Gruppen", text: "Jedes Kind hat im Kurs seinen eigenen Roboter, echte Betreuung – und Raum für Fragen, denn dumme Fragen gibt's hier nicht." },
-      { title: "Echte Hardware", text: "Keine Bildschirm-Simulation – ein Roboter zum Anfassen, der wirklich reagiert." },
+      { title: "Echte Hardware, echte MINT-Bildung", text: "Ein Roboter zum Anfassen statt Bildschirm-Simulation: echte Sensoren, echter Code, echte Physik – so lernen Kinder Mathematik, Informatik, Naturwissenschaft und Technik." },
       { title: "Keine Vorkenntnisse nötig", text: "Alle starten bei null und kommen weiter, als sie erwartet hätten." },
       { title: "Eltern inklusive", text: "Ihr seht die Fortschritte live mit – plus eine echte Abschlusspräsentation zum Vorführen." },
-      { title: "Praktische MINT-Bildung", text: "Echte Sensoren, echter Code, echte Physik – Kinder lernen Mathematik, Informatik, Naturwissenschaft und Technik, indem sie einen Roboter zum Laufen bringen." },
     ],
     testimonials: [
       { quote: "Meine Tochter hat nach vier Wochen ihren ersten hindernis-erkennenden Roboter gebaut – sie konnte gar nicht mehr aufhören zu grinsen.", name: "Anna, Mama von Mia (9)" },
@@ -302,6 +303,7 @@ export const content: Record<Lang, PageContent> = {
     trainersTitle: "Wer eure Kinder begleitet",
     flyer: {
       heroAlt: "Kind spielt mit einem freundlichen Roboter",
+      kicker: "Kinder 8–14 · MINT",
       sticker: "Zeig das deinen Eltern!",
       parentLine:
         "Euer Kind hat sich für einen unserer Kurse interessiert. Innen steht alles, was ihr wissen wollt.",
@@ -309,7 +311,7 @@ export const content: Record<Lang, PageContent> = {
       experienceLabel: "Das Erlebnis",
       experienceTitle: "Das erlebt euer Kind",
       experienceClosing:
-        "Nebenbei entstehen neue Freundschaften, es gibt echte Bugs zu lösen, und am Ende sind sie ein Stück selbstbewusster als vorher.",
+        "Nebenbei entstehen neue Freundschaften, es gibt echte Aufgaben zu lösen, und am Ende sind sie ein Stück selbstbewusster als vorher.",
       parentsLabel: "Für Eltern",
       parentsTitle: "Gut aufgehoben",
       flapHint: "Weiter aufklappen: Kurse, Preise & Team →",
@@ -319,10 +321,10 @@ export const content: Record<Lang, PageContent> = {
       startFact: "Start: Oktober 2026",
       locationFact: "Kurse in eurer Nähe",
       signupTitle: "Jetzt anmelden",
-      signupText: "QR-Code scannen oder einfach anrufen:",
-      qrCaption: "QR-Code scannen: alle Infos & Anmeldung",
+      signupText: "Oder einfach anrufen:",
+      qrCaption: "Alle Infos & Anmeldung",
       qrAlt: "QR-Code zur Website edu.bumbleflies.de",
-      smallPrint: "© bumbleflies UG · München · Impressum & Datenschutz: edu.bumbleflies.de/impressum",
+      smallPrint: "© bumbleflies UG · Impressum & Datenschutz: edu.bumbleflies.de/impressum",
       outsideLabel: "Außenseite · Druckseite 1",
       insideLabel: "Innenseite · Druckseite 2",
       printHint:

@@ -127,7 +127,9 @@ describe.each(['de', 'en'] as const)('ParentFlyer (%s)', (lang) => {
       const intro = section(html, 'intro');
       expect(text(intro)).toContain('bumble:futurespace');
       expect(text(intro)).toContain('powered by bumble:education');
-      expect(text(intro)).toContain(text(c.heroEyebrow));
+      expect(text(intro)).toContain(text(f.kicker));
+      // the site's long hero sentence is too wordy for the top of the page
+      expect(text(intro)).not.toContain(text(c.heroEyebrow));
       expect(intro).toContain('class="pf-kicker"');
       const h1 = intro.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? '';
       expect(text(h1)).toContain(c.heroTitle);
@@ -301,5 +303,18 @@ describe.each(['de', 'en'] as const)('ParentFlyer (%s)', (lang) => {
     for (const testimonial of c.testimonials) expect(visible).not.toContain(text(testimonial.quote).slice(0, 30));
     expect(visible).not.toMatch(/testimonial/i);
     expect(visible).not.toMatch(ownershipClaim);
+  });
+});
+
+describe('one-page print budget', () => {
+  // The A4 sheet is tuned for four reassurance cards (2 x 2) and four outcomes per course. A fifth card once
+  // pushed the team, the QR card and the contact line off the page (0.18.0), so growing either needs a layout review.
+  it.each(['de', 'en'] as const)('%s: the copy stays within what fits on one printed page', (lang) => {
+    const c = content[lang];
+    expect(c.whyList.length).toBeLessThanOrEqual(4);
+    for (const course of c.courses) expect(course.outcomes.length).toBeLessThanOrEqual(4);
+    const reassuranceChars = c.whyList.reduce((sum, item) => sum + item.title.length + item.text.length, 0);
+    expect(reassuranceChars, 'reassurance copy length').toBeLessThanOrEqual(560);
+    expect(c.steps.length).toBe(3);
   });
 });
