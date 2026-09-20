@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.19.0](https://github.com/bumbleflies/edu/compare/edu-v0.18.1...edu-v0.19.0) (2026-09-20)
+
+
+### Features
+
+* add Thore to the team and an mbot2 photo to the tri-fold ([#88](https://github.com/bumbleflies/edu/issues/88)) ([5ea7937](https://github.com/bumbleflies/edu/commit/5ea7937b5e3b903b45125d6273f63b62975f91e4))
+
 ## [0.18.1](https://github.com/bumbleflies/edu/compare/edu-v0.18.0...edu-v0.18.1) (2026-09-20)
 
 
