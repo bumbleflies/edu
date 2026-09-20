@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.20.0](https://github.com/bumbleflies/edu/compare/edu-v0.19.0...edu-v0.20.0) (2026-09-20)
+
+
+### Features
+
+* default tri-fold print to long-edge duplex ([#90](https://github.com/bumbleflies/edu/issues/90)) ([ac9c186](https://github.com/bumbleflies/edu/commit/ac9c186cb8218af635f66fdd84792befd108fff4))
+
 ## [0.19.0](https://github.com/bumbleflies/edu/compare/edu-v0.18.1...edu-v0.19.0) (2026-09-20)
 
 
