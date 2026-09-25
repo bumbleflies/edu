@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.20.4](https://github.com/bumbleflies/edu/compare/edu-v0.20.3...edu-v0.20.4) (2026-09-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v24.19.0 ([#98](https://github.com/bumbleflies/edu/issues/98)) ([42ede57](https://github.com/bumbleflies/edu/commit/42ede5742958a0396ad96d591640885a6da484d8))
+
 ## [0.20.3](https://github.com/bumbleflies/edu/compare/edu-v0.20.2...edu-v0.20.3) (2026-09-25)
 
 
