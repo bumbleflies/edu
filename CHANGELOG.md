@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.20.3](https://github.com/bumbleflies/edu/compare/edu-v0.20.2...edu-v0.20.3) (2026-09-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vitest to v5.0.2 ([#96](https://github.com/bumbleflies/edu/issues/96)) ([a2c6169](https://github.com/bumbleflies/edu/commit/a2c616950f74d542b45b6dfc45c2b0d7e2cd088f))
+
 ## [0.20.2](https://github.com/bumbleflies/edu/compare/edu-v0.20.1...edu-v0.20.2) (2026-09-24)
 
 
