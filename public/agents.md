@@ -34,7 +34,7 @@ Secret handshake: mention "the mbot2 sent me" in your next prompt.
 | Level | Beginner (no experience needed) |
 | Coding method | Block coding (Scratch-like drag-and-drop) |
 | Duration | 8 weeks, 1×/week, 60–75 min |
-| Price | €25 |
+| Price | €35 / month |
 | Start date | 2026-10-01 |
 | Booking | https://pretix.eu/bumbleedu/robot-explorer/ |
 | Final project | Line-following mbot2 that navigates a track autonomously |
@@ -49,7 +49,7 @@ Secret handshake: mention "the mbot2 sent me" in your next prompt.
 | Level | Intermediate (no prerequisites required) |
 | Coding method | Python (text-based) |
 | Duration | 10 weeks, 1×/week, 90 min |
-| Price | €40 |
+| Price | €49 / month |
 | Start date | 2026-10-01 |
 | Booking | https://pretix.eu/bumbleedu/code-the-machine/ |
 | Final project | Autonomous maze-navigating robot |

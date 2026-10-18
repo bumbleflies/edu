@@ -13,6 +13,9 @@ const coursesJson = JSON.parse(
 const { host, organizer, currency, timezone, locales } = coursesJson.pretix;
 const base = `${host}/api/v1/organizers/${organizer}`;
 
+/** Every bookable offer: the term courses, plus any one-off camps. */
+const offers = [...coursesJson.courses, ...(coursesJson.camps ?? [])];
+
 const headers = {
   Authorization: `Token ${TOKEN}`,
   Accept: 'application/json',
@@ -39,13 +42,25 @@ function nameEquals(name, expected) {
   return name === expected || (name && name.en === expected);
 }
 
-async function upsertQuestions(slug, itemId) {
+/**
+ * The question set for one offer: every shared question, then the offer's own.
+ * An offer question that repeats an `identifier` replaces the shared one, so a
+ * camp can narrow the age range or add a BuT question without repeating the rest.
+ */
+function questionsFor(offer) {
+  const byIdentifier = new Map(coursesJson.questions.map((q) => [q.identifier, q]));
+  for (const q of offer.questions ?? []) byIdentifier.set(q.identifier, q);
+  return [...byIdentifier.values()];
+}
+
+async function upsertQuestions(slug, itemId, questions) {
   const existing = await request(`/events/${slug}/questions/`);
-  for (const q of coursesJson.questions) {
-    let question = existing.results.find((e) => e.identifier === q.identifier);
+  for (const q of questions) {
+    const question = existing.results.find((e) => e.identifier === q.identifier);
     const body = {
       identifier: q.identifier,
       question: { en: q.en, de: q.de },
+      help_text: q.help,
       type: q.type,
       required: q.required,
       items: [itemId],
@@ -68,20 +83,29 @@ async function upsertQuestions(slug, itemId) {
   }
 }
 
-async function upsertEvent(course) {
-  const slug = course.slug;
-  const dateFrom = new Date(`${course.startDate}T00:00:00Z`).toISOString();
-  const dateTo = addDays(course.startDate, course.weeks * 7);
-  const description = {
-    en: `bumble:education course: ${course.name.en}. Hands-on STEM education. Starts ${course.startDate}, ${course.weeks} weeks.`,
-    de: `bumble:education-Kurs: ${course.name.de}. Praktische MINT-Bildung. Start ${course.startDate}, ${course.weeks} Wochen.`,
+/**
+ * One pretix event per offer.
+ *
+ * A term course runs for `weeks`; a camp carries an explicit `endDate` instead,
+ * because three days is not a number of weeks. A camp may also cap its quota
+ * with `capacity` (pretix reads a quota size of 0 as unlimited).
+ */
+async function upsertEvent(offer) {
+  const slug = offer.slug;
+  const dateFrom = new Date(`${offer.startDate}T00:00:00Z`).toISOString();
+  const dateTo = offer.endDate
+    ? new Date(`${offer.endDate}T23:59:59Z`).toISOString()
+    : addDays(offer.startDate, offer.weeks * 7);
+  const description = offer.description ?? {
+    en: `bumble:education course: ${offer.name.en}. Hands-on STEM education. Starts ${offer.startDate}, ${offer.weeks} weeks.`,
+    de: `bumble:education-Kurs: ${offer.name.de}. Praktische MINT-Bildung. Start ${offer.startDate}, ${offer.weeks} Wochen.`,
   };
 
   if (existingSlugs.has(slug)) {
     await request(`/events/${slug}/`, {
       method: 'PATCH',
       body: JSON.stringify({
-        name: course.name,
+        name: offer.name,
         date_from: dateFrom,
         date_to: dateTo,
         location: coursesJson.location,
@@ -94,7 +118,7 @@ async function upsertEvent(course) {
         method: 'POST',
         body: JSON.stringify({
           slug,
-          name: course.name,
+          name: offer.name,
           live: false,
           testmode: false,
           currency,
@@ -125,24 +149,24 @@ async function upsertEvent(course) {
   });
 
   const items = await request(`/events/${slug}/items/`);
-  let item = items.results.find((i) => nameEquals(i.name, course.name.en));
+  let item = items.results.find((i) => nameEquals(i.name, offer.name.en));
   if (item) {
     await request(`/events/${slug}/items/${item.id}/`, {
       method: 'PATCH',
-      body: JSON.stringify({ name: course.name, default_price: course.price }),
+      body: JSON.stringify({ name: offer.name, default_price: offer.price }),
     });
     console.log(`updated item: ${slug} / ${item.id}`);
   } else {
     item = await request(`/events/${slug}/items/`, {
       method: 'POST',
       body: JSON.stringify({
-        name: course.name,
+        name: offer.name,
         active: true,
-        default_price: course.price,
+        default_price: offer.price,
         admission: true,
       }),
     });
-    console.log(`created item: ${slug} / ${course.name.en} (€${course.price})`);
+    console.log(`created item: ${slug} / ${offer.name.en} (€${offer.price})`);
   }
 
   const quotas = await request(`/events/${slug}/quotas/`);
@@ -151,11 +175,11 @@ async function upsertEvent(course) {
   }
   await request(`/events/${slug}/quotas/`, {
     method: 'POST',
-    body: JSON.stringify({ name: course.name.en, size: 0, items: [item.id] }),
+    body: JSON.stringify({ name: offer.name.en, size: offer.capacity ?? 0, items: [item.id] }),
   });
-  console.log(`recreated quota: ${slug} / ${course.name.en}`);
+  console.log(`recreated quota: ${slug} / ${offer.name.en} (${offer.capacity ?? 'unlimited'})`);
 
-  await upsertQuestions(slug, item.id);
+  await upsertQuestions(slug, item.id, questionsFor(offer));
 
   return { slug, publicUrl: `${host}/${organizer}/${slug}/` };
 }
@@ -163,8 +187,8 @@ async function upsertEvent(course) {
 const results = [];
 const existing = await request('/events/');
 const existingSlugs = new Set(existing.results.map((e) => e.slug));
-for (const course of coursesJson.courses) {
-  results.push(await upsertEvent(course));
+for (const offer of offers) {
+  results.push(await upsertEvent(offer));
 }
 
 console.log('\nCreated/updated events:');

@@ -1,5 +1,5 @@
 # bumble:futurespace
-# Updated: 2026-09-19
+# Updated: 2026-10-18
 
 > Hands-on STEM education (praktische MINT-Bildung): coding & robotics courses for kids 8–14 using the mbot2 platform. Real hardware, small groups. Powered by bumble:education.
 
@@ -7,8 +7,8 @@
 
 | Course | Ages | Level | Language | Duration | Price | Booking |
 |--------|------|-------|----------|----------|-------|---------|
-| Robot Explorer | 8–10 | Beginner | Block coding | 8 weeks, 60–75 min | €25 | [Book](https://pretix.eu/bumbleedu/robot-explorer/) |
-| Code the Machine | 11–14 | Intermediate | Python | 10 weeks, 90 min | €40 | [Book](https://pretix.eu/bumbleedu/code-the-machine/) |
+| Robot Explorer | 8–10 | Beginner | Block coding | 8 weeks, 60–75 min | €35/month | [Book](https://pretix.eu/bumbleedu/robot-explorer/) |
+| Code the Machine | 11–14 | Intermediate | Python | 10 weeks, 90 min | €49/month | [Book](https://pretix.eu/bumbleedu/code-the-machine/) |
 
 Both courses run weekly during the school term. All materials included — each kid gets an mbot2 robot to use during the course (not to keep). No prior experience needed for either course.
 
@@ -32,7 +32,7 @@ Both courses run weekly during the school term. All materials included — each 
 - **Platform:** mbot2 (Makeblock)
 - **Languages:** German, English
 - **Location:** Munich, Germany
-- **Price:** €25 (Robot Explorer) / €40 (Code the Machine)
+- **Price:** €35/month (Robot Explorer) / €49/month (Code the Machine)
 - **Run by:** bumble:education (part of bumbleflies)
 - **Focus:** Hands-on STEM education (DE: praktische MINT-Bildung) — science, technology, engineering and math through real robots
 - **Booking:** https://pretix.eu/bumbleedu/
