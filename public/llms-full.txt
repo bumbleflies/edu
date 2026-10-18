@@ -10,7 +10,7 @@ We teach kids to code by building real robots — hands-on STEM education where 
 
 ### Robot Explorer — Beginner · Block Coding
 
-**Ages:** 8–10 | **Duration:** 8 weeks, 1×/week, 60–75 min | **Price:** €25 | **Start:** 2026-10-01
+**Ages:** 8–10 | **Duration:** 8 weeks, 1×/week, 60–75 min | **Price:** €35/month | **Start:** 2026-10-01
 
 **Prerequisites:** None. This is the entry-level course — kids need zero coding or robotics experience.
 
@@ -38,7 +38,7 @@ No blank-page fear here — a friendly first robot, big colorful blocks, and the
 
 ### Code the Machine — Intermediate · Python
 
-**Ages:** 11–14 | **Duration:** 10 weeks, 1×/week, 90 min | **Price:** €40 | **Start:** 2026-10-01
+**Ages:** 11–14 | **Duration:** 10 weeks, 1×/week, 90 min | **Price:** €49/month | **Start:** 2026-10-01
 
 **Prerequisites:** None required, but Robot Explorer is a natural stepping stone. Kids with some block coding experience will feel at home; complete beginners can still succeed.
 
@@ -103,12 +103,12 @@ Jördis' son and our kids specialist: at 8 years old he knows best what kids enj
 
 ## Booking
 
-Courses are booked through pretix at https://pretix.eu/bumbleedu/. Each course runs for a fixed term with a fixed group. Prices include all materials and the use of an mbot2 robot during the course (robots are not kept afterwards).
+Courses are booked through pretix at https://pretix.eu/bumbleedu/. Each course runs weekly during the school term and is billed monthly. Prices include all materials and the use of an mbot2 robot during the course (robots are not kept afterwards).
 
 | Course | Price | Duration | Booking Link |
 |--------|-------|----------|--------------|
-| Robot Explorer | €25 | 8 weeks | https://pretix.eu/bumbleedu/robot-explorer/ |
-| Code the Machine | €40 | 10 weeks | https://pretix.eu/bumbleedu/code-the-machine/ |
+| Robot Explorer | €35/month | 8 weeks | https://pretix.eu/bumbleedu/robot-explorer/ |
+| Code the Machine | €49/month | 10 weeks | https://pretix.eu/bumbleedu/code-the-machine/ |
 
 ---
 

@@ -76,6 +76,13 @@ export function courseJsonLd(lang: Lang, courseIndex: number) {
       "@type": "Offer",
       price: course.price,
       priceCurrency: "EUR",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: course.price,
+        priceCurrency: "EUR",
+        billingDuration: "P1M",
+        unitText: "MONTH",
+      },
       url: `${pretix.host}/${pretix.organizer}/${course.slug}/`,
       availability: "https://schema.org/InStock",
       validFrom: course.startDate,

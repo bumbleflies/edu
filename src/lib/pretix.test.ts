@@ -51,10 +51,10 @@ describe('homepage booking links', () => {
 
 describe('priceByCourseName', () => {
   it('looks prices up by localized course name', () => {
-    expect(priceByCourseName('de', 'Roboter-Entdecker')).toBe(25);
-    expect(priceByCourseName('de', 'Coding-Abenteurer')).toBe(40);
-    expect(priceByCourseName('en', 'Robot Explorer')).toBe(25);
-    expect(priceByCourseName('en', 'Code the Machine')).toBe(40);
+    expect(priceByCourseName('de', 'Roboter-Entdecker')).toBe(35);
+    expect(priceByCourseName('de', 'Coding-Abenteurer')).toBe(49);
+    expect(priceByCourseName('en', 'Robot Explorer')).toBe(35);
+    expect(priceByCourseName('en', 'Code the Machine')).toBe(49);
   });
 
   it('matches by name, never by array position', () => {

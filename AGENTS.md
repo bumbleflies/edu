@@ -23,12 +23,20 @@ npx astro check    # type check
 PRETIX_API_TOKEN=<token> node scripts/setup-pretix.mjs
 ```
 
-Idempotent upsert: creates/updates one pretix event per course
-(slug/name/dates, locales `en`+`de`, item with price, unlimited quota),
-plus attendee questions and shop branding/legal settings, from
-`src/data/courses.json`. The token is read from the environment —
-never commit it. Events are created as drafts: going live requires
-enabling a payment provider in the pretix admin, which has no API.
+Idempotent upsert: creates/updates one pretix event per bookable offer
+(slug/name/dates, locales `en`+`de`, item with price, quota), plus attendee
+questions and shop branding/legal settings, from `src/data/courses.json`. The
+token is read from the environment — never commit it. Events are created as
+drafts: going live requires enabling a payment provider in the pretix admin,
+which has no API.
+
+`courses.json` holds two lists of offers: `courses` (term courses, ending at
+`startDate + weeks`, quota unlimited) and `camps` (one-off, with an explicit
+`endDate` and a `capacity` that becomes the quota size). Both take the shared
+`questions`; an offer's own `questions` entry replaces the shared one with the
+same `identifier`, so a camp can narrow the age range or add the BuT question
+without repeating the rest. A camp also carries its own `description`, which
+replaces the generated course blurb in the pretix event info text.
 
 CI (Node 24) runs exactly `npm run test` then `npx astro check`. There is no
 lint/formatter configured — don't invent or require one.
@@ -47,6 +55,13 @@ lint/formatter configured — don't invent or require one.
   a Docker build/healthcheck but never publish.
 - `master.yml` has path filters (`src/**`, `public/**`, package/config files,
   `Dockerfile`, `nginx.conf`). Edits outside them won't trigger a deploy.
+- The camp is bookable but not rendered by the site, so `src/lib/camps.test.ts`
+  is the only thing pinning its dates, price, age range and duration. Keep it
+  green when editing `courses.json`.
+- Never describe BuT as making an activity free, in site copy or in
+  `courses.json`. `€15/month, up to €180 per twelve-month period` is a shared
+  budget across all leisure, and a family must apply *before* the activity
+  starts. The rule is tested; see `src/lib/camps.test.ts`.
 - Production routing (`edu.bumbleflies.de`) lives in the separate
   servyy-container repo (`bumbleflies/docker-compose.yml`), not here.
 

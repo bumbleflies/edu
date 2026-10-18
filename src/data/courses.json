@@ -73,7 +73,7 @@
         "de": ["Logik & Reihenfolgen", "Schleifen & Bedingungen", "Linienfolger-Roboter", "Angewandte MINT-Kompetenzen"]
       },
       "cta": { "en": "Start exploring", "de": "Jetzt entdecken" },
-      "price": 25,
+      "price": 35,
       "startDate": "2026-10-01",
       "weeks": 8
     },
@@ -92,9 +92,50 @@
         "de": ["Echtes Python", "Sensoren & IoT", "Autonomer Labyrinth-Roboter", "Angewandte MINT-Kompetenzen"]
       },
       "cta": { "en": "Code the machine", "de": "Maschine coden" },
-      "price": 40,
+      "price": 49,
       "startDate": "2026-10-01",
       "weeks": 10
+    }
+  ],
+  "camps": [
+    {
+      "slug": "zwischen-den-jahren",
+      "name": {
+        "en": "Between the Years — Robotics Camp",
+        "de": "Robotik-Camp zwischen den Jahren"
+      },
+      "startDate": "2026-12-28",
+      "endDate": "2026-12-30",
+      "dailyFrom": "10:00",
+      "dailyTo": "14:00",
+      "price": 99,
+      "capacity": 12,
+      "description": {
+        "en": "Between-the-years robotics camp: three mornings in the Christmas holidays, 28–30 December 2026, 10:00–14:00 daily, for children aged 8–12. Build, code and drive — with a short showcase for parents at 13:30 on day three. Please bring a packed lunch. The fee is €99 for all three days; Bildung und Teilhabe can cover it.",
+        "de": "Robotik-Camp zwischen den Jahren: drei Vormittage in den Weihnachtsferien, 28.–30. Dezember 2026, täglich 10:00–14:00 Uhr, für Kinder von 8 bis 12 Jahren. Bauen, programmieren und fahren lassen — mit einer kleinen Abschlusspräsentation für die Eltern am dritten Tag um 13:30 Uhr. Bitte ein Lunchpaket mitbringen. Die Teilnahmegebühr beträgt 99 € für alle drei Tage; Bildung und Teilhabe kann sie übernehmen."
+      },
+      "questions": [
+        {
+          "identifier": "child_age",
+          "en": "Child's age",
+          "de": "Alter des Kindes",
+          "type": "N",
+          "required": true,
+          "valid_number_min": 8,
+          "valid_number_max": 12
+        },
+        {
+          "identifier": "but_claim",
+          "en": "Will you apply for Bildung und Teilhabe (BuT) to cover the fee?",
+          "de": "Wollt ihr Bildung und Teilhabe (BuT) für die Teilnahmegebühr beantragen?",
+          "help": {
+            "en": "If you choose yes, we will send you a cost confirmation (Kostenbescheinigung) for the Jobcenter. Important: the application has to be in before the camp starts — costs that are already paid are generally not reimbursed.",
+            "de": "Wenn ihr hier Ja wählt, schicken wir euch eine Kostenbescheinigung für das Jobcenter. Wichtig: Der Antrag muss vor Campbeginn eingehen — bereits bezahlte Kosten werden in der Regel nicht erstattet."
+          },
+          "type": "B",
+          "required": false
+        }
+      ]
     }
   ]
 }

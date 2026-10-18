@@ -182,7 +182,7 @@ describe.each(['de', 'en'] as const)('ParentFlyer (%s)', (lang) => {
       for (const course of coursesData.courses) {
         const card = cards().find((candidate) => candidate.includes(`<h3>${course.name[lang]}</h3>`));
         expect(card, `card for ${course.name[lang]}`).toBeDefined();
-        const label = lang === 'de' ? `${course.price} € pro Kurs` : `€${course.price} per course`;
+        const label = lang === 'de' ? `${course.price} € pro Monat` : `€${course.price} per month`;
         expect(card).toContain(`<p class="pf-price">${label}</p>`);
       }
       const prices = [...html.matchAll(/<p class="pf-price">([^<]*)<\/p>/g)];

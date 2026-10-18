@@ -35,7 +35,7 @@ describe('courseJsonLd', () => {
       expect(data['@type']).toBe('Course');
       expect(data.educationalLevel).toBe('Beginner');
       expect(data.offers['@type']).toBe('Offer');
-      expect(data.offers.price).toBe(25);
+      expect(data.offers.price).toBe(35);
       expect(data.offers.priceCurrency).toBe('EUR');
       expect(data.offers.url).toContain('robot-explorer');
     }
@@ -46,7 +46,7 @@ describe('courseJsonLd', () => {
       const data = courseJsonLd(lang, 1)!;
       expect(data).not.toBeNull();
       expect(data.educationalLevel).toBe('Intermediate');
-      expect(data.offers.price).toBe(40);
+      expect(data.offers.price).toBe(49);
       expect(data.offers.url).toContain('code-the-machine');
     }
   });
@@ -54,6 +54,17 @@ describe('courseJsonLd', () => {
   it('returns null for out-of-range index', () => {
     expect(courseJsonLd('en', 99)).toBeNull();
     expect(courseJsonLd('en', -1)).toBeNull();
+  });
+
+  it('declares the offer is billed monthly, so the price is not read as a one-off course fee', () => {
+    for (const idx of [0, 1]) {
+      const data = courseJsonLd('en', idx)!;
+      const spec = data.offers.priceSpecification;
+      expect(spec['@type']).toBe('UnitPriceSpecification');
+      expect(spec.billingDuration).toBe('P1M');
+      expect(spec.price).toBe(data.offers.price);
+      expect(spec.priceCurrency).toBe('EUR');
+    }
   });
 
   it('localizes course names', () => {

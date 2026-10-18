@@ -25,7 +25,7 @@
     {
       "id": "course-info",
       "name": "Course Information",
-      "description": "Provides details about bumble:futurespace hands-on STEM courses for kids — coding and robotics with real mbot2 hardware. Covers both beginner (Robot Explorer, ages 8–10, block coding, €25) and intermediate (Code the Machine, ages 11–14, Python, €40) tracks.",
+      "description": "Provides details about bumble:futurespace hands-on STEM courses for kids — coding and robotics with real mbot2 hardware. Covers both beginner (Robot Explorer, ages 8–10, block coding, €35/month) and intermediate (Code the Machine, ages 11–14, Python, €49/month) tracks.",
       "tags": ["courses", "kids", "coding", "robotics", "mbot2", "munich", "education", "stem", "mint"],
       "examples": [
         "What courses does bumble:futurespace offer?",
@@ -39,7 +39,7 @@
     {
       "id": "course-comparison",
       "name": "Course Comparison",
-      "description": "Helps parents choose between Robot Explorer (beginner, block coding, ages 8–10, €25, 8 weeks) and Code the Machine (intermediate, Python, ages 11–14, €40, 10 weeks). Explains prerequisites, what's included, and which course fits a child's age and experience.",
+      "description": "Helps parents choose between Robot Explorer (beginner, block coding, ages 8–10, €35/month, 8 weeks) and Code the Machine (intermediate, Python, ages 11–14, €49/month, 10 weeks). Explains prerequisites, what's included, and which course fits a child's age and experience.",
       "tags": ["comparison", "which-course", "age-group", "prerequisites", "pricing", "recommendation"],
       "examples": [
         "Which course should my 9-year-old take?",
