@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.21.0](https://github.com/bumbleflies/edu/compare/edu-v0.20.12...edu-v0.21.0) (2026-10-18)
+
+
+### Features
+
+* **pricing:** bill courses monthly and make the camp bookable ([ae96f83](https://github.com/bumbleflies/edu/commit/ae96f83c64fcf3a2751a3e3606117042d0ae2981))
+
 ## [0.20.12](https://github.com/bumbleflies/edu/compare/edu-v0.20.11...edu-v0.20.12) (2026-10-15)
 
 
