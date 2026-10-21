@@ -71,6 +71,45 @@ robots between sessions, WC, and parent parking/loading near the door.
 
 ## 1. Candidate rooms in Porta Westfalica and Minden
 
+### Two different rooms: December camp vs January term
+
+These are not the same decision.
+
+**The camp (28–30 December)** falls inside the NRW Christmas holidays. Minden's
+Benutzungsordnung excludes school rooms during school holidays, with an
+exception for Ferienspiele providers only — so the cheapest and best-equipped
+rooms are probably unavailable for the camp, and a school caretaker is unlikely
+to be on site between Christmas and New Year. The camp therefore needs a
+*year-round* venue: a parish hall or a clubhouse.
+
+**The term courses (from January)** run on weekday afternoons in term time,
+which is exactly what the Haus der Bildung and the school rooms are for. Do not
+let the camp booking lock you into a worse room for the term.
+
+> The holiday clause has not been re-verified in this document — the
+> Benutzungsordnung is a PDF. Confirm it in writing with the reservation
+> request rather than assuming.
+
+### Who to call — verified October 2026
+
+| Venue | Address | Contact | Good for | Catch |
+|---|---|---|---|---|
+| **Bürgerhaus Porta Westfalica** | Am Park 1, 32457 Porta Westfalica | **0571 39843737** · info@buergerhaus-porta.de | Camp. Their own page accepts *"Kinder- und Jugendaktivitäten"* as a use | Shares the house with a VHS/kino programme — check 28–30 Dec |
+| **St. Marien Minden** (ev.) | Gemeindebüro, Stiftstr. 2b, 32427 Minden | **0571 8290816** · marien.buero@wir-in-marien.de | Camp, cheap. Tue closed; Mo/Do/Fr 10–12, Mi 14–16 | Hall size unconfirmed |
+| **BÜZ Kulturzentrum** | Seidenbeutel 1, 32423 Minden | **0571 23939** · mail@buezminden.de | Camp or term. Rents explicitly for *"Seminare, Kurse"* | Office only Di+Fr 9–13, Mi 11:30–15 |
+| **TuS Holzhausen/Porta Sportheim** | Vlothoer Str. 165, 32457 Porta Westfalica | Club contact via `tus-holzhausenporta.de` | Camp, cheapest tier | No published rental contact; bar room, needs a site visit |
+| **Haus der Bildung** | Königswall 14, 32423 Minden | Stadt Minden **0571 89-0** · info@minden.de · online reservation form | **Term courses.** 50–76 m², €17–22/h, height-adjustable, touch monitors | Holiday clause; *meeting* rooms out for 2026/27 (classrooms fine) |
+| **zdi Minden-Lübbecke** (ZAM e.V.) | Portastr. 9, 32423 Minden | **0571 807-13560** · zdi@minden-luebbecke.de | Partner, not landlord: space + co-marketing | Slower; comes with obligations |
+| **Stadt Porta Westfalica** | Kempstraße 1, 32457 Porta Westfalica | **0571 791-0** · info@portawestfalica.de | Ferienpass, city rooms | — |
+
+Call order for the December camp: **Bürgerhaus Porta** first (accepts the use
+explicitly, right side of the river), **St. Marien** second (cheapest, and
+parish halls are the most reliable place to get a key between Christmas and New
+Year).
+
+Ask every venue the five questions in
+[`camp-zwischen-den-jahren.md`](./camp-zwischen-den-jahren.md#five-questions-for-any-venue).
+
 ### Tier A — cheap or effectively free (fits the current price list)
 
 **1. Stadt Minden school rooms + Haus der Bildung** — *best-documented option*
