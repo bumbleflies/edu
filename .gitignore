@@ -22,3 +22,7 @@ Thumbs.db
 
 # Superpowers subagent-driven-development workspace
 .superpowers/
+docs/superpowers/
+
+# Local agent permissions (repo skills in .claude/skills/ stay tracked)
+.claude/settings.json
