@@ -19,19 +19,19 @@ still keeps the camp on schedule.
 
 | # | Item | Owner | Due | Status | Note |
 |---|---|---|---|---|---|
-| 1 | Room: call Bürgerhaus Porta (0571 39843737) | Christian | 2026-11-02 | ⬜ | Email draft ready in Gmail |
-| 2 | Room: call St. Marien Minden (0571 8290816, Mo 10–12) | Christian | 2026-11-02 | ⬜ | Email draft ready in Gmail |
-| 3 | Room: call BÜZ Kulturzentrum (0571 23939, Tue 9–13) | Christian | 2026-11-03 | ⬜ | Only if 1+2 fail. Email draft ready in Gmail |
+| 1 | Room: Bürgerhaus Porta (0571 39843737) | Christian | 2026-11-02 | 🟡 | Email sent 2026-11-01; follow up by phone Mon 2 Nov |
+| 2 | Room: St. Marien Minden (0571 8290816, Mo 10–12) | Christian | 2026-11-02 | 🟡 | Email sent 2026-11-01; follow up by phone Mon 2 Nov 10–12 |
+| 3 | Room: BÜZ Kulturzentrum (0571 23939, Tue 9–13) | Christian | 2026-11-03 | 🟡 | Email sent 2026-11-01; follow up by phone Tue 3 Nov if 1+2 have not confirmed |
 | 4 | Room: fallback, sports-club room or Diakonie e-werk Raum Hille (€249 per half day) | Christian | 2026-11-10 | ⬜ | Only if 1–3 fail |
 | 5 | Room confirmed **in writing**, all five venue questions answered | Christian | 2026-11-13 | ⬜ | Releases the camp date |
-| 6 | Erweitertes Führungszeugnis, adult 1 | Christian | apply by 2026-11-06 | ⬜ | 2–6 weeks lead time |
-| 7 | Erweitertes Führungszeugnis, adult 2 | — | apply by 2026-11-06 | ⬜ | Second adult not yet named |
-| 8 | Erste-Hilfe-Kurs valid on the day, both adults | — | book by 2026-11-15 | ⬜ | 2–4 weeks to get a place |
+| 6 | Erweitertes Führungszeugnis, Christian | Christian | apply by 2026-11-06 | 🟡 | Online application OLAF-0004419845 filled in, **payment stuck** (portal: payment already started). Retry after the session expires; letter in Drive Jobs/edu |
+| 7 | Erweitertes Führungszeugnis, second adult | — | — | ❌ | Removed for now (2026-11-01); reopen when a second adult is named |
+| 8 | Erste-Hilfe-Kurs valid on the day, Christian | Christian | book by 2026-11-15 | ⬜ | 2–4 weeks to get a place |
 | 9 | Repo: set `startDate` = `endDate` and the venue in `courses.json` (+ `camps.test.ts`) | — | after #5 | ⬜ | One-day format and €39 are already in the data |
 | 10 | pretix: re-sync event (`setup-pretix.mjs`), replace `location: "TBA"` | — | after #9 | ⬜ | |
 | 11 | pretix: enable a payment provider (manual, no API) | Christian | after #10 | ⬜ | Event cannot take money until done |
 | 12 | BuT question live, Kostenbescheinigung template ready | — | after #10 | ⬜ | See [`bildung-und-teilhabe.md`](./bildung-und-teilhabe.md) |
-| 12a | Website announcement `/robotik-tag` + `/en/robotics-day`, homepage teaser | Christian | 2026-11-06 | 🟡 | Branch `feat/robotics-day-announcement`; live after merge + release. Then add the link to the venue emails |
+| 12a | Website announcement `/robotik-tag` + `/en/robotics-day`, homepage teaser | Christian | 2026-11-06 | ✅ | Live since 2026-11-01 (PR #129, edu 0.22.0); linked from the three venue email drafts |
 | 13 | Announce: flyer, social posts, Ferienpass/zdi contacts | — | 2026-11-30 | ⬜ | Four weeks of selling before Christmas |
 | 14 | Run the day + film the showcase | both | the day | ⬜ | |
 | 15 | Debrief: attendance, January conversions, repeat as 3 days? | Christian | 2027-01-08 | ⬜ | |
@@ -113,6 +113,22 @@ and it is the moment the January booking conversation happens.
 
 - **2026-11-01** — Format cut to one prototype day at €39 / 12 places. No venue
   contacted yet. Email drafts for Bürgerhaus Porta, St. Marien and BÜZ prepared
-  in Gmail, to be sent after the phone calls. Website announcement built on
-  branch `feat/robotics-day-announcement` (one-day data, €39, reservation by
-  email, "Raum gesucht" section for venues).
+  in Gmail, to be sent after the phone calls. Website announcement
+  `/robotik-tag` + `/en/robotics-day` merged (PR #129) and released as edu
+  0.22.0 (one-day data, €39, reservation by email, "Raum gesucht" section).
+- **2026-11-01** — Background-check request letter for Christian signed and
+  filed in Drive (Jobs/edu). It describes the ongoing course series (ages
+  8–14, starting December 2026), not just the Robotik-Tag, so one certificate
+  covers the whole series. Second adult removed from the plan for now.
+- **2026-11-01** — Applied online at fuehrungszeugnis.bund.de (erweitert,
+  letter attached). Application OLAF-0004419845 hung at the card-payment
+  handover; the portal now reports a payment as already started, but no card
+  details were entered, so nothing was charged. Next: check the BundID mailbox,
+  wait for the payment session to expire, then retry with pop-ups allowed. If
+  it fails again, contact the Bundesamt für Justiz quoting OLAF-0004419845 and
+  the abandoned OLAF-0004419747.
+- **2026-11-01** — Room requests emailed to Bürgerhaus Porta, St. Marien and
+  BÜZ (any of 28/29/30 Dec, 09:30–14:30, the five venue questions, link to
+  the announcement page). The links in the emails went out as Google redirect
+  URLs (the Gmail connector rewrites them); they still lead to the page. Next:
+  phone follow-ups Mon 2 Nov (Bürgerhaus, St. Marien) and Tue 3 Nov (BÜZ).
