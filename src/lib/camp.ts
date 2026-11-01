@@ -153,7 +153,7 @@ export const campCopy: Record<Lang, CampCopy> = {
     ],
     venueContact: "Sie haben einen passenden Raum? Wir freuen uns über eine Nachricht an",
     teaserLabel: "Neu in den Weihnachtsferien",
-    teaserText: `${camp.name.de}: ein Tag mit dem mbot2 für Kinder von 8 bis 12, 39 €.`,
+    teaserText: `${camp.name.de}: ein Tag mit dem mbot2 für Kinder von 8 bis 12 Jahren. Preis: ${camp.price} €.`,
     teaserLink: "Mehr erfahren",
   },
   en: {
@@ -204,7 +204,7 @@ export const campCopy: Record<Lang, CampCopy> = {
     ],
     venueContact: "Have a suitable room? We would love to hear from you at",
     teaserLabel: "New in the Christmas holidays",
-    teaserText: `${camp.name.en}: one day with the mbot2 for children aged 8–12, €39.`,
+    teaserText: `${camp.name.en}: one day with the mbot2 for children aged 8 to 12. Price: €${camp.price}.`,
     teaserLink: "Find out more",
   },
 };

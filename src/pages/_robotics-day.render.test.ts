@@ -62,4 +62,9 @@ describe.each([
     const html = await render(page);
     expect(html).toMatch(new RegExp(`<a\\b[^>]*href="${campPath[lang]}"`));
   });
+
+  it('keeps the age range and the price apart, so "12, 39 €" cannot read as €12.39', async () => {
+    const html = await render(page);
+    expect(html).not.toMatch(/12,\s*(39|€)/);
+  });
 });
