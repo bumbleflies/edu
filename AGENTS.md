@@ -55,9 +55,14 @@ lint/formatter configured — don't invent or require one.
   a Docker build/healthcheck but never publish.
 - `master.yml` has path filters (`src/**`, `public/**`, package/config files,
   `Dockerfile`, `nginx.conf`). Edits outside them won't trigger a deploy.
-- The camp is bookable but not rendered by the site, so `src/lib/camps.test.ts`
-  is the only thing pinning its dates, price, age range and duration. Keep it
-  green when editing `courses.json`.
+- The camp is a one-day prototype ("Robotik-Tag"), announced at
+  `/robotik-tag` and `/en/robotics-day` (`src/components/RoboticsDay.astro`,
+  copy in `src/lib/camp.ts`, teaser on both homepages). Until a venue is
+  signed it lists `dateOptions` and has no `startDate`: the page shows the
+  three candidate days plus a "room wanted" section, the CTA is a reservation
+  mailto, and `setup-pretix.mjs` skips it. Once signed: set
+  `startDate` = `endDate` (one of the options), then `bookingOpen: true` after
+  the pretix event is live. `src/lib/camps.test.ts` pins the facts.
 - Never describe BuT as making an activity free, in site copy or in
   `courses.json`. `€15/month, up to €180 per twelve-month period` is a shared
   budget across all leisure, and a family must apply *before* the activity

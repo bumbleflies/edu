@@ -1,0 +1,42 @@
+/* src/styles/robotics-day.css — the Robotik-Tag announcement page. Reuses .why-item and .cta from home.css. */
+.rd-hero { padding-top: 48px; }
+.rd-hero h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); max-width: 18ch; }
+.rd-hero h1 .pop { color: var(--signal); font-style: italic; }
+.rd-lead { font-size: 1.15rem; color: var(--ink-soft); max-width: 38rem; }
+
+.rd-facts {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  margin: 32px 0 16px; padding: 0;
+}
+.rd-fact {
+  background: var(--paper); border-radius: var(--radius); padding: 18px 20px;
+  box-shadow: 0 6px 20px rgba(43, 43, 51, 0.06); border-top: 4px solid var(--accent);
+}
+.rd-fact dt {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-soft); font-weight: 600; margin-bottom: 6px;
+}
+.rd-fact dd { margin: 0; font-weight: 700; font-size: 1.05rem; }
+.rd-note { color: var(--ink-soft); font-size: 0.95rem; max-width: 38rem; margin: 0 0 24px; }
+
+.rd-schedule { background: var(--paper); }
+.rd-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.rd-timeline { list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.rd-timeline li { display: grid; grid-template-columns: 4.5rem 1fr; gap: 12px; align-items: baseline; }
+.rd-time { font-family: "Instrument Serif", Georgia, serif; font-size: 1.4rem; color: var(--accent-deep); }
+.rd-know { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
+
+.rd-venue { background: var(--ink); color: var(--bg); }
+.rd-venue h2 { color: var(--accent); }
+.rd-venue p { max-width: 42rem; }
+.rd-venue ul { margin: 12px 0 20px; padding-left: 1.2rem; }
+.rd-venue a { color: var(--accent); }
+
+@media (max-width: 760px) {
+  .rd-facts { grid-template-columns: 1fr 1fr; }
+  .rd-two-col { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 420px) {
+  .rd-facts { grid-template-columns: 1fr; }
+}

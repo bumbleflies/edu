@@ -1,0 +1,86 @@
+---
+import Layout from "./Layout.astro";
+import type { Lang } from "../lib/i18n";
+import { camp, campCopy, campPath, campDateLabel, campPriceLabel, campBookingHref } from "../lib/camp";
+import "../styles/home.css";
+import "../styles/robotics-day.css";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const c = campCopy[lang];
+const twin = campPath[lang === "de" ? "en" : "de"];
+const facts = [
+  [c.factsLabels.when, campDateLabel(lang)],
+  [c.factsLabels.time, c.timeValue],
+  [c.factsLabels.age, c.ageValue],
+  [c.factsLabels.places, c.placesValue],
+  [c.factsLabels.price, campPriceLabel(lang)],
+  [c.factsLabels.where, c.whereValue],
+];
+---
+<Layout lang={lang} altHref={twin} title={c.title} description={c.description}>
+  <section class="rd-hero">
+    <div class="wrap">
+      <span class="eyebrow">{c.eyebrow}</span>
+      <h1>{c.titleMain} <span class="pop">{c.titlePop}</span></h1>
+      <p class="rd-lead">{c.lead}</p>
+      <dl class="rd-facts">
+        {facts.map(([label, value]) => (
+          <div class="rd-fact">
+            <dt>{label}</dt>
+            <dd>{value}</dd>
+          </div>
+        ))}
+      </dl>
+      {!camp.startDate && <p class="rd-note">{c.dateNote}</p>}
+      <a class="btn btn-primary" href={campBookingHref(lang)}>{camp.bookingOpen ? c.ctaButtonOpen : c.ctaButton}</a>
+    </div>
+  </section>
+
+  <section class="rd-schedule">
+    <div class="wrap rd-two-col">
+      <div>
+        <h2>{c.scheduleTitle}</h2>
+        <ol class="rd-timeline">
+          {c.schedule.map((s) => (
+            <li><span class="rd-time">{s.time}</span><span>{s.text}</span></li>
+          ))}
+        </ol>
+      </div>
+      <div>
+        <h2>{c.goodToKnowTitle}</h2>
+        <div class="rd-know">
+          {c.goodToKnow.map((k) => (
+            <div class="why-item"><b>{k.title}</b>{k.text}</div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {!camp.bookingOpen && (
+    <section class="cta">
+      <div class="wrap">
+        <h2>{c.ctaTitle}</h2>
+        <p>{c.ctaText}</p>
+        <a class="btn btn-primary" href={campBookingHref(lang)}>{c.ctaButton}</a>
+      </div>
+    </section>
+  )}
+
+  {!camp.startDate && (
+    <section id="venue" class="rd-venue">
+      <div class="wrap">
+        <h2>{c.venueTitle}</h2>
+        <p>{c.venueText}</p>
+        <ul>
+          {c.venueNeeds.map((n) => <li>{n}</li>)}
+        </ul>
+        <p>{c.venueContact} <a href="mailto:info@bumbleflies.de">info@bumbleflies.de</a>.</p>
+      </div>
+    </section>
+  )}
+</Layout>

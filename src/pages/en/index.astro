@@ -3,6 +3,7 @@ import Layout from "../../components/Layout.astro";
 import { content } from "../../lib/content";
 import { ui } from "../../lib/i18n";
 import { organizationJsonLd, courseJsonLd } from "../../lib/jsonld";
+import { campCopy, campPath } from "../../lib/camp";
 import "../../styles/home.css";
 
 const lang = "en" as const;
@@ -50,6 +51,18 @@ const course1JsonLd = courseJsonLd(lang, 1);
           </video>
           {t.videoLanguageNote && <p class="hero-video-note">{t.videoLanguageNote}</p>}
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="camp-teaser" aria-label={campCopy.en.teaserLabel}>
+    <div class="wrap">
+      <div class="camp-teaser-card">
+        <div>
+          <span class="eyebrow">{campCopy.en.teaserLabel}</span>
+          <p>{campCopy.en.teaserText}</p>
+        </div>
+        <a class="btn btn-honey" href={campPath.en}>{campCopy.en.teaserLink}</a>
       </div>
     </div>
   </section>
