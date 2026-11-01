@@ -13,8 +13,19 @@ const coursesJson = JSON.parse(
 const { host, organizer, currency, timezone, locales } = coursesJson.pretix;
 const base = `${host}/api/v1/organizers/${organizer}`;
 
-/** Every bookable offer: the term courses, plus any one-off camps. */
-const offers = [...coursesJson.courses, ...(coursesJson.camps ?? [])];
+/**
+ * Every bookable offer: the term courses, plus any one-off camps. A camp that
+ * only lists `dateOptions` (no `startDate` yet, because the venue decides the
+ * day) is announced on the site but not synced — pretix needs a real date.
+ */
+const offers = [
+  ...coursesJson.courses,
+  ...(coursesJson.camps ?? []).filter((camp) => {
+    if (camp.startDate) return true;
+    console.log(`skipped camp: ${camp.slug} (no startDate yet — set it once the venue is signed)`);
+    return false;
+  }),
+];
 
 const headers = {
   Authorization: `Token ${TOKEN}`,
@@ -87,7 +98,7 @@ async function upsertQuestions(slug, itemId, questions) {
  * One pretix event per offer.
  *
  * A term course runs for `weeks`; a camp carries an explicit `endDate` instead,
- * because three days is not a number of weeks. A camp may also cap its quota
+ * because a day is not a number of weeks (one day: `endDate` = `startDate`). A camp may also cap its quota
  * with `capacity` (pretix reads a quota size of 0 as unlimited).
  */
 async function upsertEvent(offer) {

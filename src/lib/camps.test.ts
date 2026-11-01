@@ -2,11 +2,11 @@ import { describe, it, expect } from 'vitest';
 import coursesData from '../data/courses.json';
 
 /**
- * The camp is sold through pretix, not rendered by the site, so nothing else in
- * the test suite would notice if its dates, price or age range drifted. These
- * assertions pin the published facts and the two BuT-relevant rules: the fee has
- * to fit inside the annual Bildung-und-Teilhabe budget, and the copy must not
- * promise that attendance is free.
+ * The camp is a one-day prototype ("Robotik-Tag"), announced on its own page and
+ * sold through pretix once a venue is signed. These assertions pin the published
+ * facts and the two BuT-relevant rules: the fee has to fit inside the annual
+ * Bildung-und-Teilhabe budget, and the copy must not promise that attendance is
+ * free. Rendering is covered in `src/pages/_robotics-day.render.test.ts`.
  */
 
 type Question = {
@@ -23,8 +23,10 @@ type Question = {
 const camps = (coursesData.camps ?? []) as Array<{
   slug: string;
   name: { en: string; de: string };
-  startDate: string;
-  endDate: string;
+  dateOptions: string[];
+  startDate?: string;
+  endDate?: string;
+  bookingOpen: boolean;
   dailyFrom: string;
   dailyTo: string;
   price: number;
@@ -50,26 +52,31 @@ describe('the between-the-years camp', () => {
   });
 
   it('is named in both languages', () => {
-    expect(camp.name.de).toContain('Robotik-Camp');
-    expect(camp.name.en.length).toBeGreaterThan(0);
-    expect(camp.name.de).not.toBe(camp.name.en);
+    expect(camp.name.de).toContain('Robotik-Tag');
+    expect(camp.name.en).toContain('Robotics Day');
   });
 
-  it('runs Mon 28 – Wed 30 December 2026, inside the NRW Christmas holidays', () => {
-    expect(camp.startDate).toBe('2026-12-28');
-    expect(camp.endDate).toBe('2026-12-30');
-    expect(camp.startDate >= HOLIDAY_FROM).toBe(true);
-    expect(camp.endDate <= HOLIDAY_TO).toBe(true);
-
-    const days = ['2026-12-28', '2026-12-29', '2026-12-30'].map((d) =>
-      new Date(`${d}T00:00:00Z`).getUTCDay(),
-    );
+  it('offers Mon 28 – Wed 30 December 2026, inside the NRW Christmas holidays', () => {
+    expect(camp.dateOptions).toEqual(['2026-12-28', '2026-12-29', '2026-12-30']);
+    for (const d of camp.dateOptions) {
+      expect(d >= HOLIDAY_FROM && d <= HOLIDAY_TO).toBe(true);
+    }
+    const days = camp.dateOptions.map((d) => new Date(`${d}T00:00:00Z`).getUTCDay());
     expect(days).toEqual([1, 2, 3]); // Monday, Tuesday, Wednesday
   });
 
-  it('uses an explicit end date rather than a week count', () => {
+  it('runs on one day, picked from the options once a venue is signed', () => {
     expect(camp.weeks).toBeUndefined();
-    expect(camp.endDate > camp.startDate).toBe(true);
+    if (camp.startDate === undefined) {
+      expect(camp.endDate).toBeUndefined();
+    } else {
+      expect(camp.endDate).toBe(camp.startDate);
+      expect(camp.dateOptions).toContain(camp.startDate);
+    }
+  });
+
+  it('only opens booking once the day is fixed', () => {
+    if (camp.bookingOpen) expect(camp.startDate).toBeDefined();
   });
 
   it('runs 10:00–14:00 and takes 12 children', () => {
@@ -78,13 +85,14 @@ describe('the between-the-years camp', () => {
     expect(camp.capacity).toBe(12);
   });
 
-  it('costs €99 — inside a single child’s annual BuT budget', () => {
-    expect(camp.price).toBe(99);
+  it('costs €39 — inside a single child’s annual BuT budget', () => {
+    expect(camp.price).toBe(39);
     expect(camp.price).toBeLessThanOrEqual(BUT_ANNUAL_BUDGET);
   });
 
   it('describes the camp in both languages', () => {
-    expect(camp.description.de).toContain('99');
+    expect(camp.description.de).toContain('39 €');
+    expect(camp.description.en).toContain('€39');
     expect(camp.description.en.length).toBeGreaterThan(0);
   });
 
@@ -109,7 +117,7 @@ describe('the camp booking form', () => {
     expect(but).toBeDefined();
     expect(but?.type).toBe('B'); // pretix: boolean
     expect(but?.required).toBe(false);
-    expect(but?.help?.de).toMatch(/vor Campbeginn/);
+    expect(but?.help?.de).toMatch(/vor dem Robotik-Tag/);
   });
 });
 

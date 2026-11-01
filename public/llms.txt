@@ -1,5 +1,5 @@
 # bumble:futurespace
-# Updated: 2026-10-18
+# Updated: 2026-11-01
 
 > Hands-on STEM education (praktische MINT-Bildung): coding & robotics courses for kids 8–14 using the mbot2 platform. Real hardware, small groups. Powered by bumble:education.
 
@@ -15,12 +15,18 @@ Both courses run weekly during the school term. All materials included — each 
 - **Robot Explorer** is the entry point: kids build a robot from parts and learn coding through colorful drag-and-drop blocks.
 - **Code the Machine** is the next step: kids transition to real Python, work with sensors (ultrasonic, infrared, light), and build an autonomous maze-navigating robot.
 
+## Holiday Offer
+
+- **Robotik-Tag zwischen den Jahren / Between the Years — Robotics Day:** one day in the Christmas holidays (Mon 28, Tue 29 or Wed 30 December 2026 — the exact day and venue in Minden / Porta Westfalica are fixed once a room is booked), 10:00–14:00, ages 8–12, 12 places, €39. Booking opens once the day is fixed; places can be reserved by email to info@bumbleflies.de. [DE](https://edu.bumbleflies.de/robotik-tag) · [EN](https://edu.bumbleflies.de/en/robotics-day)
+
 ## Pages
 
 - [Homepage (DE)](https://edu.bumbleflies.de/) — Hauptseite
 - [Homepage (EN)](https://edu.bumbleflies.de/en/) — Main page
 - [Flyer (DE)](https://edu.bumbleflies.de/flyer) — Eltern-Flyer
 - [Flyer (EN)](https://edu.bumbleflies.de/en/flyer) — Parent flyer
+- [Robotik-Tag (DE)](https://edu.bumbleflies.de/robotik-tag) — Robotik-Tag zwischen den Jahren
+- [Robotics Day (EN)](https://edu.bumbleflies.de/en/robotics-day) — One-day holiday robotics offer
 - [Imprint (DE)](https://edu.bumbleflies.de/impressum) — Impressum
 - [Imprint (EN)](https://edu.bumbleflies.de/en/imprint) — Legal imprint
 - [Privacy (DE)](https://edu.bumbleflies.de/datenschutz) — Datenschutz

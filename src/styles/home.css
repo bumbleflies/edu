@@ -91,3 +91,13 @@
   .trainer-card { flex-direction: column; align-items: center; text-align: center; }
   .trainer-card:last-child:nth-child(odd) { width: auto; }
 }
+
+/* Teaser band for the Robotik-Tag, between hero and age strip. */
+.camp-teaser { padding: 0 0 40px; }
+.camp-teaser-card {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+  background: var(--paper); border-radius: var(--radius); padding: 20px 24px;
+  border-left: 6px solid var(--signal); box-shadow: 0 6px 20px rgba(43, 43, 51, 0.06);
+}
+.camp-teaser-card .eyebrow { margin-bottom: 4px; }
+.camp-teaser-card p { margin: 0; font-weight: 600; }
