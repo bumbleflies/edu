@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.22.0](https://github.com/bumbleflies/edu/compare/edu-v0.21.4...edu-v0.22.0) (2026-11-01)
+
+
+### Features
+
+* **camp:** announce the one-day Robotik-Tag on the website ([#129](https://github.com/bumbleflies/edu/issues/129)) ([5e08b98](https://github.com/bumbleflies/edu/commit/5e08b988a3859e09b30da10d3ae75552334e4c69))
+
 ## [0.21.4](https://github.com/bumbleflies/edu/compare/edu-v0.21.3...edu-v0.21.4) (2026-10-28)
 
 
