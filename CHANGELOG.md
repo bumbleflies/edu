@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.22.3](https://github.com/bumbleflies/edu/compare/edu-v0.22.2...edu-v0.22.3) (2026-11-02)
+
+
+### Bug Fixes
+
+* **agents:** drop dead A2A card, real 404s, complete agent files ([#136](https://github.com/bumbleflies/edu/issues/136)) ([dcdaebb](https://github.com/bumbleflies/edu/commit/dcdaebb34a9d1c2add8b8ad416c2682d76354275))
+
 ## [0.22.2](https://github.com/bumbleflies/edu/compare/edu-v0.22.1...edu-v0.22.2) (2026-11-02)
 
 
