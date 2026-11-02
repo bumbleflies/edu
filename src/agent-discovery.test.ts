@@ -25,9 +25,8 @@ describe('robots.txt agent resource references', () => {
     expect(robots).toContain('https://edu.bumbleflies.de/facts.json');
   });
 
-  it('references agent-card.json', () => {
-    expect(robots).toContain('agent-card.json');
-    expect(robots).toContain('https://edu.bumbleflies.de/.well-known/agent-card.json');
+  it('does not reference an A2A agent card (static site, no endpoint to call)', () => {
+    expect(robots).not.toContain('agent-card.json');
   });
 
   it('still has the sitemap reference', () => {
@@ -49,8 +48,8 @@ describe('Layout.astro agent resource link tags', () => {
     expect(layout).toContain('application/json');
   });
 
-  it('has a link to agent-card.json', () => {
-    expect(layout).toContain('href="/.well-known/agent-card.json"');
+  it('does not link an A2A agent card (static site, no endpoint to call)', () => {
+    expect(layout).not.toContain('agent-card.json');
   });
 });
 

@@ -12,7 +12,6 @@ const machineReadableFiles = [
   'agents.md',
   'llms.txt',
   'llms-full.txt',
-  '.well-known/agent-card.json',
 ];
 
 describe('machine-readable site data', () => {
@@ -40,13 +39,4 @@ describe('machine-readable site data', () => {
     );
   });
 
-  it('describes booking info in the agent card without the robot-to-keep claim', () => {
-    const card = JSON.parse(readPublic('.well-known/agent-card.json')) as {
-      skills: { id: string; description: string }[];
-    };
-    const booking = card.skills.find((s) => s.id === 'booking-info');
-    expect(booking?.description).toContain(
-      'all materials + an mbot2 robot to use during the course',
-    );
-  });
 });

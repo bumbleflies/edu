@@ -74,7 +74,7 @@ One day of robotics in the NRW Christmas holidays for children aged 8–12: work
 - **Places:** 12 children, 2 coaches
 - **Price:** €39. Bildung und Teilhabe (BuT) can cover the fee if the application is made before the day.
 - **Booking:** opens once the day is fixed; reserve a place by email to info@bumbleflies.de
-- **Pages:** https://edu.bumbleflies.de/robotik-tag (DE) · https://edu.bumbleflies.de/en/robotics-day (EN)
+- **Pages:** https://edu.bumbleflies.de/robotik-tag/ (DE) · https://edu.bumbleflies.de/en/robotics-day/ (EN)
 
 The page also describes the room the team is looking for (heated, tables for 14, around eight sockets, 09:30–14:30), so venue owners can get in touch.
 
@@ -134,15 +134,27 @@ bumble:futurespace is the education label of bumbleflies — a Munich-based team
 
 ---
 
+## Pages
+
+- [Homepage (DE)](https://edu.bumbleflies.de/): Kursangebot, Team und Buchung.
+- [Homepage (EN)](https://edu.bumbleflies.de/en/): Courses, team and booking in English.
+- [Kursübersicht / Eltern-Flyer (DE)](https://edu.bumbleflies.de/flyer/): One-page parent flyer with both courses, dates and prices.
+- [Course Overview / Parent Flyer (EN)](https://edu.bumbleflies.de/en/flyer/): English version of the parent flyer.
+- [Robotik-Tag (DE)](https://edu.bumbleflies.de/robotik-tag/): One-day holiday robotics offer between Christmas and New Year.
+- [Robotics Day (EN)](https://edu.bumbleflies.de/en/robotics-day/): English version of the Robotics Day page.
+- [Impressum (DE)](https://edu.bumbleflies.de/impressum/) and [Imprint (EN)](https://edu.bumbleflies.de/en/imprint/): Legal imprint.
+- [Datenschutz (DE)](https://edu.bumbleflies.de/datenschutz/) and [Privacy (EN)](https://edu.bumbleflies.de/en/privacy/): Privacy policy.
+
 ## Contact
 
-- Website: https://edu.bumbleflies.de
+- Website: https://edu.bumbleflies.de/
 - Booking: https://pretix.eu/bumbleedu/
-- Imprint: https://edu.bumbleflies.de/impressum
-- Privacy: https://edu.bumbleflies.de/datenschutz
+- Imprint: https://edu.bumbleflies.de/impressum/
+- Privacy: https://edu.bumbleflies.de/datenschutz/
 
 ## For Agents
 
 - Welcome page: https://edu.bumbleflies.de/agents.md
 - Facts: https://edu.bumbleflies.de/facts.json
-- Agent Card: https://edu.bumbleflies.de/.well-known/agent-card.json
+- Site summary: https://edu.bumbleflies.de/llms.txt
+- Agent directory: https://edu.bumbleflies.de/agents.txt

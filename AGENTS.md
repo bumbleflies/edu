@@ -48,6 +48,14 @@ lint/formatter configured — don't invent or require one.
   CI; update the test alongside it.
 - `/health` is served by `nginx.conf`, not Astro. The Docker HEALTHCHECK polls
   it; keep that route working when touching serving config.
+- No SPA fallback: `try_files $uri $uri/ =404` plus `src/pages/404.astro`
+  (noindex, listed in `unlistedPaths`). Never reintroduce `/index.html` as the
+  fallback: every unknown URL would answer 200 with the homepage. nginx has
+  `absolute_redirect off` (Traefik terminates TLS, so absolute redirects would
+  point to `http://`), and serves `*.md` as `text/markdown`.
+- There is deliberately no A2A `/.well-known/agent-card.json`: the site is
+  static, so a card would advertise an endpoint nobody answers.
+  `src/agent-discovery.test.ts` guards that.
 - Publishing `bumblecode/edu` to Docker Hub only happens on `edu-v*` tag
   pushes (`release.yml`: tests, then `build-publish.yml`'s build + container
   healthcheck gate + push). release-please creates those tags on master but no

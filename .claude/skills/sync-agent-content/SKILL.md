@@ -123,7 +123,6 @@ For each AI crawler (GPTBot, ClaudeBot, PerplexityBot, etc.), ensure these paths
 - `/llms.txt`
 - `/llms-full.txt`
 - `/agents.txt`
-- `/.well-known/agent-card.json`
 
 Keep standard search engines (Googlebot, Bingbot) with just `Allow: /`.
 Keep aggressive scraper blocks (Bytespider, DotBot).

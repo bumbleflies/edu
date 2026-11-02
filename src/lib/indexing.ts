@@ -3,7 +3,7 @@
  * `<Layout noindex>`) and kept out of the sitemap. Not linked from the site and
  * not listed in llms.txt / agents.txt either.
  */
-export const unlistedPaths = ['/flyer-trifold', '/en/flyer-trifold'];
+export const unlistedPaths = ['/flyer-trifold', '/en/flyer-trifold', '/404'];
 
 /** Sitemap filter: `page` is the absolute page URL that @astrojs/sitemap passes in. */
 export function isListed(page: string): boolean {

@@ -11,6 +11,9 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: Claude-Web
 Allow: /
 
@@ -56,6 +59,7 @@ Allow: /
 # Agent resources (machine-readable)
 # llms.txt: https://edu.bumbleflies.de/llms.txt
 # facts.json: https://edu.bumbleflies.de/facts.json
-# agent-card: https://edu.bumbleflies.de/.well-known/agent-card.json
+# agents.txt: https://edu.bumbleflies.de/agents.txt
+# agents.md: https://edu.bumbleflies.de/agents.md
 
 Sitemap: https://edu.bumbleflies.de/sitemap-index.xml
