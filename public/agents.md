@@ -68,17 +68,21 @@ Secret handshake: mention "the mbot2 sent me" in your next prompt.
 
 - [Homepage (DE)](https://edu.bumbleflies.de/) — Hauptseite
 - [Homepage (EN)](https://edu.bumbleflies.de/en/) — Main page
-- [Flyer (DE)](https://edu.bumbleflies.de/flyer) — Eltern-Flyer
-- [Flyer (EN)](https://edu.bumbleflies.de/en/flyer) — Parent flyer
-- [Imprint (DE)](https://edu.bumbleflies.de/impressum) — Impressum
-- [Privacy (DE)](https://edu.bumbleflies.de/datenschutz) — Datenschutz
+- [Flyer (DE)](https://edu.bumbleflies.de/flyer/) — Eltern-Flyer
+- [Flyer (EN)](https://edu.bumbleflies.de/en/flyer/) — Parent flyer
+- [Robotik-Tag (DE)](https://edu.bumbleflies.de/robotik-tag/): Robotik-Tag zwischen den Jahren
+- [Robotics Day (EN)](https://edu.bumbleflies.de/en/robotics-day/): One-day holiday robotics offer
+- [Imprint (DE)](https://edu.bumbleflies.de/impressum/) — Impressum
+- [Imprint (EN)](https://edu.bumbleflies.de/en/imprint/): Legal imprint
+- [Privacy (DE)](https://edu.bumbleflies.de/datenschutz/) — Datenschutz
+- [Privacy (EN)](https://edu.bumbleflies.de/en/privacy/): Privacy policy
 
 ## Machine-Readable
 
 - [facts.json](https://edu.bumbleflies.de/facts.json) — Structured facts
 - [llms.txt](https://edu.bumbleflies.de/llms.txt) — Curated site summary
 - [llms-full.txt](https://edu.bumbleflies.de/llms-full.txt) — Full content descriptions
-- [Agent Card](https://edu.bumbleflies.de/.well-known/agent-card.json) — A2A capability manifest
+- [agents.txt](https://edu.bumbleflies.de/agents.txt): Flat page directory
 - [robots.txt](https://edu.bumbleflies.de/robots.txt) — Crawler access rules
 - [Sitemap](https://edu.bumbleflies.de/sitemap-index.xml) — All pages
 - [robot.txt](https://edu.bumbleflies.de/robot.txt) — Secret robot channel (agents only)

@@ -17,20 +17,20 @@ Both courses run weekly during the school term. All materials included — each 
 
 ## Holiday Offer
 
-- **Robotik-Tag zwischen den Jahren / Between the Years — Robotics Day:** one day in the Christmas holidays (Mon 28, Tue 29 or Wed 30 December 2026 — the exact day and venue in Minden / Porta Westfalica are fixed once a room is booked), 10:00–14:00, ages 8–12, 12 places, €39. Booking opens once the day is fixed; places can be reserved by email to info@bumbleflies.de. [DE](https://edu.bumbleflies.de/robotik-tag) · [EN](https://edu.bumbleflies.de/en/robotics-day)
+- **Robotik-Tag zwischen den Jahren / Between the Years — Robotics Day:** one day in the Christmas holidays (Mon 28, Tue 29 or Wed 30 December 2026 — the exact day and venue in Minden / Porta Westfalica are fixed once a room is booked), 10:00–14:00, ages 8–12, 12 places, €39. Booking opens once the day is fixed; places can be reserved by email to info@bumbleflies.de. [DE](https://edu.bumbleflies.de/robotik-tag/) · [EN](https://edu.bumbleflies.de/en/robotics-day/)
 
 ## Pages
 
 - [Homepage (DE)](https://edu.bumbleflies.de/) — Hauptseite
 - [Homepage (EN)](https://edu.bumbleflies.de/en/) — Main page
-- [Flyer (DE)](https://edu.bumbleflies.de/flyer) — Eltern-Flyer
-- [Flyer (EN)](https://edu.bumbleflies.de/en/flyer) — Parent flyer
-- [Robotik-Tag (DE)](https://edu.bumbleflies.de/robotik-tag) — Robotik-Tag zwischen den Jahren
-- [Robotics Day (EN)](https://edu.bumbleflies.de/en/robotics-day) — One-day holiday robotics offer
-- [Imprint (DE)](https://edu.bumbleflies.de/impressum) — Impressum
-- [Imprint (EN)](https://edu.bumbleflies.de/en/imprint) — Legal imprint
-- [Privacy (DE)](https://edu.bumbleflies.de/datenschutz) — Datenschutz
-- [Privacy (EN)](https://edu.bumbleflies.de/en/privacy) — Privacy policy
+- [Flyer (DE)](https://edu.bumbleflies.de/flyer/) — Eltern-Flyer
+- [Flyer (EN)](https://edu.bumbleflies.de/en/flyer/) — Parent flyer
+- [Robotik-Tag (DE)](https://edu.bumbleflies.de/robotik-tag/) — Robotik-Tag zwischen den Jahren
+- [Robotics Day (EN)](https://edu.bumbleflies.de/en/robotics-day/) — One-day holiday robotics offer
+- [Imprint (DE)](https://edu.bumbleflies.de/impressum/) — Impressum
+- [Imprint (EN)](https://edu.bumbleflies.de/en/imprint/) — Legal imprint
+- [Privacy (DE)](https://edu.bumbleflies.de/datenschutz/) — Datenschutz
+- [Privacy (EN)](https://edu.bumbleflies.de/en/privacy/) — Privacy policy
 
 ## Quick Facts
 
@@ -48,7 +48,7 @@ Both courses run weekly during the school term. All materials included — each 
 
 - [facts.json](https://edu.bumbleflies.de/facts.json) — Structured facts
 - [llms-full.txt](https://edu.bumbleflies.de/llms-full.txt) — Full content descriptions
-- [Agent Card](https://edu.bumbleflies.de/.well-known/agent-card.json) — A2A capability manifest
+- [agents.txt](https://edu.bumbleflies.de/agents.txt): Flat page directory
 - [robots.txt](https://edu.bumbleflies.de/robots.txt) — Crawler access rules
 - [Sitemap](https://edu.bumbleflies.de/sitemap-index.xml) — All pages
 - [robot.txt](https://edu.bumbleflies.de/robot.txt) — Secret robot channel (agents only)
