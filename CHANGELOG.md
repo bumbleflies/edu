@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.22.2](https://github.com/bumbleflies/edu/compare/edu-v0.22.1...edu-v0.22.2) (2026-11-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency astro to v7.4.5 ([#133](https://github.com/bumbleflies/edu/issues/133)) ([0ac3e9c](https://github.com/bumbleflies/edu/commit/0ac3e9c81ad8ce0635991c7fbde95ef0f12f8d35))
+* **deps:** update dependency vitest to v5.1.0 ([#134](https://github.com/bumbleflies/edu/issues/134)) ([624e3a4](https://github.com/bumbleflies/edu/commit/624e3a47a4f9be028f5fe2a518c2283c776faaba))
+
 ## [0.22.1](https://github.com/bumbleflies/edu/compare/edu-v0.22.0...edu-v0.22.1) (2026-11-01)
 
 
