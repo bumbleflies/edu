@@ -96,7 +96,7 @@ let the camp booking lock you into a worse room for the term.
 |---|---|---|---|---|
 | **Bürgerhaus Porta Westfalica** | Am Park 1, 32457 Porta Westfalica | **0571 39843737** · info@buergerhaus-porta.de | Camp. Their own page accepts *"Kinder- und Jugendaktivitäten"* as a use | Shares the house with a VHS/kino programme — check 28–30 Dec |
 | **St. Marien Minden** (ev.) | Gemeindebüro, Stiftstr. 2b, 32427 Minden | **0571 8290816** · marien.buero@wir-in-marien.de | Camp, cheap. Tue closed; Mo/Do/Fr 10–12, Mi 14–16 | Hall size unconfirmed |
-| **BÜZ Kulturzentrum** | Seidenbeutel 1, 32423 Minden | **0571 23939** · mail@buezminden.de | Camp or term. Rents explicitly for *"Seminare, Kurse"* | Office only Di+Fr 9–13, Mi 11:30–15 |
+| **BÜZ Kulturzentrum** | Seidenbeutel 1, 32423 Minden | **0571 23939** · mail@buezminden.de | Term courses only. Rents for *"Seminare, Kurse"* | Office only Di+Fr 9–13, Mi 11:30–15. **Closed between Christmas and New Year** (declined the camp, 2026-11-05) |
 | **TuS Holzhausen/Porta Sportheim** | Vlothoer Str. 165, 32457 Porta Westfalica | Club contact via `tus-holzhausenporta.de` | Camp, cheapest tier | No published rental contact; bar room, needs a site visit |
 | **Haus der Bildung** | Königswall 14, 32423 Minden | Stadt Minden **0571 89-0** · info@minden.de · online reservation form | **Term courses.** 50–76 m², €17–22/h, height-adjustable, touch monitors | Holiday clause; *meeting* rooms out for 2026/27 (classrooms fine) |
 | **zdi Minden-Lübbecke** (ZAM e.V.) | Portastr. 9, 32423 Minden | **0571 807-13560** · zdi@minden-luebbecke.de | Partner, not landlord: space + co-marketing | Slower; comes with obligations |
@@ -173,6 +173,9 @@ evening or day **[on request]**. Named:
 **"Seminare, Kurse oder Vorträge"** outside its own programme. Tel. 0571 23939
 (office Tue+Fri 9–13, Wed 11:30–15:00). Price **[on request]**; expect
 €15–25/h. Central, has a café, credible cultural address.
+- **Not usable between Christmas and New Year:** asked for 28–30 Dec 2026 and
+  declined 2026-11-05 — the house is closed in that window. Fine for term
+  courses in school time.
 
 **6. Stadtbibliothek Minden / Stadtbücherei Porta Westfalica** — the Minden
 library is an official *außerschulischer Lernort*, workshops 60–120 min at

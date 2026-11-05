@@ -21,7 +21,7 @@ still keeps the camp on schedule.
 |---|---|---|---|---|---|
 | 1 | Room: Bürgerhaus Porta (0571 39843737) | Christian | 2026-11-02 | 🟡 | Email sent 2026-11-01; follow up by phone Mon 2 Nov |
 | 2 | Room: St. Marien Minden (0571 8290816, Mo 10–12) | Christian | 2026-11-02 | 🟡 | Email sent 2026-11-01; follow up by phone Mon 2 Nov 10–12 |
-| 3 | Room: BÜZ Kulturzentrum (0571 23939, Tue 9–13) | Christian | 2026-11-03 | 🟡 | Email sent 2026-11-01; follow up by phone Tue 3 Nov if 1+2 have not confirmed |
+| 3 | Room: BÜZ Kulturzentrum (0571 23939, Tue 9–13) | Christian | 2026-11-03 | ❌ | **Declined 2026-11-05** (Petra Süzer, Geschäftsführung): the house is closed between Christmas and New Year. Not a price or fit problem — do not re-ask for this window |
 | 4 | Room: fallback, sports-club room or Diakonie e-werk Raum Hille (€249 per half day) | Christian | 2026-11-10 | ⬜ | Only if 1–3 fail |
 | 5 | Room confirmed **in writing**, all five venue questions answered | Christian | 2026-11-13 | ⬜ | Releases the camp date |
 | 6 | Erweitertes Führungszeugnis, Christian | Christian | apply by 2026-11-06 | 🟡 | Online application OLAF-0004419845 filled in, **payment stuck** (portal: payment already started). Retry after the session expires; letter in Drive Jobs/edu |
@@ -132,3 +132,10 @@ and it is the moment the January booking conversation happens.
   the announcement page). The links in the emails went out as Google redirect
   URLs (the Gmail connector rewrites them); they still lead to the page. Next:
   phone follow-ups Mon 2 Nov (Bürgerhaus, St. Marien) and Tue 3 Nov (BÜZ).
+- **2026-11-05** — **BÜZ Kulturzentrum declined** (Petra Süzer,
+  petra.suezer@buezminden.de): "Leider haben wir zwischen Weihnachten und
+  Neujahr geschlossen." Wishes us luck finding a room. This is a holiday
+  shutdown, not a judgement on the offer — BÜZ stays a candidate for term
+  courses during school time. With BÜZ out, the camp rests on Bürgerhaus Porta
+  (#1), St. Marien (#2) and the fallback tier (#4); both of the first two are
+  past their follow-up date and need a call now.
