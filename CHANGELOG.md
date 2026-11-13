@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.22.9](https://github.com/bumbleflies/edu/compare/edu-v0.22.8...edu-v0.22.9) (2026-11-13)
+
+
+### Bug Fixes
+
+* **deps:** update astro monorepo ([#149](https://github.com/bumbleflies/edu/issues/149)) ([1f1d480](https://github.com/bumbleflies/edu/commit/1f1d480c373d77a7488ca9bfe6b41b66665b75a8))
+
 ## [0.22.8](https://github.com/bumbleflies/edu/compare/edu-v0.22.7...edu-v0.22.8) (2026-11-11)
 
 
