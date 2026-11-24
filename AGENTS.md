@@ -17,35 +17,11 @@ npm run test       # vitest run
 npx astro check    # type check
 ```
 
-### pretix ticketing setup
-
-```bash
-PRETIX_API_TOKEN=<token> node scripts/setup-pretix.mjs
-```
-
-Idempotent upsert: creates/updates one pretix event per bookable offer
-(slug/name/dates, locales `en`+`de`, item with price, quota), plus attendee
-questions and shop branding/legal settings, from `src/data/courses.json`. The
-token is read from the environment — never commit it. Events are created as
-drafts: going live requires enabling a payment provider in the pretix admin,
-which has no API.
-
-`courses.json` holds two lists of offers: `courses` (term courses, ending at
-`startDate + weeks`, quota unlimited) and `camps` (one-off, with an explicit
-`endDate` and a `capacity` that becomes the quota size). Both take the shared
-`questions`; an offer's own `questions` entry replaces the shared one with the
-same `identifier`, so a camp can narrow the age range or add the BuT question
-without repeating the rest. A camp also carries its own `description`, which
-replaces the generated course blurb in the pretix event info text.
-
-CI (Node 24) runs exactly `npm run test` then `npx astro check`. There is no
+CI (Node 26) runs exactly `npm run test` then `npx astro check`. There is no
 lint/formatter configured — don't invent or require one.
 
-## Gotchas
+## Deployment & infrastructure
 
-- `src/lib/content.test.ts` asserts `content.de.title` and `content.en.title`
-  both contain `edu.bumbleflies.de`. Changing or removing either title fails
-  CI; update the test alongside it.
 - `/health` is served by `nginx.conf`, not Astro. The Docker HEALTHCHECK polls
   it; keep that route working when touching serving config.
 - No SPA fallback: `try_files $uri $uri/ =404` plus `src/pages/404.astro`
@@ -53,9 +29,6 @@ lint/formatter configured — don't invent or require one.
   fallback: every unknown URL would answer 200 with the homepage. nginx has
   `absolute_redirect off` (Traefik terminates TLS, so absolute redirects would
   point to `http://`), and serves `*.md` as `text/markdown`.
-- There is deliberately no A2A `/.well-known/agent-card.json`: the site is
-  static, so a card would advertise an endpoint nobody answers.
-  `src/agent-discovery.test.ts` guards that.
 - Publishing `bumblecode/edu` to Docker Hub only happens on `edu-v*` tag
   pushes (`release.yml`: tests, then `build-publish.yml`'s build + container
   healthcheck gate + push). release-please creates those tags on master but no
@@ -63,22 +36,19 @@ lint/formatter configured — don't invent or require one.
   a Docker build/healthcheck but never publish.
 - `master.yml` has path filters (`src/**`, `public/**`, package/config files,
   `Dockerfile`, `nginx.conf`). Edits outside them won't trigger a deploy.
-- The camp is a one-day prototype ("Robotik-Tag"), announced at
-  `/robotik-tag` and `/en/robotics-day` (`src/components/RoboticsDay.astro`,
-  copy in `src/lib/camp.ts`, teaser on both homepages). Until a venue is
-  signed it lists `dateOptions` and has no `startDate`: the page shows the
-  three candidate days plus a "room wanted" section, the CTA is a reservation
-  mailto, and `setup-pretix.mjs` skips it. Once signed: set
-  `startDate` = `endDate` (one of the options), then `bookingOpen: true` after
-  the pretix event is live. `src/lib/camps.test.ts` pins the facts.
-- Never describe BuT as making an activity free, in site copy or in
-  `courses.json`. `€15/month, up to €180 per twelve-month period` is a shared
-  budget across all leisure, and a family must apply *before* the activity
-  starts. The rule is tested; see `src/lib/camps.test.ts`.
 - Production routing (`edu.bumbleflies.de`) lives in the separate
   servyy-container repo (`bumbleflies/docker-compose.yml`), not here.
 
 ## Conventions
 
-- Node 24 everywhere (Dockerfile, CI).
+- Node 26 everywhere (Dockerfile, CI).
 - Renovate auto-merges devDependency and patch-update PRs (squash).
+
+## Directory guides
+
+Directory-specific rules live next to the code they apply to:
+
+- [src/AGENTS.md](src/AGENTS.md) — application source: layout, co-located
+  tests, bilingual pages, copy/content rules.
+- [scripts/AGENTS.md](scripts/AGENTS.md) — pretix event sync from
+  `src/data/courses.json`.
