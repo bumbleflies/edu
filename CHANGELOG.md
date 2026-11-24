@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.22.12](https://github.com/bumbleflies/edu/compare/edu-v0.22.11...edu-v0.22.12) (2026-11-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v26.6.7 ([#155](https://github.com/bumbleflies/edu/issues/155)) ([8253bcf](https://github.com/bumbleflies/edu/commit/8253bcf54ec66dd4f249604a2221a82e77027e76))
+
 ## [0.22.11](https://github.com/bumbleflies/edu/compare/edu-v0.22.10...edu-v0.22.11) (2026-11-18)
 
 
