@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.22.13](https://github.com/bumbleflies/edu/compare/edu-v0.22.12...edu-v0.22.13) (2026-11-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v26.6.10 ([#158](https://github.com/bumbleflies/edu/issues/158)) ([4241306](https://github.com/bumbleflies/edu/commit/4241306fcb643f3fb6613a59dd438cb2b774db26))
+* **deps:** update dependency vitest to v5.1.2 ([#159](https://github.com/bumbleflies/edu/issues/159)) ([b1f0a39](https://github.com/bumbleflies/edu/commit/b1f0a391bb740eea36e1a95ce676264281cb72d1))
+
 ## [0.22.12](https://github.com/bumbleflies/edu/compare/edu-v0.22.11...edu-v0.22.12) (2026-11-24)
 
 
