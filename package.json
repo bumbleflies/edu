@@ -1,6 +1,6 @@
 {
   "name": "edu",
-  "version": "0.22.13",
+  "version": "0.22.14",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
